@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Safari Shuffle | Great Migration Safari Package</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/safarishuffleicon.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .package-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/serengeti.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        .itinerary-day {
+            border-left: 3px solid #0d6efd;
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+        .included-item, .excluded-item {
+            margin-bottom: 10px;
+        }
+        .included-item i {
+            color: #28a745;
+        }
+        .excluded-item i {
+            color: #dc3545;
+        }
+        .booking-card {
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .gallery-img {
+            transition: transform 0.3s;
+        }
+        .gallery-img:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>Arusha, Tanzania</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Open 24/7</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+255 123 456 789</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    
+    <!-- Navbar Start -->
+	<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="img/safarilogo.png" alt="WooDY Logo" class="navbar-logo">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Destinations</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="serengeti.html" class="dropdown-item">Serengeti National Park</a>
+                        <a href="ngorongoro.html" class="dropdown-item">Ngorongoro Conservational Area</a>
+                        <a href="manyara.html" class="dropdown-item">Lake Manyara National Park</a>
+                        <a href="tarangire.html" class="dropdown-item">Tarangire National Park</a>
+                        <a href="zanzibar.html" class="dropdown-item">Zanzibar</a>
+                        <a href="kilimanjaro.html" class="dropdown-item">Mount Kilimanjaro</a>
+                    </div>
+                </div>
+                <a href="tours.html" class="nav-item nav-link">Tours</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our Services</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="" class="dropdown-item">Tailor Made Safaris</a>
+                        <a href="" class="dropdown-item">Luxury Safaris</a>
+                        <a href="" class="dropdown-item">Group Safaris</a>
+                        <a href="" class="dropdown-item">Zanzibar Beach Holidays</a>
+                        <a href="" class="dropdown-item">Cultural Tours</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Travel Tips</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="packing.html" class="dropdown-item">Packing Tips</a>
+                        <a href="visa.html" class="dropdown-item">Visa Information</a>
+                        <a href="health&safety.html" class="dropdown-item">Health & Safety</a>
+                        <a href="besttimetovisit.html" class="dropdown-item">Best Time to Visit</a>
+                        <a href="localcustoms.html" class="dropdown-item">Local Customs</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            
+            <a href="booking.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Package Hero Start -->
+    <div class="container-fluid package-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="display-4 text-white mb-4">Great Migration Safari</h1>
+                    <div class="d-flex align-items-center mb-4">
+                        <div class="me-4">
+                            <i class="fa fa-calendar-alt text-primary me-2"></i>
+                            <span class="text-white">5 Days / 4 Nights</span>
+                        </div>
+                        <div class="me-4">
+                            <i class="fa fa-map-marker-alt text-primary me-2"></i>
+                            <span class="text-white">Serengeti National Park</span>
+                        </div>
+                        <div>
+                            <i class="fa fa-star text-primary me-2"></i>
+                            <span class="text-white">5.0 (24 Reviews)</span>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <span class="bg-primary text-white px-3 py-1 rounded me-2">Popular</span>
+                        <span class="bg-white text-dark px-3 py-1 rounded">Great Migration</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <h2 class="text-white display-5 mb-3">From $1,800</h2>
+                    <span class="text-white-50">per person</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Package Hero End -->
+
+    <!-- Package Content Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Main Content -->
+                <div class="col-lg-8">
+                    <!-- Overview -->
+                    <div class="mb-5">
+                        <h2 class="mb-4">Tour Overview</h2>
+                        <p class="mb-4">Experience the greatest wildlife spectacle on earth - the annual Great Migration in Serengeti National Park. This 5-day safari follows the massive herds of wildebeest and zebra as they traverse the plains, with expert guides to maximize your wildlife viewing opportunities.</p>
+                        <p>Witness dramatic river crossings, predator action, and the breathtaking landscapes of the Serengeti. Our carefully designed itinerary ensures you'll be in the best locations at the optimal times for migration viewing.</p>
+                    </div>
+
+                    <!-- Highlights -->
+                    <div class="mb-5">
+                        <h2 class="mb-4">Tour Highlights</h2>
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 btn-lg-square bg-primary rounded-circle me-3">
+                                        <i class="fa fa-binoculars text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5>Migration Viewing</h5>
+                                        <p>Witness thousands of wildebeest crossing the plains and rivers</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 btn-lg-square bg-primary rounded-circle me-3">
+                                        <i class="fa fa-camera text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5>Photography Focus</h5>
+                                        <p>Special vehicles with open roofs for optimal photography</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 btn-lg-square bg-primary rounded-circle me-3">
+                                        <i class="fa fa-paw text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5>Big Five</h5>
+                                        <p>Excellent chances to see all of Africa's Big Five animals</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0 btn-lg-square bg-primary rounded-circle me-3">
+                                        <i class="fa fa-hotel text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5>Luxury Lodging</h5>
+                                        <p>Stay at premium safari lodges with stunning views</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Itinerary -->
+                    <div class="mb-5">
+                        <h2 class="mb-4">Detailed Itinerary</h2>
+                        <div class="itinerary-day">
+                            <h4>Day 1: Arrival in Arusha</h4>
+                            <p>Arrive at Kilimanjaro International Airport, where you'll be met by our representative and transferred to your lodge in Arusha. Evening briefing about your upcoming safari.</p>
+                            <p><strong>Accommodation:</strong> Arusha Coffee Lodge</p>
+                        </div>
+                        <div class="itinerary-day">
+                            <h4>Day 2: Arusha to Central Serengeti</h4>
+                            <p>Morning flight to Serengeti. Afternoon game drive in Seronera Valley, known for its year-round wildlife concentrations and scenic kopjes.</p>
+                            <p><strong>Accommodation:</strong> Serengeti Serena Safari Lodge</p>
+                        </div>
+                        <div class="itinerary-day">
+                            <h4>Day 3: Full Day Migration Viewing</h4>
+                            <p>Full day dedicated to following the migration herds. Picnic lunch in the bush. Depending on season, witness river crossings or calving grounds.</p>
+                            <p><strong>Accommodation:</strong> Serengeti Serena Safari Lodge</p>
+                        </div>
+                        <div class="itinerary-day">
+                            <h4>Day 4: Northern Serengeti</h4>
+                            <p>Transfer to northern Serengeti (seasonal). Game drives focusing on the Mara River crossings (July-October) or western corridor (May-July).</p>
+                            <p><strong>Accommodation:</strong> Sayari Camp</p>
+                        </div>
+                        <div class="itinerary-day">
+                            <h4>Day 5: Departure</h4>
+                            <p>Morning game drive followed by transfer to airstrip for flight back to Arusha. Connect with your international flight or extend your stay.</p>
+                        </div>
+                    </div>
+
+                    <!-- Inclusions/Exclusions -->
+                    <div class="row mb-5">
+                        <div class="col-md-6">
+                            <div class="bg-light p-4 rounded">
+                                <h4 class="mb-4">Included</h4>
+                                <div class="included-item">
+                                    <i class="fa fa-check me-2"></i> All park fees and taxes
+                                </div>
+                                <div class="included-item">
+                                    <i class="fa fa-check me-2"></i> Luxury accommodation
+                                </div>
+                                <div class="included-item">
+                                    <i class="fa fa-check me-2"></i> All meals on safari
+                                </div>
+                                <div class="included-item">
+                                    <i class="fa fa-check me-2"></i> Professional guide
+                                </div>
+                                <div class="included-item">
+                                    <i class="fa fa-check me-2"></i> Domestic flights
+                                </div>
+                                <div class="included-item">
+                                    <i class="fa fa-check me-2"></i> Game drives in 4x4 vehicle
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-light p-4 rounded">
+                                <h4 class="mb-4">Not Included</h4>
+                                <div class="excluded-item">
+                                    <i class="fa fa-times me-2"></i> International flights
+                                </div>
+                                <div class="excluded-item">
+                                    <i class="fa fa-times me-2"></i> Travel insurance
+                                </div>
+                                <div class="excluded-item">
+                                    <i class="fa fa-times me-2"></i> Visa fees
+                                </div>
+                                <div class="excluded-item">
+                                    <i class="fa fa-times me-2"></i> Alcoholic beverages
+                                </div>
+                                <div class="excluded-item">
+                                    <i class="fa fa-times me-2"></i> Tips and gratuities
+                                </div>
+                                <div class="excluded-item">
+                                    <i class="fa fa-times me-2"></i> Personal expenses
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery -->
+                    <div class="mb-5">
+                        <h2 class="mb-4">Gallery</h2>
+                        <div class="row g-3">
+                            <div class="col-lg-4 col-md-6">
+                                <a href="img/tour1.jpg" data-lightbox="gallery">
+                                    <img src="img/tour1.jpg" class="img-fluid rounded gallery-img" alt="Serengeti Landscape">
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <a href="img/serengeti-gallery2.jpg" data-lightbox="gallery">
+                                    <img src="img/tour2.jpg" class="img-fluid rounded gallery-img" alt="Wildebeest Migration">
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <a href="img/img/tour3.jpg" data-lightbox="gallery">
+                                    <img src="img/tour3.jpg" class="img-fluid rounded gallery-img" alt="Safari Vehicle">
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <a href="img/tour6.jpg" data-lightbox="gallery">
+                                    <img src="img/tour6.jpg" class="img-fluid rounded gallery-img" alt="Lodge Accommodation">
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <a href="img/tour4.jpg" data-lightbox="gallery">
+                                    <img src="img/tour4.jpg" class="img-fluid rounded gallery-img" alt="River Crossing">
+                                </a>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <a href="img/tour5.jpg" data-lightbox="gallery">
+                                    <img src="img/tour5.jpg" class="img-fluid rounded gallery-img" alt="Sunset in Serengeti">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Booking Sidebar -->
+                <div class="col-lg-4">
+                    <div class="bg-light rounded p-4 booking-card">
+                        <h3 class="mb-4">Book This Tour</h3>
+                        <form id="bookingForm">
+                            <div class="mb-3">
+                                <label for="bookingName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="bookingName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="bookingEmail" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="bookingEmail" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="bookingPhone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="bookingPhone" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="bookingDate" class="form-label">Preferred Start Date</label>
+                                <input type="date" class="form-control" id="bookingDate" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="bookingAdults" class="form-label">Number of Adults</label>
+                                <select class="form-select" id="bookingAdults" required>
+                                    <option value="1">1 Adult</option>
+                                    <option value="2" selected>2 Adults</option>
+                                    <option value="3">3 Adults</option>
+                                    <option value="4">4 Adults</option>
+                                    <option value="5">5 Adults</option>
+                                    <option value="6">6 Adults</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="bookingChildren" class="form-label">Number of Children (Under 12)</label>
+                                <select class="form-select" id="bookingChildren">
+                                    <option value="0" selected>0 Children</option>
+                                    <option value="1">1 Child</option>
+                                    <option value="2">2 Children</option>
+                                    <option value="3">3 Children</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="bookingNotes" class="form-label">Special Requests</label>
+                                <textarea class="form-control" id="bookingNotes" rows="3"></textarea>
+                            </div>
+                            <div class="mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="bookingTerms" required>
+                                    <label class="form-check-label" for="bookingTerms">
+                                        I agree to the <a href="#">terms and conditions</a>
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 py-3">Book Now</button>
+                        </form>
+
+                        <div class="mt-4">
+                            <h5 class="mb-3">Need Help?</h5>
+                            <p class="mb-2"><i class="fa fa-phone-alt me-2"></i> +255 123 456 789</p>
+                            <p><i class="fa fa-envelope me-2"></i> bookings@safarishuffle.com</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-light rounded p-4 mt-4">
+                        <h4 class="mb-4">Why Book With Us?</h4>
+                        <div class="d-flex mb-3">
+                            <div class="flex-shrink-0 btn-sm-square bg-primary text-white rounded-circle me-3">
+                                <i class="fa fa-check"></i>
+                            </div>
+                            <p class="mb-0">Local safari experts with 15+ years experience</p>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="flex-shrink-0 btn-sm-square bg-primary text-white rounded-circle me-3">
+                                <i class="fa fa-check"></i>
+                            </div>
+                            <p class="mb-0">Best price guarantee</p>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="flex-shrink-0 btn-sm-square bg-primary text-white rounded-circle me-3">
+                                <i class="fa fa-check"></i>
+                            </div>
+                            <p class="mb-0">Flexible booking options</p>
+                        </div>
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-sm-square bg-primary text-white rounded-circle me-3">
+                                <i class="fa fa-check"></i>
+                            </div>
+                            <p class="mb-0">24/7 customer support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Package Content End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Contact Us</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Arusha, Tanzania</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+255 123 456 789</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@safarishuffle.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Our Services</h4>
+                    <a class="btn btn-link" href="#">Tailor-Made Safaris</a>
+                    <a class="btn btn-link" href="#">Group Safaris</a>
+                    <a class="btn btn-link" href="#">Luxury Safaris</a>
+                    <a class="btn btn-link" href="#">Zanzibar Beach Holidays</a>
+                    <a class="btn btn-link" href="#">Cultural Tours</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="#">About Us</a>
+                    <a class="btn btn-link" href="#">Destinations</a>
+                    <a class="btn btn-link" href="#">Safari Packages</a>
+                    <a class="btn btn-link" href="#">Terms & Conditions</a>
+                    <a class="btn btn-link" href="#">Contact Us</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Newsletter</h4>
+                    <p>Subscribe to receive updates on our latest safari offers and travel tips.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Safari Shuffle</a>, All Rights Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <!-- Designed by <a class="border-bottom" href="#">Your</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Booking Form Script -->
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('bookingName').value;
+            const email = document.getElementById('bookingEmail').value;
+            const phone = document.getElementById('bookingPhone').value;
+            const date = document.getElementById('bookingDate').value;
+            const adults = document.getElementById('bookingAdults').value;
+            const children = document.getElementById('bookingChildren').value;
+            const notes = document.getElementById('bookingNotes').value;
+            
+            // Here you would typically send this data to your server
+            // For now, we'll just show an alert
+            alert(`Thank you, ${name}! Your booking request for the Great Migration Safari has been received. We will contact you shortly to confirm your reservation.`);
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>

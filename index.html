@@ -83,7 +83,7 @@
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>+012 345 6789</small>
+                    <small>+255 681 838 482</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
                     <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
@@ -200,7 +200,7 @@
 								<h5 class="text-white text-uppercase mb-3 animated slideInDown">Conquer Mount Kilimanjaro</h5>
 								<h1 class="display-3 text-white animated slideInDown mb-4">The Roof of Africa Awaits</h1>
 								<p class="fs-5 fw-medium text-white mb-4 pb-2">
-									Stand on the summit of Africa’s highest peak. Whether you're trekking to Uhuru Peak or exploring its lush foothills, Mount Kilimanjaro offers an adventure like no other.
+									Stand on the summit of Africa's highest peak. Whether you're trekking to Uhuru Peak or exploring its lush foothills, Mount Kilimanjaro offers an adventure like no other.
 								</p>
 								<a href="kilimanjaro.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Start Your Journey</a>
 								<a href="booking.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Book Now</a>
@@ -277,7 +277,7 @@
 						<div class="section-title text-start">
 							<h1 class="display-5 mb-4">Our Journey at Safari Shuffle</h1>
 						</div>
-						<p class="mb-4 pb-2">Safari Shuffle is your gateway to Tanzania’s most incredible safari experiences. From the majestic Serengeti to the iconic Ngorongoro Crater, we provide personalized, immersive adventures that let you connect with nature like never before.</p>
+						<p class="mb-4 pb-2">Safari Shuffle is your gateway to Tanzania's most incredible safari experiences. From the majestic Serengeti to the iconic Ngorongoro Crater, we provide personalized, immersive adventures that let you connect with nature like never before.</p>
 						<div class="row g-4 mb-4 pb-2">
 							<div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
 								<div class="d-flex align-items-center">
@@ -471,197 +471,16 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="section-title text-center">
-            <h1 class="display-5 mb-5">Featured Safaris</h1>
+            <h1 class="display-5 mb-5">Featured Safari Packages</h1>
         </div>
-        <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
-            <div class="col-12 text-center">
-                <ul class="list-inline mb-5" id="portfolio-flters">
-                    <li class="mx-2 active" data-filter="*">All</li>
-                    <li class="mx-2" data-filter=".mainland">Mainland</li>
-                    <li class="mx-2" data-filter=".zanzibar">Zanzibar</li>
-                </ul>
+        <div class="col-12 text-center" id="loading-indicator" style="display: none;">
+             <div class="spinner-border text-primary" role="status">
+                 <span class="visually-hidden">Loading...</span>
             </div>
+             <p>Loading featured packages...</p>
         </div>
-        <div class="row g-4 portfolio-container">
-            <!-- Mainland Safari 1 - Serengeti & Ngorongoro -->
-            <div class="col-lg-4 col-md-6 portfolio-item mainland wow fadeInUp" data-wow-delay="0.1s">
-                <div class="card safari-card h-100 border-0 shadow-sm overflow-hidden">
-                    <div class="position-relative">
-                        <img class="card-img-top" src="img/pac1.jpg" alt="Serengeti Safari">
-                        <div class="card-img-overlay d-flex align-items-end p-0">
-                            <div class="price-badge bg-primary text-white px-3 py-2">
-                                From $2,850/person
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span class="text-primary"><i class="fas fa-calendar-alt me-2"></i>7 Days</span>
-                            <span class="text-primary"><i class="fas fa-map-marker-alt me-2"></i>3 Parks</span>
-                        </div>
-                        <h4 class="card-title mb-3">Serengeti & Ngorongoro Crater Safari</h4>
-                        <p class="card-text">Witness the Great Migration and explore the wildlife-rich Ngorongoro Crater with expert guides.</p>
-                        <ul class="list-unstyled mb-3">
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>All Big Five animals</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Luxury tented camps</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Private game drives</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <a href="#" class="btn btn-primary w-100 py-2">Explore Package</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Zanzibar Safari 1 - Island & Spice Tour -->
-            <div class="col-lg-4 col-md-6 portfolio-item zanzibar wow fadeInUp" data-wow-delay="0.3s">
-                <div class="card safari-card h-100 border-0 shadow-sm overflow-hidden">
-                    <div class="position-relative">
-                        <img class="card-img-top" src="img/pac2.jpg" alt="Zanzibar Safari">
-                        <div class="card-img-overlay d-flex align-items-end p-0">
-                            <div class="price-badge bg-primary text-white px-3 py-2">
-                                From $1,950/person
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span class="text-primary"><i class="fas fa-calendar-alt me-2"></i>5 Days</span>
-                            <span class="text-primary"><i class="fas fa-map-marker-alt me-2"></i>Zanzibar</span>
-                        </div>
-                        <h4 class="card-title mb-3">Zanzibar Island Safari & Spice Tour</h4>
-                        <p class="card-text">Experience pristine beaches, historic Stone Town, and fragrant spice plantations.</p>
-                        <ul class="list-unstyled mb-3">
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Private island tour</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Boutique beach resort</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Snorkeling included</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <a href="#" class="btn btn-primary w-100 py-2">Explore Package</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Mainland Safari 2 - Tarangire & Manyara -->
-            <div class="col-lg-4 col-md-6 portfolio-item mainland wow fadeInUp" data-wow-delay="0.5s">
-                <div class="card safari-card h-100 border-0 shadow-sm overflow-hidden">
-                    <div class="position-relative">
-                        <img class="card-img-top" src="img/pac3.jpg" alt="Tarangire Safari">
-                        <div class="card-img-overlay d-flex align-items-end p-0">
-                            <div class="price-badge bg-primary text-white px-3 py-2">
-                                From $2,150/person
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span class="text-primary"><i class="fas fa-calendar-alt me-2"></i>8 Days</span>
-                            <span class="text-primary"><i class="fas fa-map-marker-alt me-2"></i>4 Parks</span>
-                        </div>
-                        <h4 class="card-title mb-3">Tarangire & Manyara National Park Safari</h4>
-                        <p class="card-text">Discover elephant herds in Tarangire and tree-climbing lions in Lake Manyara.</p>
-                        <ul class="list-unstyled mb-3">
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Exclusive lodges</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Night game drives</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Cultural visits</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <a href="#" class="btn btn-primary w-100 py-2">Explore Package</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Zanzibar Safari 2 - Beach & Historical -->
-            <div class="col-lg-4 col-md-6 portfolio-item zanzibar wow fadeInUp" data-wow-delay="0.1s">
-                <div class="card safari-card h-100 border-0 shadow-sm overflow-hidden">
-                    <div class="position-relative">
-                        <img class="card-img-top" src="img/pac4.jpg" alt="Zanzibar Beach">
-                        <div class="card-img-overlay d-flex align-items-end p-0">
-                            <div class="price-badge bg-primary text-white px-3 py-2">
-                                From $2,250/person
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span class="text-primary"><i class="fas fa-calendar-alt me-2"></i>6 Days</span>
-                            <span class="text-primary"><i class="fas fa-map-marker-alt me-2"></i>Zanzibar</span>
-                        </div>
-                        <h4 class="card-title mb-3">Zanzibar Beach Safari & Historical Sites</h4>
-                        <p class="card-text">Combine relaxation on white sand beaches with exploration of Zanzibar's rich history.</p>
-                        <ul class="list-unstyled mb-3">
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Stone Town tour</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Prison Island visit</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Luxury beachfront villa</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <a href="#" class="btn btn-primary w-100 py-2">Explore Package</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Mainland Safari 3 - Kilimanjaro Combo -->
-            <div class="col-lg-4 col-md-6 portfolio-item mainland wow fadeInUp" data-wow-delay="0.3s">
-                <div class="card safari-card h-100 border-0 shadow-sm overflow-hidden">
-                    <div class="position-relative">
-                        <img class="card-img-top" src="img/pac5.jpg" alt="Kilimanjaro Safari">
-                        <div class="card-img-overlay d-flex align-items-end p-0">
-                            <div class="price-badge bg-primary text-white px-3 py-2">
-                                From $3,450/person
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span class="text-primary"><i class="fas fa-calendar-alt me-2"></i>10 Days</span>
-                            <span class="text-primary"><i class="fas fa-map-marker-alt me-2"></i>2 Activities</span>
-                        </div>
-                        <h4 class="card-title mb-3">Mount Kilimanjaro & Safari Combo</h4>
-                        <p class="card-text">Conquer Africa's highest peak then unwind with a wildlife safari adventure.</p>
-                        <ul class="list-unstyled mb-3">
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>6-day Machame route</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>3-day safari</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Certified mountain guides</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <a href="#" class="btn btn-primary w-100 py-2">Explore Package</a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Zanzibar Safari 3 - Wildlife & Beach -->
-            <div class="col-lg-4 col-md-6 portfolio-item zanzibar wow fadeInUp" data-wow-delay="0.5s">
-                <div class="card safari-card h-100 border-0 shadow-sm overflow-hidden">
-                    <div class="position-relative">
-                        <img class="card-img-top" src="img/pac6.jpg" alt="Zanzibar Wildlife">
-                        <div class="card-img-overlay d-flex align-items-end p-0">
-                            <div class="price-badge bg-primary text-white px-3 py-2">
-                                From $2,650/person
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="d-flex justify-content-between mb-2">
-                            <span class="text-primary"><i class="fas fa-calendar-alt me-2"></i>7 Days</span>
-                            <span class="text-primary"><i class="fas fa-map-marker-alt me-2"></i>Zanzibar</span>
-                        </div>
-                        <h4 class="card-title mb-3">Zanzibar Wildlife Safari & Beach Holiday</h4>
-                        <p class="card-text">Unique combination of Jozani Forest wildlife and luxury beach relaxation.</p>
-                        <ul class="list-unstyled mb-3">
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Red colobus monkey trekking</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Turtle sanctuary visit</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i>Private beach cabana</li>
-                        </ul>
-                    </div>
-                    <div class="card-footer bg-white border-0">
-                        <a href="#" class="btn btn-primary w-100 py-2">Explore Package</a>
-                    </div>
-                </div>
-            </div>
+        <div id="featured-packages-container" class="row g-4">
+            <!-- Featured packages will be loaded here by JavaScript -->
         </div>
     </div>
 </div>
@@ -767,7 +586,7 @@
             <div class="col-lg-3 col-md-6">
                 <h4 class="text-light mb-4">Contact Us</h4>
                 <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Arusha, Tanzania</p>
-                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+255 123 456 789</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+255 681 838 482</p>
                 <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@safarishuffle.com</p>
                 <div class="d-flex pt-2">
                     <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
@@ -840,6 +659,79 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <!-- Custom Script for Featured Packages -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const featuredContainer = document.getElementById('featured-packages-container');
+            const loadingIndicator = document.getElementById('loading-indicator');
+            const backendUrl = 'http://127.0.0.1:8000';
+
+            // Function to create package HTML (similar to tours.html)
+            function createPackageHTML(pkg) {
+                const imageUrl = pkg.hero_image ? `${backendUrl}/storage/${pkg.hero_image}` : 'img/placeholder.jpg';
+                const price = pkg.price ? `$${parseFloat(pkg.price).toFixed(0)}` : 'Contact for Price';
+                const title = pkg.title || 'Package Title';
+                const duration = pkg.duration || 'N/A';
+                const location = pkg.location || 'Multiple Locations';
+                const shortDesc = pkg.short_description || 'Explore this amazing safari!';
+                const detailUrl = `tourdetails.html?slug=${pkg.slug || pkg.id}`;
+
+                // Use the destination-item structure from index.html
+                 return `
+                    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                         <div class="destination-item h-100 d-flex flex-column">
+                             <div class="overflow-hidden">
+                                 <img class="img-fluid" src="${imageUrl}" alt="${title}" style="height: 250px; width: 100%; object-fit: cover;">
+                             </div>
+                             <div class="p-4 text-center border border-5 border-light border-top-0 flex-grow-1 d-flex flex-column">
+                                 <h5 class="mb-2">${title}</h5>
+                                 <p class="text-muted mb-2" style="font-size: 0.9em;"><i class="fa fa-clock text-primary me-2"></i>${duration}</p>
+                                 <p class="text-body mb-3 flex-grow-1" style="font-size: 0.9em;">${shortDesc.substring(0, 80)}${shortDesc.length > 80 ? '...' : ''}</p>
+                                 <div class="mt-auto">
+                                     <h5 class="mb-3">${price}</h5>
+                                     <a class="btn btn-sm btn-primary px-3" href="${detailUrl}" style="border-radius: 30px 30px 30px 30px;">View Details</a>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                 `;
+            }
+
+            // Function to fetch featured packages
+            async function fetchFeaturedPackages() {
+                loadingIndicator.style.display = 'block';
+                featuredContainer.innerHTML = ''; // Clear previous content
+
+                try {
+                    const response = await fetch(`${backendUrl}/api/packages?featured=true`);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    const result = await response.json();
+
+                    if (result.data && result.data.length > 0) {
+                        // Optionally limit the number of featured packages shown
+                        const packagesToShow = result.data.slice(0, 6); // Show max 6 featured packages
+                        packagesToShow.forEach(pkg => {
+                             featuredContainer.innerHTML += createPackageHTML(pkg);
+                        });
+                    } else {
+                        featuredContainer.innerHTML = '<div class="col-12"><p class="text-center">No featured packages available at the moment.</p></div>';
+                    }
+                } catch (error) {
+                    console.error("Error fetching featured packages:", error);
+                    featuredContainer.innerHTML = `<div class="col-12"><p class="text-center text-danger">Failed to load featured packages.</p></div>`;
+                } finally {
+                    loadingIndicator.style.display = 'none';
+                }
+            }
+
+            // Initial fetch
+            fetchFeaturedPackages();
+        });
+    </script>
+
 </body>
 
 </html>

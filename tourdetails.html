@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Safari Shuffle | Great Migration Safari Package</title>
+    <title id="page-title">Safari Shuffle | Package Details</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -66,6 +66,12 @@
         .gallery-img:hover {
             transform: scale(1.03);
         }
+        /* Add placeholder style */
+        .placeholder-glow .placeholder { min-height: 1em; }
+        /* Ensure hero background can be changed */
+        #package-hero-section {
+            transition: background-image 0.5s ease-in-out;
+        }
     </style>
 </head>
 
@@ -94,7 +100,7 @@
             <div class="col-lg-5 px-5 text-end">
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-phone-alt text-primary me-2"></small>
-                    <small>+255 123 456 789</small>
+                    <small>+255 681 838 482</small>
                 </div>
                 <div class="h-100 d-inline-flex align-items-center">
                     <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
@@ -161,33 +167,28 @@
 
 
     <!-- Package Hero Start -->
-    <div class="container-fluid package-hero">
+    <div class="container-fluid package-hero" id="package-hero-section">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
-                    <h1 class="display-4 text-white mb-4">Great Migration Safari</h1>
+                <div class="col-lg-8" id="package-hero-main">
+                    <!-- Placeholder while loading -->
+                     <div class="placeholder-glow">
+                        <h1 class="display-4 text-white mb-4 placeholder col-8" id="package-title">Package Title</h1>
                     <div class="d-flex align-items-center mb-4">
-                        <div class="me-4">
-                            <i class="fa fa-calendar-alt text-primary me-2"></i>
-                            <span class="text-white">5 Days / 4 Nights</span>
+                            <div class="me-4 placeholder col-3" id="package-duration">Duration</div>
+                            <div class="me-4 placeholder col-4" id="package-location">Location</div>
+                            <div class="placeholder col-3" id="package-rating">Rating</div>
                         </div>
-                        <div class="me-4">
-                            <i class="fa fa-map-marker-alt text-primary me-2"></i>
-                            <span class="text-white">Serengeti National Park</span>
+                        <div class="d-flex" id="package-tags">
+                            <span class="placeholder col-2 me-2 py-1 rounded"></span>
                         </div>
-                        <div>
-                            <i class="fa fa-star text-primary me-2"></i>
-                            <span class="text-white">5.0 (24 Reviews)</span>
-                        </div>
-                    </div>
-                    <div class="d-flex">
-                        <span class="bg-primary text-white px-3 py-1 rounded me-2">Popular</span>
-                        <span class="bg-white text-dark px-3 py-1 rounded">Great Migration</span>
                     </div>
                 </div>
-                <div class="col-lg-4 text-lg-end">
-                    <h2 class="text-white display-5 mb-3">From $1,800</h2>
-                    <span class="text-white-50">per person</span>
+                <div class="col-lg-4 text-lg-end" id="package-hero-price">
+                     <div class="placeholder-glow">
+                        <h2 class="text-white display-5 mb-3 placeholder col-5" id="package-price">$Price</h2>
+                        <span class="text-white-50 placeholder col-3">per person</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -203,183 +204,69 @@
                     <!-- Overview -->
                     <div class="mb-5">
                         <h2 class="mb-4">Tour Overview</h2>
-                        <p class="mb-4">Experience the greatest wildlife spectacle on earth - the annual Great Migration in Serengeti National Park. This 5-day safari follows the massive herds of wildebeest and zebra as they traverse the plains, with expert guides to maximize your wildlife viewing opportunities.</p>
-                        <p>Witness dramatic river crossings, predator action, and the breathtaking landscapes of the Serengeti. Our carefully designed itinerary ensures you'll be in the best locations at the optimal times for migration viewing.</p>
+                        <div id="package-overview" class="placeholder-glow">
+                             <p class="placeholder col-12"></p>
+                             <p class="placeholder col-10"></p>
+                             <p class="placeholder col-11"></p>
+                        </div>
                     </div>
 
                     <!-- Highlights -->
                     <div class="mb-5">
                         <h2 class="mb-4">Tour Highlights</h2>
-                        <div class="row g-4">
-                            <div class="col-md-6">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0 btn-lg-square bg-primary rounded-circle me-3">
-                                        <i class="fa fa-binoculars text-white"></i>
-                                    </div>
-                                    <div>
-                                        <h5>Migration Viewing</h5>
-                                        <p>Witness thousands of wildebeest crossing the plains and rivers</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0 btn-lg-square bg-primary rounded-circle me-3">
-                                        <i class="fa fa-camera text-white"></i>
-                                    </div>
-                                    <div>
-                                        <h5>Photography Focus</h5>
-                                        <p>Special vehicles with open roofs for optimal photography</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0 btn-lg-square bg-primary rounded-circle me-3">
-                                        <i class="fa fa-paw text-white"></i>
-                                    </div>
-                                    <div>
-                                        <h5>Big Five</h5>
-                                        <p>Excellent chances to see all of Africa's Big Five animals</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="d-flex">
-                                    <div class="flex-shrink-0 btn-lg-square bg-primary rounded-circle me-3">
-                                        <i class="fa fa-hotel text-white"></i>
-                                    </div>
-                                    <div>
-                                        <h5>Luxury Lodging</h5>
-                                        <p>Stay at premium safari lodges with stunning views</p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="row g-4" id="highlights-container">
+                            <!-- Highlights will be loaded here -->
+                             <div class="col-md-6 placeholder-glow"><p class="placeholder col-12"></p></div>
+                             <div class="col-md-6 placeholder-glow"><p class="placeholder col-12"></p></div>
                         </div>
                     </div>
 
                     <!-- Itinerary -->
                     <div class="mb-5">
                         <h2 class="mb-4">Detailed Itinerary</h2>
-                        <div class="itinerary-day">
-                            <h4>Day 1: Arrival in Arusha</h4>
-                            <p>Arrive at Kilimanjaro International Airport, where you'll be met by our representative and transferred to your lodge in Arusha. Evening briefing about your upcoming safari.</p>
-                            <p><strong>Accommodation:</strong> Arusha Coffee Lodge</p>
-                        </div>
-                        <div class="itinerary-day">
-                            <h4>Day 2: Arusha to Central Serengeti</h4>
-                            <p>Morning flight to Serengeti. Afternoon game drive in Seronera Valley, known for its year-round wildlife concentrations and scenic kopjes.</p>
-                            <p><strong>Accommodation:</strong> Serengeti Serena Safari Lodge</p>
-                        </div>
-                        <div class="itinerary-day">
-                            <h4>Day 3: Full Day Migration Viewing</h4>
-                            <p>Full day dedicated to following the migration herds. Picnic lunch in the bush. Depending on season, witness river crossings or calving grounds.</p>
-                            <p><strong>Accommodation:</strong> Serengeti Serena Safari Lodge</p>
-                        </div>
-                        <div class="itinerary-day">
-                            <h4>Day 4: Northern Serengeti</h4>
-                            <p>Transfer to northern Serengeti (seasonal). Game drives focusing on the Mara River crossings (July-October) or western corridor (May-July).</p>
-                            <p><strong>Accommodation:</strong> Sayari Camp</p>
-                        </div>
-                        <div class="itinerary-day">
-                            <h4>Day 5: Departure</h4>
-                            <p>Morning game drive followed by transfer to airstrip for flight back to Arusha. Connect with your international flight or extend your stay.</p>
+                        <div id="itinerary-container">
+                            <!-- Itinerary days will be loaded here -->
+                             <div class="placeholder-glow"><p class="placeholder col-12 mb-3"></p></div>
                         </div>
                     </div>
 
-                    <!-- Inclusions/Exclusions -->
-                    <div class="row mb-5">
+                    <!-- Inclusions & Exclusions -->
+                    <div class="row g-4 mb-5">
                         <div class="col-md-6">
-                            <div class="bg-light p-4 rounded">
-                                <h4 class="mb-4">Included</h4>
-                                <div class="included-item">
-                                    <i class="fa fa-check me-2"></i> All park fees and taxes
-                                </div>
-                                <div class="included-item">
-                                    <i class="fa fa-check me-2"></i> Luxury accommodation
-                                </div>
-                                <div class="included-item">
-                                    <i class="fa fa-check me-2"></i> All meals on safari
-                                </div>
-                                <div class="included-item">
-                                    <i class="fa fa-check me-2"></i> Professional guide
-                                </div>
-                                <div class="included-item">
-                                    <i class="fa fa-check me-2"></i> Domestic flights
-                                </div>
-                                <div class="included-item">
-                                    <i class="fa fa-check me-2"></i> Game drives in 4x4 vehicle
-                                </div>
-                            </div>
+                            <h4 class="mb-3">What's Included</h4>
+                            <ul class="list-unstyled" id="inclusions-list">
+                                <!-- Inclusions will be loaded here -->
+                                 <li class="placeholder-glow"><span class="placeholder col-7"></span></li>
+                                 <li class="placeholder-glow"><span class="placeholder col-8"></span></li>
+                            </ul>
                         </div>
                         <div class="col-md-6">
-                            <div class="bg-light p-4 rounded">
-                                <h4 class="mb-4">Not Included</h4>
-                                <div class="excluded-item">
-                                    <i class="fa fa-times me-2"></i> International flights
-                                </div>
-                                <div class="excluded-item">
-                                    <i class="fa fa-times me-2"></i> Travel insurance
-                                </div>
-                                <div class="excluded-item">
-                                    <i class="fa fa-times me-2"></i> Visa fees
-                                </div>
-                                <div class="excluded-item">
-                                    <i class="fa fa-times me-2"></i> Alcoholic beverages
-                                </div>
-                                <div class="excluded-item">
-                                    <i class="fa fa-times me-2"></i> Tips and gratuities
-                                </div>
-                                <div class="excluded-item">
-                                    <i class="fa fa-times me-2"></i> Personal expenses
-                                </div>
-                            </div>
+                            <h4 class="mb-3">What's Not Included</h4>
+                            <ul class="list-unstyled" id="exclusions-list">
+                                <!-- Exclusions will be loaded here -->
+                                 <li class="placeholder-glow"><span class="placeholder col-7"></span></li>
+                                 <li class="placeholder-glow"><span class="placeholder col-6"></span></li>
+                            </ul>
                         </div>
                     </div>
 
                     <!-- Gallery -->
                     <div class="mb-5">
-                        <h2 class="mb-4">Gallery</h2>
-                        <div class="row g-3">
-                            <div class="col-lg-4 col-md-6">
-                                <a href="img/tour1.jpg" data-lightbox="gallery">
-                                    <img src="img/tour1.jpg" class="img-fluid rounded gallery-img" alt="Serengeti Landscape">
-                                </a>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <a href="img/serengeti-gallery2.jpg" data-lightbox="gallery">
-                                    <img src="img/tour2.jpg" class="img-fluid rounded gallery-img" alt="Wildebeest Migration">
-                                </a>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <a href="img/img/tour3.jpg" data-lightbox="gallery">
-                                    <img src="img/tour3.jpg" class="img-fluid rounded gallery-img" alt="Safari Vehicle">
-                                </a>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <a href="img/tour6.jpg" data-lightbox="gallery">
-                                    <img src="img/tour6.jpg" class="img-fluid rounded gallery-img" alt="Lodge Accommodation">
-                                </a>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <a href="img/tour4.jpg" data-lightbox="gallery">
-                                    <img src="img/tour4.jpg" class="img-fluid rounded gallery-img" alt="River Crossing">
-                                </a>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <a href="img/tour5.jpg" data-lightbox="gallery">
-                                    <img src="img/tour5.jpg" class="img-fluid rounded gallery-img" alt="Sunset in Serengeti">
-                                </a>
-                            </div>
+                        <h2 class="mb-4">Photo Gallery</h2>
+                        <div class="row g-3" id="gallery-container">
+                            <!-- Gallery images will be loaded here -->
+                             <div class="col-md-4 placeholder-glow"><div class="placeholder" style="height: 150px;"></div></div>
+                             <div class="col-md-4 placeholder-glow"><div class="placeholder" style="height: 150px;"></div></div>
+                             <div class="col-md-4 placeholder-glow"><div class="placeholder" style="height: 150px;"></div></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Booking Sidebar -->
+                <!-- Sidebar -->
                 <div class="col-lg-4">
-                    <div class="bg-light rounded p-4 booking-card">
-                        <h3 class="mb-4">Book This Tour</h3>
-                        <form id="bookingForm">
+                    <div class="card booking-card p-4">
+                        <h4 class="mb-4">Book This Tour</h4>
+                        <form>
                             <div class="mb-3">
                                 <label for="bookingName" class="form-label">Full Name</label>
                                 <input type="text" class="form-control" id="bookingName" required>
@@ -390,80 +277,22 @@
                             </div>
                             <div class="mb-3">
                                 <label for="bookingPhone" class="form-label">Phone Number</label>
-                                <input type="tel" class="form-control" id="bookingPhone" required>
+                                <input type="tel" class="form-control" id="bookingPhone">
                             </div>
                             <div class="mb-3">
-                                <label for="bookingDate" class="form-label">Preferred Start Date</label>
-                                <input type="date" class="form-control" id="bookingDate" required>
+                                <label for="bookingDate" class="form-label">Preferred Travel Date</label>
+                                <input type="date" class="form-control" id="bookingDate">
                             </div>
                             <div class="mb-3">
-                                <label for="bookingAdults" class="form-label">Number of Adults</label>
-                                <select class="form-select" id="bookingAdults" required>
-                                    <option value="1">1 Adult</option>
-                                    <option value="2" selected>2 Adults</option>
-                                    <option value="3">3 Adults</option>
-                                    <option value="4">4 Adults</option>
-                                    <option value="5">5 Adults</option>
-                                    <option value="6">6 Adults</option>
-                                </select>
+                                <label for="bookingGuests" class="form-label">Number of Guests</label>
+                                <input type="number" class="form-control" id="bookingGuests" min="1" value="2">
                             </div>
                             <div class="mb-3">
-                                <label for="bookingChildren" class="form-label">Number of Children (Under 12)</label>
-                                <select class="form-select" id="bookingChildren">
-                                    <option value="0" selected>0 Children</option>
-                                    <option value="1">1 Child</option>
-                                    <option value="2">2 Children</option>
-                                    <option value="3">3 Children</option>
-                                </select>
+                                <label for="bookingMessage" class="form-label">Message (Optional)</label>
+                                <textarea class="form-control" id="bookingMessage" rows="3"></textarea>
                             </div>
-                            <div class="mb-3">
-                                <label for="bookingNotes" class="form-label">Special Requests</label>
-                                <textarea class="form-control" id="bookingNotes" rows="3"></textarea>
-                            </div>
-                            <div class="mb-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="bookingTerms" required>
-                                    <label class="form-check-label" for="bookingTerms">
-                                        I agree to the <a href="#">terms and conditions</a>
-                                    </label>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100 py-3">Book Now</button>
+                            <button type="submit" class="btn btn-primary w-100">Send Enquiry</button>
                         </form>
-
-                        <div class="mt-4">
-                            <h5 class="mb-3">Need Help?</h5>
-                            <p class="mb-2"><i class="fa fa-phone-alt me-2"></i> +255 123 456 789</p>
-                            <p><i class="fa fa-envelope me-2"></i> bookings@safarishuffle.com</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-light rounded p-4 mt-4">
-                        <h4 class="mb-4">Why Book With Us?</h4>
-                        <div class="d-flex mb-3">
-                            <div class="flex-shrink-0 btn-sm-square bg-primary text-white rounded-circle me-3">
-                                <i class="fa fa-check"></i>
-                            </div>
-                            <p class="mb-0">Local safari experts with 15+ years experience</p>
-                        </div>
-                        <div class="d-flex mb-3">
-                            <div class="flex-shrink-0 btn-sm-square bg-primary text-white rounded-circle me-3">
-                                <i class="fa fa-check"></i>
-                            </div>
-                            <p class="mb-0">Best price guarantee</p>
-                        </div>
-                        <div class="d-flex mb-3">
-                            <div class="flex-shrink-0 btn-sm-square bg-primary text-white rounded-circle me-3">
-                                <i class="fa fa-check"></i>
-                            </div>
-                            <p class="mb-0">Flexible booking options</p>
-                        </div>
-                        <div class="d-flex">
-                            <div class="flex-shrink-0 btn-sm-square bg-primary text-white rounded-circle me-3">
-                                <i class="fa fa-check"></i>
-                            </div>
-                            <p class="mb-0">24/7 customer support</p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -478,7 +307,7 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Contact Us</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Arusha, Tanzania</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+255 123 456 789</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+255 681 838 482</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@safarishuffle.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
@@ -548,27 +377,178 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-    <!-- Booking Form Script -->
+     <!-- Tour Detail Loading Script -->
     <script>
-        document.getElementById('bookingForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form values
-            const name = document.getElementById('bookingName').value;
-            const email = document.getElementById('bookingEmail').value;
-            const phone = document.getElementById('bookingPhone').value;
-            const date = document.getElementById('bookingDate').value;
-            const adults = document.getElementById('bookingAdults').value;
-            const children = document.getElementById('bookingChildren').value;
-            const notes = document.getElementById('bookingNotes').value;
-            
-            // Here you would typically send this data to your server
-            // For now, we'll just show an alert
-            alert(`Thank you, ${name}! Your booking request for the Great Migration Safari has been received. We will contact you shortly to confirm your reservation.`);
-            
-            // Reset form
-            this.reset();
+        document.addEventListener('DOMContentLoaded', function() {
+            const backendUrl = 'http://127.0.0.1:8000';
+            const params = new URLSearchParams(window.location.search);
+            const packageSlug = params.get('slug') || params.get('id'); // Get slug or ID
+
+            const titleEl = document.getElementById('page-title');
+            const heroSectionEl = document.getElementById('package-hero-section');
+            const packageTitleEl = document.getElementById('package-title');
+            const durationEl = document.getElementById('package-duration');
+            const locationEl = document.getElementById('package-location');
+            const ratingEl = document.getElementById('package-rating');
+            const tagsEl = document.getElementById('package-tags');
+            const priceEl = document.getElementById('package-price');
+            const overviewEl = document.getElementById('package-overview');
+            const highlightsContainer = document.getElementById('highlights-container');
+            const itineraryContainer = document.getElementById('itinerary-container');
+            const inclusionsList = document.getElementById('inclusions-list');
+            const exclusionsList = document.getElementById('exclusions-list');
+            const galleryContainer = document.getElementById('gallery-container');
+
+            // Helper to safely set text content
+            const setText = (el, text) => { if (el && text) el.textContent = text; };
+            // Helper to safely set inner HTML
+            const setHtml = (el, html) => { if (el) el.innerHTML = html; };
+
+            async function fetchPackageDetails() {
+                if (!packageSlug) {
+                    console.error('No package slug or ID found in URL');
+                    setHtml(document.body, '<div class="container py-5 text-center"><h1>Package Not Found</h1><p>Please provide a valid package identifier in the URL.</p></div>');
+                    return;
+                }
+
+                const apiUrl = `${backendUrl}/api/packages/${packageSlug}`;
+
+                try {
+                    const response = await fetch(apiUrl);
+                    if (!response.ok) {
+                         if (response.status === 404) {
+                             throw new Error('Package not found.');
+                         } else {
+                             throw new Error(`HTTP error! status: ${response.status}`);
+                         }
+                    }
+                    const pkg = await response.json();
+
+                    // --- Populate Hero Section ---
+                    setText(titleEl, `Safari Shuffle | ${pkg.title || 'Package Details'}`);
+                    if (pkg.hero_image) {
+                         heroSectionEl.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${backendUrl}/storage/${pkg.hero_image}')`;
+                    }
+                    document.getElementById('package-hero-main').classList.remove('placeholder-glow');
+                    document.getElementById('package-hero-price').classList.remove('placeholder-glow');
+                    setText(packageTitleEl, pkg.title);
+                    setText(durationEl, pkg.duration);
+                    setText(locationEl, pkg.location);
+                    setText(ratingEl, pkg.rating_display || ''); // Hide if empty
+                    if(ratingEl && pkg.rating_display) ratingEl.innerHTML = `<i class="fa fa-star text-primary me-2"></i> ${pkg.rating_display}`;
+                    else if(ratingEl) ratingEl.innerHTML = ''; // Clear placeholder if no rating
+                    
+                    let tagsHtml = '';
+                    if (pkg.show_popular_tag) {
+                         tagsHtml += `<span class="bg-primary text-white px-3 py-1 rounded me-2">Popular</span>`;
+                    }
+                    if (pkg.display_tags) {
+                        pkg.display_tags.split(',').forEach(tag => {
+                             tagsHtml += `<span class="bg-white text-dark px-3 py-1 rounded me-2">${tag.trim()}</span>`;
+                        });
+                    }
+                    setHtml(tagsEl, tagsHtml || '');
+                    
+                    setText(priceEl, pkg.price ? `$${parseFloat(pkg.price).toFixed(0)}` : 'Contact Us');
+
+                    // --- Populate Main Content ---
+                    setHtml(overviewEl, pkg.overview ? pkg.overview.replace(/\n/g, '<br>') : 'No overview provided.');
+                     overviewEl.classList.remove('placeholder-glow');
+
+                    // Highlights
+                    let highlightsHtml = '';
+                    if (pkg.highlights && Array.isArray(pkg.highlights) && pkg.highlights.length > 0) {
+                        pkg.highlights.forEach(item => {
+                            highlightsHtml += `
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start">
+                                        <div class="flex-shrink-0 btn-lg-square bg-primary text-white rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+                                             <i class="fa fa-star"></i> <!-- You might want different icons -->
+                                        </div>
+                                        <div>
+                                            <h5 class="mb-1">${item.title || 'Highlight'}</h5>
+                                            <p class="mb-0 text-muted small">${item.description || ''}</p>
+                                        </div>
+                                    </div>
+                                </div>`;
+                        });
+                    } else {
+                        highlightsHtml = '<div class="col-12"><p>No specific highlights listed for this package.</p></div>';
+                    }
+                    setHtml(highlightsContainer, highlightsHtml);
+
+                    // Itinerary
+                    let itineraryHtml = '';
+                    if (pkg.itinerary && Array.isArray(pkg.itinerary) && pkg.itinerary.length > 0) {
+                        pkg.itinerary.forEach(day => {
+                            itineraryHtml += `
+                                <div class="itinerary-day">
+                                    <h4 class="h6 fw-bold text-primary">${day.title || 'Day'}</h4>
+                                    <p class="small mb-1">${day.description ? day.description.replace(/\n/g, '<br>') : 'No description.'}</p>
+                                    ${day.accommodation ? `<p class="small mb-0"><strong>Accommodation:</strong> ${day.accommodation}</p>` : ''}
+                                </div>`;
+                        });
+                    } else {
+                        itineraryHtml = '<p>No detailed itinerary provided for this package.</p>';
+                    }
+                    setHtml(itineraryContainer, itineraryHtml);
+
+                    // Inclusions
+                    let inclusionsHtml = '';
+                     if (pkg.inclusions && Array.isArray(pkg.inclusions) && pkg.inclusions.length > 0) {
+                        pkg.inclusions.forEach(item => {
+                            inclusionsHtml += `<li class="included-item"><i class="fa fa-check me-2"></i>${item}</li>`;
+                        });
+                    } else {
+                        inclusionsHtml = '<li>No inclusions specified.</li>';
+                    }
+                    setHtml(inclusionsList, inclusionsHtml);
+
+                    // Exclusions
+                    let exclusionsHtml = '';
+                     if (pkg.exclusions && Array.isArray(pkg.exclusions) && pkg.exclusions.length > 0) {
+                        pkg.exclusions.forEach(item => {
+                            exclusionsHtml += `<li class="excluded-item"><i class="fa fa-times me-2"></i>${item}</li>`;
+                        });
+                    } else {
+                        exclusionsHtml = '<li>No exclusions specified.</li>';
+                    }
+                    setHtml(exclusionsList, exclusionsHtml);
+
+                    // Gallery
+                    let galleryHtml = '';
+                     if (pkg.gallery_images && Array.isArray(pkg.gallery_images) && pkg.gallery_images.length > 0) {
+                        pkg.gallery_images.forEach(imagePath => {
+                             const fullImagePath = `${backendUrl}/storage/${imagePath}`;
+                             galleryHtml += `
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="${fullImagePath}" data-lightbox="gallery">
+                                        <img class="img-fluid rounded gallery-img" src="${fullImagePath}" alt="Package Gallery Image" style="height: 200px; width: 100%; object-fit: cover;">
+                                    </a>
+                                </div>`;
+                        });
+                    } else {
+                        galleryHtml = '<div class="col-12"><p>No gallery images available for this package.</p></div>';
+                    }
+                    setHtml(galleryContainer, galleryHtml);
+
+                    // Initialize lightbox if images were added
+                     if (pkg.gallery_images && pkg.gallery_images.length > 0) {
+                         lightbox.option({
+                             'resizeDuration': 200,
+                             'wrapAround': true
+                         });
+                     }
+
+                } catch (error) {
+                    console.error("Error fetching package details:", error);
+                    setHtml(document.body, `<div class="container py-5 text-center"><h1>Error</h1><p>${error.message}</p><a href="tours.html">Back to Tours</a></div>`);
+                }
+            }
+
+            fetchPackageDetails();
         });
     </script>
+
 </body>
 </html>

@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Safari Shuffle | Cultural Tours in Tanzania</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="tanzania cultural tours, maasai village visit, hadzabe tribe, cultural safari" name="keywords">
+    <meta content="Immerse yourself in Tanzania's rich cultural heritage with our authentic cultural tours. Visit Maasai villages, meet the Hadzabe tribe, and experience local traditions." name="description">
+
+    <!-- Favicon -->
+    <link href="img/safarishuffleicon.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .cultural-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/cultural-tour-hero.jpg') center/cover no-repeat;
+            min-height: 70vh;
+        }
+        .culture-card {
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        .culture-card:hover {
+            transform: translateY(-5px);
+        }
+        .culture-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(13, 110, 253, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Topbar -->
+    <div class="container-fluid bg-light p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>Arusha, Tanzania</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Mon - Fri: 9AM - 6PM | Sat: 9AM - 1PM</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+255 681 838 482</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar Start -->
+	<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="img/safarilogo.png" alt="WooDY Logo" class="navbar-logo">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Destinations</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="serengeti.html" class="dropdown-item">Serengeti National Park</a>
+                        <a href="ngorongoro.html" class="dropdown-item">Ngorongoro Conservational Area</a>
+                        <a href="manyara.html" class="dropdown-item">Lake Manyara National Park</a>
+                        <a href="tarangire.html" class="dropdown-item">Tarangire National Park</a>
+                        <a href="zanzibar.html" class="dropdown-item">Zanzibar</a>
+                        <a href="kilimanjaro.html" class="dropdown-item">Mount Kilimanjaro</a>
+                    </div>
+                </div>
+                <a href="tours.html" class="nav-item nav-link">Tours</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our Services</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="tailormade.html" class="dropdown-item">Tailor Made Safaris</a>
+                        <a href="luxurysafaris.html" class="dropdown-item">Luxury Safaris</a>
+                        <a href="groupsafari.html" class="dropdown-item">Group Safaris</a>
+                        <a href="zanzaibarbeachholidya.html" class="dropdown-item">Zanzibar Beach Holidays</a>
+                        <a href="culturaltours.html" class="dropdown-item">Cultural Tours</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Travel Tips</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="packing.html" class="dropdown-item">Packing Tips</a>
+                        <a href="visa.html" class="dropdown-item">Visa Information</a>
+                        <a href="health&safety.html" class="dropdown-item">Health & Safety</a>
+                        <a href="besttimetovisit.html" class="dropdown-item">Best Time to Visit</a>
+                        <a href="localcustoms.html" class="dropdown-item">Local Customs</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            
+            <a href="booking.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section -->
+    <div class="container-fluid cultural-hero d-flex align-items-center">
+        <div class="container text-center text-white py-5">
+            <h1 class="display-3 mb-4 text-white">Cultural Tours of Tanzania</h1>
+            <p class="fs-4 mb-5 text-white">Authentic encounters with Tanzania's diverse cultures and traditions</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#tours" class="btn btn-lg btn-primary px-4 py-3">View Tours</a>
+                <a href="contact.html" class="btn btn-lg btn-outline-light px-4 py-3">Enquire Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Intro Section -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="section-title position-relative">
+                        <h6 class="text-uppercase text-primary mb-3">Cultural Immersion</h6>
+                        <h1 class="display-5 mb-4">Discover Tanzania's <span class="text-primary">Living Heritage</span></h1>
+                    </div>
+                    <p class="mb-4">Tanzania is home to over 120 ethnic groups, each with their own unique traditions, languages, and ways of life. Our cultural tours offer respectful, authentic experiences that support local communities while giving you unforgettable insights into Tanzania's human tapestry.</p>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-check text-white"></i>
+                                </div>
+                                <h6 class="mb-0">Ethically Conducted</h6>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-check text-white"></i>
+                                </div>
+                                <h6 class="mb-0">Local Guides</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-check text-white"></i>
+                                </div>
+                                <h6 class="mb-0">Community Benefits</h6>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-check text-white"></i>
+                                </div>
+                                <h6 class="mb-0">Hands-On Experiences</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#communities" class="btn btn-primary py-3 px-5 mt-4">Meet the Communities</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img class="img-fluid rounded w-100" src="img/maasai-jumping.avif" alt="Maasai Warriors" style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="col-6">
+                            <img class="img-fluid rounded w-100" src="img/hadzabe-hunting.jpg" alt="Hadzabe Hunter" style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="col-6">
+                            <img class="img-fluid rounded w-100" src="img/sukuma-dance.jpg" alt="Sukuma Dance" style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="col-6">
+                            <img class="img-fluid rounded w-100" src="img/Tanzania-Culture.webp" alt="Iraqw Art" style="height: 250px; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cultural Communities -->
+    <div class="container-fluid bg-light py-5" id="communities">
+        <div class="container py-5">
+            <div class="section-title text-center">
+                <h6 class="text-uppercase text-primary mb-3">Cultural Diversity</h6>
+                <h1 class="display-5 mb-5">Meet Tanzania's <span class="text-primary">Communities</span></h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card culture-card h-100 border-0 shadow-sm">
+                        <img src="img/maasai-village.jpg" class="card-img-top" alt="Maasai Village" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">The Maasai</h5>
+                            <p class="text-muted">Northern Tanzania</p>
+                            <p class="card-text">Semi-nomadic pastoralists known for their distinctive red shukas, intricate beadwork, and jumping dances.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <div class="d-flex justify-content-between">
+                                <small><i class="fas fa-tshirt text-primary me-1"></i> Beadwork</small>
+                                <small><i class="fas fa-home text-primary me-1"></i> Manyattas</small>
+                                <small><i class="fas fa-cow text-primary me-1"></i> Cattle</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card culture-card h-100 border-0 shadow-sm">
+                        <img src="img/hadzabe-camp.jpg" class="card-img-top" alt="Hadzabe Camp" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">The Hadzabe</h5>
+                            <p class="text-muted">Lake Eyasi Region</p>
+                            <p class="card-text">One of the last hunter-gatherer tribes in Africa, with a click language and ancient survival skills.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <div class="d-flex justify-content-between">
+                                <small><i class="fas fa-bow-arrow text-primary me-1"></i> Hunting</small>
+                                <small><i class="fas fa-honey-pot text-primary me-1"></i> Foraging</small>
+                                <small><i class="fas fa-campground text-primary me-1"></i> Nomadic</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card culture-card h-100 border-0 shadow-sm">
+                        <img src="img/datoga-family.jpg" class="card-img-top" alt="Datoga Family" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">The Datoga</h5>
+                            <p class="text-muted">Manyara Region</p>
+                            <p class="card-text">Skilled blacksmiths and pastoralists with distinctive facial tattoos and brass jewelry.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <div class="d-flex justify-content-between">
+                                <small><i class="fas fa-hammer text-primary me-1"></i> Metalwork</small>
+                                <small><i class="fas fa-ring text-primary me-1"></i> Jewelry</small>
+                                <small><i class="fas fa-warehouse text-primary me-1"></i> Settled</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card culture-card h-100 border-0 shadow-sm">
+                        <img src="img/zaramo-dancers.jpg" class="card-img-top" alt="Zaramo Dancers" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">The Zaramo</h5>
+                            <p class="text-muted">Coastal Tanzania</p>
+                            <p class="card-text">Coastal people known for their ngoma drumming traditions and intricate wood carvings.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <div class="d-flex justify-content-between">
+                                <small><i class="fas fa-drum text-primary me-1"></i> Music</small>
+                                <small><i class="fas fa-wood text-primary me-1"></i> Carving</small>
+                                <small><i class="fas fa-fish text-primary me-1"></i> Fishing</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experiences -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="section-title text-center">
+                <h6 class="text-uppercase text-primary mb-3">Authentic Encounters</h6>
+                <h1 class="display-5 mb-5">Cultural <span class="text-primary">Experiences</span></h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center p-4">
+                        <div class="culture-icon">
+                            <i class="fas fa-fire fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="mb-3">Maasai Village Stay</h5>
+                        <p class="mb-0">Spend a day and night in a traditional manyatta, learning about cattle herding, beadwork, and warrior traditions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center p-4">
+                        <div class="culture-icon">
+                            <i class="fas fa-bow-arrow fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="mb-3">Hadzabe Hunting</h5>
+                        <p class="mb-0">Join a hunting expedition using traditional bows and arrows, then gather wild honey and tubers.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center p-4">
+                        <div class="culture-icon">
+                            <i class="fas fa-hammer fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="mb-3">Datoga Blacksmithing</h5>
+                        <p class="mb-0">Learn ancient metalworking techniques to create jewelry and tools from scrap metal and beads.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center p-4">
+                        <div class="culture-icon">
+                            <i class="fas fa-drum fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="mb-3">Traditional Dance</h5>
+                        <p class="mb-0">Participate in Sukuma snake dances or Zaramo drumming ceremonies with local performers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tours -->
+    <div class="container-fluid bg-light py-5" id="tours">
+        <div class="container py-5">
+            <div class="section-title text-center">
+                <h6 class="text-uppercase text-primary mb-3">Featured Tours</h6>
+                <h1 class="display-5 mb-5">Cultural <span class="text-primary">Tour Packages</span></h1>
+            </div>
+             <div class="col-12 text-center" id="loading-indicator" style="display: none;">
+                 <div class="spinner-border text-primary" role="status">
+                     <span class="visually-hidden">Loading...</span>
+                        </div>
+                 <p>Loading cultural packages...</p>
+                        </div>
+            <div id="cultural-packages-container" class="row g-4">
+                 <!-- Cultural packages will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Ethical Tourism -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <img src="img/ethical-tourism.jpg" class="img-fluid rounded" alt="Ethical Tourism" style="height: 100%; object-fit: cover;">
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-title position-relative">
+                        <h6 class="text-uppercase text-primary mb-3">Our Approach</h6>
+                        <h1 class="display-5 mb-4">Ethical <span class="text-primary">Cultural Tourism</span></h1>
+                    </div>
+                    <p>We are committed to responsible cultural tourism that benefits local communities while preserving traditions:</p>
+                    <div class="mb-4">
+                        <h5><i class="fas fa-hand-holding-heart text-primary me-2"></i> Community Partnerships</h5>
+                        <p>All tours are designed with local leaders to ensure authentic experiences that respect cultural norms.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h5><i class="fas fa-money-bill-wave text-primary me-2"></i> Direct Benefits</h5>
+                        <p>At least 60% of your tour fee goes directly to the communities you visit.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h5><i class="fas fa-camera text-primary me-2"></i> Respectful Photography</h5>
+                        <p>We educate visitors on appropriate photography and always ask permission.</p>
+                    </div>
+                    <div>
+                        <h5><i class="fas fa-exchange-alt text-primary me-2"></i> Cultural Exchange</h5>
+                        <p>Our tours emphasize two-way learning and meaningful interaction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <!-- <div class="container-fluid bg-light py-5"> -->
+        <!-- <div class="container py-5">
+            <div class="section-title text-center">
+                <h6 class="text-uppercase text-primary mb-3">Traveler Stories</h6>
+                <h1 class="display-5 mb-5">Cultural Tour <span class="text-primary">Testimonials</span></h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="testimonial-item bg-white p-4 border">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="img/testimonial-4.jpg" class="rounded-circle me-3" width="60" alt="Guest">
+                            <div>
+                                <h6 class="mb-0">The Williams Family</h6>
+                                <small>Australia | July 2023</small>
+                                <div class="text-primary">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Spending time with the Hadzabe was the highlight of our Tanzania trip. Our kids (ages 10 and 12) learned to make fire with sticks and shot bows and arrows. The genuine warmth of the people was unforgettable."</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-item bg-white p-4 border">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="img/testimonial-5.jpg" class="rounded-circle me-3" width="60" alt="Guest">
+                            <div>
+                                <h6 class="mb-0">Maria & Sofia</h6>
+                                <small>Spain | September 2023</small>
+                                <div class="text-primary">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">"The Maasai women taught us beadwork techniques passed down for generations. We appreciated how the tour fees directly supported the village school. Much more meaningful than typical tourist experiences."</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-item bg-white p-4 border">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="img/testimonial-6.jpg" class="rounded-circle me-3" width="60" alt="Guest">
+                            <div>
+                                <h6 class="mb-0">James K.</h6>
+                                <small>Canada | Anthropologist, March 2023</small>
+                                <div class="text-primary">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">"As an anthropologist, I was impressed by how respectfully these tours are conducted. The Datoga blacksmithing demonstration provided authentic insight into their metalworking traditions rarely seen by outsiders."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- CTA -->
+    <div class="container-fluid bg-primary text-white py-5">
+        <div class="container text-center py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="display-5 mb-4">Ready for a Cultural Adventure?</h2>
+                    <p class="fs-5 mb-5">Connect with Tanzania's living traditions through our respectful cultural tours</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="contact.html" class="btn btn-lg btn-light px-4 py-3">
+                            <i class="fas fa-envelope me-2"></i> Enquire Now
+                        </a>
+                        <a href="tel:+255789456123" class="btn btn-lg btn-outline-light px-4 py-3">
+                            <i class="fas fa-phone-alt me-2"></i> Call +255 789 456 123
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Contact Us</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Arusha, Tanzania</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+255 681 838 482</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@safarishuffle.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Our Services</h4>
+                <a class="btn btn-link" href="tailormade.html">Tailor-Made Safaris</a>
+                <a class="btn btn-link" href="groupsafari.html">Group Safaris</a>
+                <a class="btn btn-link" href="luxurysafaris.html">Luxury Safaris</a>
+                <a class="btn btn-link" href="zanzaibarbeachholidya.html">Zanzibar Beach Holidays</a>
+                <a class="btn btn-link" href="culturaltours.html">Cultural Tours</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Quick Links</h4>
+                <a class="btn btn-link" href="about us.html">About Us</a>
+                <!-- <a class="btn btn-link" href="#">Destinations</a> -->
+                <a class="btn btn-link" href="tours.html">Safari Packages</a>
+                <a class="btn btn-link" href="termsandconditions.html">Terms & Conditions</a>
+                <a class="btn btn-link" href="contact.html">Contact Us</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Newsletter</h4>
+                <p>Subscribe to receive updates on our latest safari offers and travel tips.</p>
+                <div class="position-relative mx-auto" style="max-width: 400px;">
+                    <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Safari Shuffle</a>, All Rights Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!-- Designed by <a class="border-bottom" href="#">Your</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+<a href="https://wa.me/yourwhatsappnumber" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp whatsapp-icon"></i>
+</a>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Custom Script for Cultural Packages -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const culturalContainer = document.getElementById('cultural-packages-container');
+            const loadingIndicator = document.getElementById('loading-indicator');
+            const backendUrl = 'http://127.0.0.1:8000';
+
+            function createCulturalPackageHTML(pkg) {
+                const imageUrl = pkg.hero_image ? `${backendUrl}/storage/${pkg.hero_image}` : 'img/placeholder.jpg';
+                const price = pkg.price ? `$${parseFloat(pkg.price).toFixed(0)}` : 'Contact for Price';
+                const title = pkg.title || 'Cultural Tour Package';
+                const duration = pkg.duration || 'Varies';
+                const shortDesc = pkg.short_description || 'Immerse yourself in local culture.';
+                const detailUrl = `tourdetails.html?slug=${pkg.slug || pkg.id}`;
+
+                // Attempt to create a few highlights or inclusions
+                let featuresHTML = '';
+                if (pkg.highlights && pkg.highlights.length > 0) {
+                    pkg.highlights.slice(0, 3).forEach(h => { // Show max 3 highlights
+                        featuresHTML += `<li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> ${h.title}</li>`;
+                    });
+                } else if (pkg.inclusions && pkg.inclusions.length > 0) {
+                     pkg.inclusions.slice(0, 3).forEach(inc => { // Show max 3 inclusions
+                        featuresHTML += `<li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> ${inc}</li>`;
+                    });
+                } else {
+                     featuresHTML = `<li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Authentic Cultural Experience</li>`;
+                }
+
+                return `
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="position-relative">
+                                <img src="${imageUrl}" class="card-img-top" alt="${title}" style="height: 200px; object-fit: cover;">
+                                <div class="position-absolute top-0 end-0 bg-primary text-white p-2">${duration}</div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">${title}</h5>
+                                <p class="text-primary mb-3">From ${price} ${pkg.price ? 'per person' : ''}</p>
+                                <p class="card-text small flex-grow-1">${shortDesc.substring(0, 100)}${shortDesc.length > 100 ? '...' : ''}</p>
+                                <ul class="list-unstyled mb-4 small">
+                                    ${featuresHTML}
+                                </ul>
+                            </div>
+                            <div class="card-footer bg-white border-0 pt-0">
+                                <a href="${detailUrl}" class="btn btn-primary w-100">View Details</a> 
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            async function fetchCulturalPackages() {
+                loadingIndicator.style.display = 'block';
+                culturalContainer.innerHTML = '';
+
+                try {
+                    const response = await fetch(`${backendUrl}/api/packages?category=cultural`);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    const result = await response.json();
+
+                    if (result.data && result.data.length > 0) {
+                        // Display all cultural packages
+                        result.data.forEach(pkg => {
+                             culturalContainer.innerHTML += createCulturalPackageHTML(pkg);
+                        });
+                    } else {
+                        culturalContainer.innerHTML = '<div class="col-12"><p class="text-center">No cultural tour packages currently available.</p></div>';
+                    }
+                } catch (error) {
+                    console.error("Error fetching cultural packages:", error);
+                    culturalContainer.innerHTML = `<div class="col-12"><p class="text-center text-danger">Failed to load cultural packages.</p></div>`;
+                } finally {
+                    loadingIndicator.style.display = 'none';
+                }
+            }
+
+            fetchCulturalPackages();
+        });
+    </script>
+    
+</body>
+
+</html>

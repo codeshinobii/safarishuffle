@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Safari Shuffle | Packing Tips</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/safarishuffleicon.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .packing-card {
+            transition: all 0.3s;
+            height: 100%;
+        }
+        .packing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .essentials-list {
+            column-count: 2;
+            column-gap: 30px;
+        }
+        .checklist-item {
+            margin-bottom: 10px;
+            break-inside: avoid;
+        }
+        .checklist-item i {
+            color: #28a745;
+            margin-right: 10px;
+        }
+        .warning-item {
+            margin-bottom: 10px;
+        }
+        .warning-item i {
+            color: #dc3545;
+            margin-right: 10px;
+        }
+        .seasonal-tip {
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .bag-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #d67a23;
+        }
+        .category-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #e77e27;
+            color: white;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        @media (max-width: 768px) {
+            .essentials-list {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>Arusha, Tanzania</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Open 24/7</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+255 681 838 482</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    
+    <!-- Navbar Start -->
+	<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="img/safarilogo.png" alt="WooDY Logo" class="navbar-logo">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Destinations</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="serengeti.html" class="dropdown-item">Serengeti National Park</a>
+                        <a href="ngorongoro.html" class="dropdown-item">Ngorongoro Conservational Area</a>
+                        <a href="manyara.html" class="dropdown-item">Lake Manyara National Park</a>
+                        <a href="tarangire.html" class="dropdown-item">Tarangire National Park</a>
+                        <a href="zanzibar.html" class="dropdown-item">Zanzibar</a>
+                        <a href="kilimanjaro.html" class="dropdown-item">Mount Kilimanjaro</a>
+                    </div>
+                </div>
+                <a href="tours.html" class="nav-item nav-link">Tours</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our Services</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="tailormade.html" class="dropdown-item">Tailor Made Safaris</a>
+                        <a href="luxurysafaris.html" class="dropdown-item">Luxury Safaris</a>
+                        <a href="groupsafari.html" class="dropdown-item">Group Safaris</a>
+                        <a href="zanzaibarbeachholidya.html" class="dropdown-item">Zanzibar Beach Holidays</a>
+                        <a href="culturaltours.html" class="dropdown-item">Cultural Tours</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Travel Tips</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="packing.html" class="dropdown-item">Packing Tips</a>
+                        <a href="visa.html" class="dropdown-item">Visa Information</a>
+                        <a href="health&safety.html" class="dropdown-item">Health & Safety</a>
+                        <a href="besttimetovisit.html" class="dropdown-item">Best Time to Visit</a>
+                        <a href="localcustoms.html" class="dropdown-item">Local Customs</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            
+            <a href="booking.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Safari Packing Guide</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Travel Tips</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Packing Tips</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Packing Overview Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="display-6 mb-4">Essential Packing List for Safari</h1>
+                    <p class="mb-4">Packing appropriately for your Tanzanian safari ensures comfort, safety, and an unforgettable experience. Our comprehensive guide covers everything you'll need for the bush, cities, and beach extensions.</p>
+                    
+                    <div class="row g-4 mb-4">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-suitcase text-white"></i>
+                                </div>
+                                <h6 class="mb-0">Luggage Tips</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-camera text-white"></i>
+                                </div>
+                                <h6 class="mb-0">Gear Guide</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#essentials" class="btn btn-primary py-3 px-5">View Packing List</a>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid rounded" src="img/packing1.jpg" alt="Safari Packing">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Packing Overview End -->
+
+    <!-- Luggage Tips Start -->
+    <div class="container-xxl py-5 bg-light">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h1 class="display-6 mb-4">Luggage Recommendations</h1>
+                <p class="mb-4">Choosing the right luggage is crucial for safari travel due to weight restrictions and vehicle space limitations.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="card packing-card h-100">
+                        <div class="card-body text-center">
+                            <div class="bag-icon">
+                                <i class="fa fa-suitcase-rolling"></i>
+                            </div>
+                            <h5 class="mb-3">Main Luggage</h5>
+                            <p>Soft-sided duffel bag (15-20kg limit)</p>
+                            <p>Waterproof or water-resistant material</p>
+                            <p>Dimensions under 24"x14"x10"</p>
+                            <p>No hard-shell suitcases</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="card packing-card h-100">
+                        <div class="card-body text-center">
+                            <div class="bag-icon">
+                                <i class="fa fa-backpack"></i>
+                            </div>
+                            <h5 class="mb-3">Day Pack</h5>
+                            <p>20-30L capacity for daily game drives</p>
+                            <p>Should have multiple compartments</p>
+                            <p>Water bottle pocket recommended</p>
+                            <p>Can double as carry-on for flights</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="card packing-card h-100">
+                        <div class="card-body text-center">
+                            <div class="bag-icon">
+                                <i class="fa fa-camera"></i>
+                            </div>
+                            <h5 class="mb-3">Camera Bag</h5>
+                            <p>Dustproof and padded for equipment</p>
+                            <p>Quick-access design for safari vehicles</p>
+                            <p>Consider a rain cover for protection</p>
+                            <p>Should fit in your day pack</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <h3 class="mb-4"><i class="fa fa-check-circle text-primary me-2"></i> Packing Tips</h3>
+                    <div class="checklist-item"><i class="fa fa-check"></i> Use packing cubes to organize your items</div>
+                    <div class="checklist-item"><i class="fa fa-check"></i> Pack heavier items at the bottom</div>
+                    <div class="checklist-item"><i class="fa fa-check"></i> Roll clothes to save space and reduce wrinkles</div>
+                    <div class="checklist-item"><i class="fa fa-check"></i> Put liquids in sealable plastic bags</div>
+                    <div class="checklist-item"><i class="fa fa-check"></i> Keep essential medications in carry-on</div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.9s">
+                    <h3 class="mb-4"><i class="fa fa-exclamation-triangle text-primary me-2"></i> What to Avoid</h3>
+                    <div class="warning-item"><i class="fa fa-times"></i> No plastic bags (banned in Tanzania)</div>
+                    <div class="warning-item"><i class="fa fa-times"></i> Avoid bright colors for safari clothing</div>
+                    <div class="warning-item"><i class="fa fa-times"></i> Don't overpack - laundry services available</div>
+                    <div class="warning-item"><i class="fa fa-times"></i> Limit valuables and jewelry</div>
+                    <div class="warning-item"><i class="fa fa-times"></i> No drone cameras without special permit</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Luggage Tips End -->
+
+    <!-- Essentials Start -->
+    <div class="container-xxl py-5" id="essentials">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h1 class="display-6 mb-4">Safari Essentials Checklist</h1>
+                <p class="mb-4">These are the must-have items for your Tanzanian safari adventure:</p>
+            </div>
+            
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-start">
+                        <div class="category-icon">
+                            <i class="fa fa-tshirt"></i>
+                        </div>
+                        <div class="ms-4">
+                            <h3>Clothing</h3>
+                            <ul class="essentials-list">
+                                <li class="checklist-item"></i> Neutral-colored clothing (khaki, green, beige)</li>
+                                <li class="checklist-item"></i> Lightweight long-sleeve shirts (3-4)</li>
+                                <li class="checklist-item"></i> T-shirts (3-4)</li>
+                                <li class="checklist-item"></i> Convertible hiking pants (2 pairs)</li>
+                                <li class="checklist-item"></i> Shorts (for lodges/camps)</li>
+                                <li class="checklist-item"></i> Light jacket or fleece</li>
+                                <li class="checklist-item"></i> Waterproof windbreaker</li>
+                                <li class="checklist-item"></i> Swimwear</li>
+                                <li class="checklist-item"></i> Comfortable walking shoes</li>
+                                <li class="checklist-item"></i> Sandals/flip-flops</li>
+                                <li class="checklist-item"></i> Wide-brimmed hat</li>
+                                <li class="checklist-item"></i> Bandana/buff</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="d-flex align-items-start">
+                        <div class="category-icon">
+                            <i class="fa fa-camera"></i>
+                        </div>
+                        <div class="ms-4">
+                            <h3>Photography Gear</h3>
+                            <ul class="essentials-list">
+                                <li class="checklist-item"></i> DSLR/mirrorless camera</li>
+                                <li class="checklist-item"></i> Telephoto lens (200-400mm ideal)</li>
+                                <li class="checklist-item"></i> Extra camera batteries (3-4)</li>
+                                <li class="checklist-item"></i> Large capacity memory cards</li>
+                                <li class="checklist-item"></i> Lens cleaning kit</li>
+                                <li class="checklist-item"></i> Binoculars (8x42 recommended)</li>
+                                <li class="checklist-item"></i> Smartphone with good camera</li>
+                                <li class="checklist-item"></i> Portable hard drive</li>
+                                <li class="checklist-item"></i> Universal power adapter</li>
+                                <li class="checklist-item"></i> Power bank</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="d-flex align-items-start">
+                        <div class="category-icon">
+                            <i class="fa fa-first-aid"></i>
+                        </div>
+                        <div class="ms-4">
+                            <h3>Health & Safety</h3>
+                            <ul class="essentials-list">
+                                <li class="checklist-item"></i> Prescription medications</li>
+                                <li class="checklist-item"></i> Malaria prophylaxis</li>
+                                <li class="checklist-item"></i> High-SPF sunscreen</li>
+                                <li class="checklist-item"></i> Insect repellent (DEET 30-50%)</li>
+                                <li class="checklist-item"></i> Basic first aid kit</li>
+                                <li class="checklist-item"></i> Hand sanitizer</li>
+                                <li class="checklist-item"></i> Wet wipes</li>
+                                <li class="checklist-item"></i> Motion sickness tablets</li>
+                                <li class="checklist-item"></i> Lip balm with SPF</li>
+                                <li class="checklist-item"></i> Personal toiletries</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="d-flex align-items-start">
+                        <div class="category-icon">
+                            <i class="fa fa-sun"></i>
+                        </div>
+                        <div class="ms-4">
+                            <h3>Miscellaneous</h3>
+                            <ul class="essentials-list">
+                                <li class="checklist-item"> Reusable water bottle</li>
+                                <li class="checklist-item"></i> Headlamp/flashlight</li>
+                                <li class="checklist-item"></i> Sunglasses (polarized)</li>
+                                <li class="checklist-item"></i> Lightweight scarf</li>
+                                <li class="checklist-item"></i> Small backpack</li>
+                                <li class="checklist-item"></i> Travel documents (copies)</li>
+                                <li class="checklist-item"></i> Notebook/pen</li>
+                                <li class="checklist-item"></i> Travel pillow</li>
+                                <li class="checklist-item"></i> Earplugs</li>
+                                <li class="checklist-item"></i> Small binoculars</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Essentials End -->
+
+    <!-- Seasonal Packing Start -->
+    <div class="container-xxl py-5 bg-light">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h1 class="display-6 mb-4">Seasonal Packing Considerations</h1>
+                <p class="mb-4">Adjust your packing list based on when you're traveling to Tanzania:</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="seasonal-tip">
+                        <h4><i class="fa fa-sun text-primary me-2"></i> Dry Season (June-October)</h4>
+                        <div class="checklist-item"><i class="fa fa-check"></i> Warm layers for chilly mornings</div>
+                        <div class="checklist-item"><i class="fa fa-check"></i> Beanie and gloves for early game drives</div>
+                        <div class="checklist-item"><i class="fa fa-check"></i> Extra moisturizer for dry air</div>
+                        <div class="checklist-item"><i class="fa fa-check"></i> Dust mask or bandana</div>
+                        <div class="checklist-item"><i class="fa fa-check"></i> Heavy-duty sunscreen</div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="seasonal-tip">
+                        <h4><i class="fa fa-cloud-rain text-primary me-2"></i> Wet Season (November-May)</h4>
+                        <div class="checklist-item"><i class="fa fa-check"></i> Quality rain jacket</div>
+                        <div class="checklist-item"><i class="fa fa-check"></i> Quick-dry clothing</div>
+                        <div class="checklist-item"><i class="fa fa-check"></i> Waterproof bag covers</div>
+                        <div class="checklist-item"><i class="fa fa-check"></i> Extra insect repellent</div>
+                        <div class="checklist-item"><i class="fa fa-check"></i> Waterproof hiking shoes</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-3">
+                <div class="col-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="seasonal-tip">
+                        <h4><i class="fa fa-mountain text-primary me-2"></i> Kilimanjaro Additions</h4>
+                        <p>If climbing Kilimanjaro, you'll need specialized gear including:</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="checklist-item"><i class="fa fa-check"></i> Insulated jacket</div>
+                                <div class="checklist-item"><i class="fa fa-check"></i> Thermal base layers</div>
+                                <div class="checklist-item"><i class="fa fa-check"></i> Trekking poles</div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="checklist-item"><i class="fa fa-check"></i> Four-season sleeping bag</div>
+                                <div class="checklist-item"><i class="fa fa-check"></i> Headlamp with extra batteries</div>
+                                <div class="checklist-item"><i class="fa fa-check"></i> Water purification tablets</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Seasonal Packing End -->
+
+    <!-- Zanzibar Additions Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="display-6 mb-4">Beach Extension Packing</h2>
+                    <p class="mb-4">If you're continuing to Zanzibar after your safari, add these items to your packing list:</p>
+                    
+                    <div class="checklist-item"><i class="fa fa-check"></i> Light, modest beach cover-ups</div>
+                    <div class="checklist-item"><i class="fa fa-check"></i> Reef-safe sunscreen</div>
+                    <div class="checklist-item"><i class="fa fa-check"></i> Snorkel gear (optional)</div>
+                    <div class="checklist-item"><i class="fa fa-check"></i> Beach towel</div>
+                    <div class="checklist-item"><i class="fa fa-check"></i> Water shoes</div>
+                    <div class="checklist-item"><i class="fa fa-check"></i> More casual clothing</div>
+                    <div class="checklist-item"><i class="fa fa-check"></i> Light scarf for women (for mosque visits)</div>
+                    
+                    <div class="alert alert-primary mt-4">
+                        <i class="fa fa-info-circle me-2"></i> Remember that Zanzibar is more conservative than mainland Tanzania - pack accordingly.
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid rounded" src="img/packing2.jpg" alt="Zanzibar Packing">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Zanzibar Additions End -->
+
+    
+    <!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Contact Us</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Arusha, Tanzania</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+255 681 838 482</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@safarishuffle.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Our Services</h4>
+                <a class="btn btn-link" href="tailormade.html">Tailor-Made Safaris</a>
+                <a class="btn btn-link" href="groupsafari.html">Group Safaris</a>
+                <a class="btn btn-link" href="luxurysafaris.html">Luxury Safaris</a>
+                <a class="btn btn-link" href="zanzaibarbeachholidya.html">Zanzibar Beach Holidays</a>
+                <a class="btn btn-link" href="culturaltours.html">Cultural Tours</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Quick Links</h4>
+                <a class="btn btn-link" href="about us.html">About Us</a>
+                <!-- <a class="btn btn-link" href="#">Destinations</a> -->
+                <a class="btn btn-link" href="tours.html">Safari Packages</a>
+                <a class="btn btn-link" href="termsandconditions.html">Terms & Conditions</a>
+                <a class="btn btn-link" href="contact.html">Contact Us</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Newsletter</h4>
+                <p>Subscribe to receive updates on our latest safari offers and travel tips.</p>
+                <div class="position-relative mx-auto" style="max-width: 400px;">
+                    <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Safari Shuffle</a>, All Rights Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!-- Designed by <a class="border-bottom" href="#">Your</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+<a href="https://wa.me/yourwhatsappnumber" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp whatsapp-icon"></i>
+</a>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

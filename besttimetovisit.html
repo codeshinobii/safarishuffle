@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Safari Shuffle | Best Time to Visit Tanzania</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/safarishuffleicon.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .season-card {
+            transition: all 0.3s;
+            height: 100%;
+        }
+        .season-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .month-indicator {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+        .best-month {
+            background-color: #28a745;
+        }
+        .good-month {
+            background-color: #ffc107;
+        }
+        .fair-month {
+            background-color: #fd7e14;
+        }
+        .poor-month {
+            background-color: #dc3545;
+        }
+        .calendar-legend {
+            background: rgba(255,255,255,0.9);
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>Arusha, Tanzania</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Open 24/7</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+255 681 838 482</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    
+    <!-- Navbar Start -->
+	<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="img/safarilogo.png" alt="WooDY Logo" class="navbar-logo">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Destinations</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="serengeti.html" class="dropdown-item">Serengeti National Park</a>
+                        <a href="ngorongoro.html" class="dropdown-item">Ngorongoro Conservational Area</a>
+                        <a href="manyara.html" class="dropdown-item">Lake Manyara National Park</a>
+                        <a href="tarangire.html" class="dropdown-item">Tarangire National Park</a>
+                        <a href="zanzibar.html" class="dropdown-item">Zanzibar</a>
+                        <a href="kilimanjaro.html" class="dropdown-item">Mount Kilimanjaro</a>
+                    </div>
+                </div>
+                <a href="tours.html" class="nav-item nav-link">Tours</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our Services</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="tailormade.html" class="dropdown-item">Tailor Made Safaris</a>
+                        <a href="luxurysafaris.html" class="dropdown-item">Luxury Safaris</a>
+                        <a href="groupsafari.html" class="dropdown-item">Group Safaris</a>
+                        <a href="zanzaibarbeachholidya.html" class="dropdown-item">Zanzibar Beach Holidays</a>
+                        <a href="culturaltours.html" class="dropdown-item">Cultural Tours</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Travel Tips</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="packing.html" class="dropdown-item">Packing Tips</a>
+                        <a href="visa.html" class="dropdown-item">Visa Information</a>
+                        <a href="health&safety.html" class="dropdown-item">Health & Safety</a>
+                        <a href="besttimetovisit.html" class="dropdown-item">Best Time to Visit</a>
+                        <a href="localcustoms.html" class="dropdown-item">Local Customs</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            
+            <a href="booking.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Best Time to Visit Tanzania</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Travel Tips</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Best Time to Visit</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Overview Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid rounded" src="img/tour5.jpg" alt="Tanzania Seasons">
+                        <div class="position-absolute bottom-0 end-0 p-4 calendar-legend">
+                            <h6 class="mb-2">Season Legend:</h6>
+                            <div class="d-flex align-items-center mb-1">
+                                <span class="month-indicator best-month me-2"></span>
+                                <small>Best Time</small>
+                            </div>
+                            <div class="d-flex align-items-center mb-1">
+                                <span class="month-indicator good-month me-2"></span>
+                                <small>Good Time</small>
+                            </div>
+                            <div class="d-flex align-items-center mb-1">
+                                <span class="month-indicator fair-month me-2"></span>
+                                <small>Fair Time</small>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <span class="month-indicator poor-month me-2"></span>
+                                <small>Poor Time</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h1 class="display-6 mb-4">When to Visit Tanzania for Safari & Beyond</h1>
+                    <p class="mb-4">Tanzania offers incredible wildlife experiences year-round, but the best time to visit depends on what you want to see and do. The country has two main seasons:</p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-2"><i class="fa fa-sun text-primary me-2"></i> <strong>Dry Season</strong> (June-October) - Best for wildlife viewing</li>
+                        <li class="mb-2"><i class="fa fa-cloud-rain text-primary me-2"></i> <strong>Wet Season</strong> (November-May) - Lush landscapes, fewer crowds</li>
+                    </ul>
+                    <div class="row g-4 mb-4">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-animals text-white"></i>
+                                </div>
+                                <h6 class="mb-0">Great Migration Timing</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-temperature-low text-white"></i>
+                                </div>
+                                <h6 class="mb-0">Climate Considerations</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#seasons" class="btn btn-primary py-3 px-5">Explore Seasons</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Overview End -->
+
+    <!-- Seasons Guide Start -->
+    <div class="container-xxl py-5" id="seasons">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h1 class="display-6 mb-4">Tanzania's Safari Seasons at a Glance</h1>
+                <p class="mb-4">Plan your perfect safari with our month-by-month guide to Tanzania's wildlife viewing opportunities, weather patterns, and special events.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="card season-card h-100">
+                        <div class="card-body">
+                            <div class="text-center p-3">
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px; margin: 0 auto;">
+                                    <i class="fa fa-sun fa-2x text-white"></i>
+                                </div>
+                                <h5 class="mb-3">Dry Season</h5>
+                                <p>June - October</p>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Peak wildlife viewing</li>
+                                <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Minimal rainfall</li>
+                                <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Cooler temperatures</li>
+                                <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Busiest season</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <a href="#dry-season" class="btn btn-sm btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="card season-card h-100">
+                        <div class="card-body">
+                            <div class="text-center p-3">
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px; margin: 0 auto;">
+                                    <i class="fa fa-cloud-sun fa-2x text-white"></i>
+                                </div>
+                                <h5 class="mb-3">Short Rains</h5>
+                                <p>November - December</p>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Lush green landscapes</li>
+                                <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Fewer tourists</li>
+                                <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Migratory birds arrive</li>
+                                <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Lower prices</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <a href="#short-rains" class="btn btn-sm btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="card season-card h-100">
+                        <div class="card-body">
+                            <div class="text-center p-3">
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px; margin: 0 auto;">
+                                    <i class="fa fa-cloud-rain fa-2x text-white"></i>
+                                </div>
+                                <h5 class="mb-3">Long Rains</h5>
+                                <p>March - May</p>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Lowest prices</li>
+                                <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Fewest visitors</li>
+                                <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Dramatic skies</li>
+                                <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Some roads impassable</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="card season-card h-100">
+                        <div class="card-body">
+                            <div class="text-center p-3">
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px; margin: 0 auto;">
+                                    <i class="fa fa-cloud-sun-rain fa-2x text-white"></i>
+                                </div>
+                                <h5 class="mb-3">Shoulder Seasons</h5>
+                                <p>January-February & June</p>
+                            </div>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Good wildlife viewing</li>
+                                <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Moderate prices</li>
+                                <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Comfortable weather</li>
+                                <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Fewer crowds</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Seasons Guide End -->
+
+    <!-- Monthly Calendar Start -->
+    <div class="container-xxl py-5 bg-light">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h1 class="display-6 mb-4">Month-by-Month Safari Calendar</h1>
+                <p class="mb-4">Our comprehensive guide to what you can expect each month in Tanzania's national parks and conservation areas.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="table-responsive">
+                        <table class="table table-bordered text-center">
+                            <thead class="bg-primary text-white">
+                                <tr>
+                                    <th>Month</th>
+                                    <th>Weather</th>
+                                    <th>Wildlife</th>
+                                    <th>Great Migration</th>
+                                    <th>Crowds</th>
+                                    <th>Best For</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white">
+                                <tr>
+                                    <td><strong>January</strong></td>
+                                    <td>Warm, short rains possible</td>
+                                    <td><span class="month-indicator best-month"></span> Excellent</td>
+                                    <td>Southern Serengeti (calving season)</td>
+                                    <td><span class="month-indicator good-month"></span> Moderate</td>
+                                    <td>Calving season, birding</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>February</strong></td>
+                                    <td>Hot, dry</td>
+                                    <td><span class="month-indicator best-month"></span> Excellent</td>
+                                    <td>Southern Serengeti</td>
+                                    <td><span class="month-indicator good-month"></span> Moderate</td>
+                                    <td>Predator action, photography</td>
+                                </tr>
+                                <!-- Add all months following same pattern -->
+                                <tr>
+                                    <td><strong>July</strong></td>
+                                    <td>Cool, dry</td>
+                                    <td><span class="month-indicator best-month"></span> Excellent</td>
+                                    <td>Western Corridor (river crossings)</td>
+                                    <td><span class="month-indicator fair-month"></span> High</td>
+                                    <td>River crossings, general safari</td>
+                                </tr>
+                                <!-- Continue for all months -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4 wow fadeInUp" data-wow-delay="0.3s">
+                <a href="tours.html" class="btn btn-primary py-3 px-5">Browse Safari Tours</a>
+            </div>
+        </div>
+    </div>
+    <!-- Monthly Calendar End -->
+
+    <!-- Seasonal Details Start -->
+    <div class="container-xxl py-5" id="dry-season">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="display-6 mb-4">Dry Season (June - October)</h2>
+                    <p class="mb-4">The dry season offers the most reliable wildlife viewing as animals congregate around permanent water sources. Days are sunny with cool mornings and evenings.</p>
+                    <div class="mb-4">
+                        <h5><i class="fa fa-paw text-primary me-2"></i> Wildlife Highlights:</h5>
+                        <ul>
+                            <li>Great Migration crosses the Grumeti and Mara Rivers (July-October)</li>
+                            <li>Excellent predator-prey interactions</li>
+                            <li>Large elephant herds in Tarangire</li>
+                        </ul>
+                    </div>
+                    <div class="mb-4">
+                        <h5><i class="fa fa-camera text-primary me-2"></i> Photography Tips:</h5>
+                        <p>Early morning and late afternoon light is ideal. Dust in the air creates dramatic atmospheric effects.</p>
+                    </div>
+                    <a href="tours.html" class="btn btn-primary py-3 px-5">Browse Safari Tours</a>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid rounded" src="img/tarangirepac2.jpg" alt="Dry Season Safari">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container-xxl py-5 bg-light" id="short-rains">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid rounded" src="img/tarangire3.jpg" alt="Green Season Safari">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h2 class="display-6 mb-4">Short Rains (November - December)</h2>
+                    <p class="mb-4">The landscape transforms into lush greenery after the short rains. This is an excellent time for birdwatching and photography with dramatic skies.</p>
+                    <div class="mb-4">
+                        <h5><i class="fa fa-paw text-primary me-2"></i> Wildlife Highlights:</h5>
+                        <ul>
+                            <li>Migratory birds present (November-April)</li>
+                            <li>Great Migration moves to southern Serengeti</li>
+                            <li>Newborn animals and wildflowers</li>
+                        </ul>
+                    </div>
+                    <div class="mb-4">
+                        <h5><i class="fa fa-umbrella text-primary me-2"></i> Weather Note:</h5>
+                        <p>Rains are usually short showers in the afternoon, rarely affecting safari activities.</p>
+                    </div>
+                    <a href="tours.html" class="btn btn-primary py-3 px-5">Browse Safari Tours</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Add similar sections for Long Rains and Shoulder Seasons -->
+    <!-- Seasonal Details End -->
+
+    <!-- Park-Specific Timing Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h1 class="display-6 mb-4">Best Time to Visit by Park</h1>
+                <p class="mb-4">Each of Tanzania's national parks has unique seasonal highlights. Here's when to visit our most popular destinations.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="img/serengeti.jpg" alt="Serengeti Timing">
+                        <div class="card-body">
+                            <h5 class="card-title">Serengeti National Park</h5>
+                            <p class="card-text">
+                                <strong>Best Months:</strong> January-March (calving), July-October (river crossings)<br>
+                                <strong>Special Events:</strong> Great Migration cycles through different regions
+                            </p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="serengeti.html" class="btn btn-sm btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="img/ngorongoro1.jpg" alt="Ngorongoro Timing">
+                        <div class="card-body">
+                            <h5 class="card-title">Ngorongoro Crater</h5>
+                            <p class="card-text">
+                                <strong>Best Months:</strong> June-September (dry season)<br>
+                                <strong>Year-round:</strong> Excellent wildlife viewing in the crater
+                            </p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="ngorongoro.html" class="btn btn-sm btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="img/manyara1.jpg" alt="Manyara Timing">
+                        <div class="card-body">
+                            <h5 class="card-title">Lake Manyara</h5>
+                            <p class="card-text">
+                                <strong>Best Months:</strong> July-October (tree-climbing lions)<br>
+                                <strong>Birding:</strong> November-April (migratory birds)
+                            </p>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="manyara.html" class="btn btn-sm btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Park-Specific Timing End -->
+
+    
+    <!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Contact Us</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Arusha, Tanzania</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+255 681 838 482</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@safarishuffle.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Our Services</h4>
+                <a class="btn btn-link" href="tailormade.html">Tailor-Made Safaris</a>
+                <a class="btn btn-link" href="groupsafari.html">Group Safaris</a>
+                <a class="btn btn-link" href="luxurysafaris.html">Luxury Safaris</a>
+                <a class="btn btn-link" href="zanzaibarbeachholidya.html">Zanzibar Beach Holidays</a>
+                <a class="btn btn-link" href="culturaltours.html">Cultural Tours</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Quick Links</h4>
+                <a class="btn btn-link" href="about us.html">About Us</a>
+                <!-- <a class="btn btn-link" href="#">Destinations</a> -->
+                <a class="btn btn-link" href="tours.html">Safari Packages</a>
+                <a class="btn btn-link" href="termsandconditions.html">Terms & Conditions</a>
+                <a class="btn btn-link" href="contact.html">Contact Us</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Newsletter</h4>
+                <p>Subscribe to receive updates on our latest safari offers and travel tips.</p>
+                <div class="position-relative mx-auto" style="max-width: 400px;">
+                    <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Safari Shuffle</a>, All Rights Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!-- Designed by <a class="border-bottom" href="#">Your</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+<a href="https://wa.me/yourwhatsappnumber" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp whatsapp-icon"></i>
+</a>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

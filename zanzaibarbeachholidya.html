@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Safari Shuffle | Zanzibar Beach Holidays</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="zanzibar beach holiday, zanzibar resorts, zanzibar packages, stone town, spice tour" name="keywords">
+    <meta content="Experience paradise with our Zanzibar beach holidays. Pristine white sand beaches, luxury resorts, and cultural tours in Tanzania's tropical island gem." name="description">
+
+    <!-- Favicon -->
+    <link href="img/safarishuffleicon.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .zanzibar-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/zanzibar-beach-hero.jpg') center/cover no-repeat;
+            min-height: 70vh;
+        }
+        .beach-card {
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        .beach-card:hover {
+            transform: translateY(-5px);
+        }
+        .activity-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(13, 110, 253, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Topbar -->
+    <div class="container-fluid bg-light p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>Arusha, Tanzania</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Mon - Fri: 9AM - 6PM | Sat: 9AM - 1PM</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+255 681 838 482</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar Start -->
+	<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="img/safarilogo.png" alt="WooDY Logo" class="navbar-logo">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Destinations</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="serengeti.html" class="dropdown-item">Serengeti National Park</a>
+                        <a href="ngorongoro.html" class="dropdown-item">Ngorongoro Conservational Area</a>
+                        <a href="manyara.html" class="dropdown-item">Lake Manyara National Park</a>
+                        <a href="tarangire.html" class="dropdown-item">Tarangire National Park</a>
+                        <a href="zanzibar.html" class="dropdown-item">Zanzibar</a>
+                        <a href="kilimanjaro.html" class="dropdown-item">Mount Kilimanjaro</a>
+                    </div>
+                </div>
+                <a href="tours.html" class="nav-item nav-link">Tours</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our Services</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="tailormade.html" class="dropdown-item">Tailor Made Safaris</a>
+                        <a href="luxurysafaris.html" class="dropdown-item">Luxury Safaris</a>
+                        <a href="groupsafari.html" class="dropdown-item">Group Safaris</a>
+                        <a href="zanzaibarbeachholidya.html" class="dropdown-item">Zanzibar Beach Holidays</a>
+                        <a href="culturaltours.html" class="dropdown-item">Cultural Tours</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Travel Tips</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="packing.html" class="dropdown-item">Packing Tips</a>
+                        <a href="visa.html" class="dropdown-item">Visa Information</a>
+                        <a href="health&safety.html" class="dropdown-item">Health & Safety</a>
+                        <a href="besttimetovisit.html" class="dropdown-item">Best Time to Visit</a>
+                        <a href="localcustoms.html" class="dropdown-item">Local Customs</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            
+            <a href="booking.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section -->
+    <div class="container-fluid zanzibar-hero d-flex align-items-center">
+        <div class="container text-center text-white py-5">
+            <h1 class="display-3 mb-4 text-white">Zanzibar Beach Holidays</h1>
+            <p class="fs-4 mb-5 text-white">Tanzania's Tropical Paradise of Powder-White Sands and Azure Waters</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#packages" class="btn btn-lg btn-primary px-4 py-3">View Packages</a>
+                <a href="contact.html" class="btn btn-lg btn-outline-light px-4 py-3">Enquire Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Intro Section -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="section-title position-relative">
+                        <h6 class="text-uppercase text-primary mb-3">Island Paradise</h6>
+                        <h1 class="display-5 mb-4">Discover <span class="text-primary">Zanzibar</span></h1>
+                    </div>
+                    <p class="mb-4">Just off the coast of Tanzania lies the archipelago of Zanzibar, a tropical paradise where the Indian Ocean laps at pristine white sand beaches. Our beach holidays combine luxury resort stays with cultural experiences in Stone Town and spice farm tours.</p>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-check text-white"></i>
+                                </div>
+                                <h6 class="mb-0">50+ Beaches</h6>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-check text-white"></i>
+                                </div>
+                                <h6 class="mb-0">Luxury Resorts</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-check text-white"></i>
+                                </div>
+                                <h6 class="mb-0">Rich Culture</h6>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-check text-white"></i>
+                                </div>
+                                <h6 class="mb-0">Year-Round Sun</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#best-beaches" class="btn btn-primary py-3 px-5 mt-4">Explore Beaches</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img class="img-fluid rounded w-100" src="img/zanzibar-stone-town.jpg" alt="Stone Town" style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="col-6">
+                            <img class="img-fluid rounded w-100" src="img/zanzibar-dhow.jpg" alt="Traditional Dhow" style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="col-6">
+                            <img class="img-fluid rounded w-100" src="img/zanzibar-spices.jpg" alt="Spice Farm" style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="col-6">
+                            <img class="img-fluid rounded w-100" src="img/zanzibar-sunset.jpg" alt="Beach Sunset" style="height: 250px; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Best Beaches -->
+    <div class="container-fluid bg-light py-5" id="best-beaches">
+        <div class="container py-5">
+            <div class="section-title text-center">
+                <h6 class="text-uppercase text-primary mb-3">Coastal Gems</h6>
+                <h1 class="display-5 mb-5">Zanzibar's <span class="text-primary">Best Beaches</span></h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card beach-card h-100 border-0 shadow-sm">
+                        <img src="img/nungwi-beach.webp" class="card-img-top" alt="Nungwi Beach" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Nungwi Beach</h5>
+                            <p class="text-muted">North Coast</p>
+                            <p class="card-text">Famous for its stunning sunsets and vibrant beach scene. Perfect for swimming with high and low tides.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <div class="d-flex justify-content-between">
+                                <small><i class="fas fa-umbrella-beach text-primary me-1"></i> Swimming</small>
+                                <small><i class="fas fa-cocktail text-primary me-1"></i> Beach Bars</small>
+                                <small><i class="fas fa-sun text-primary me-1"></i> Sunsets</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card beach-card h-100 border-0 shadow-sm">
+                        <img src="img/kendwa-beach.jpg" class="card-img-top" alt="Kendwa Beach" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Kendwa Beach</h5>
+                            <p class="text-muted">Northwest Coast</p>
+                            <p class="card-text">Powdery white sand that stays submerged even at low tide. Known for its full moon parties.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <div class="d-flex justify-content-between">
+                                <small><i class="fas fa-water text-primary me-1"></i> Swimming</small>
+                                <small><i class="fas fa-moon text-primary me-1"></i> Full Moon Parties</small>
+                                <small><i class="fas fa-hotel text-primary me-1"></i> Resorts</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card beach-card h-100 border-0 shadow-sm">
+                        <img src="img/paje-beach.webp" class="card-img-top" alt="Paje Beach" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Paje Beach</h5>
+                            <p class="text-muted">East Coast</p>
+                            <p class="card-text">The kitesurfing capital of Zanzibar with wide, flat beaches and constant ocean breezes.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <div class="d-flex justify-content-between">
+                                <small><i class="fas fa-wind text-primary me-1"></i> Kitesurfing</small>
+                                <small><i class="fas fa-umbrella-beach text-primary me-1"></i> Secluded</small>
+                                <small><i class="fas fa-water text-primary me-1"></i> Tide Pools</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card beach-card h-100 border-0 shadow-sm">
+                        <img src="img/matembwe-beach.webp" class="card-img-top" alt="Matembwe Beach" style="height: 200px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title">Matembwe Beach</h5>
+                            <p class="text-muted">Southeast Coast</p>
+                            <p class="card-text">Pristine and quiet beach with excellent snorkeling right offshore. Perfect for relaxation.</p>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <div class="d-flex justify-content-between">
+                                <small><i class="fas fa-fish text-primary me-1"></i> Snorkeling</small>
+                                <small><i class="fas fa-spa text-primary me-1"></i> Relaxation</small>
+                                <small><i class="fas fa-binoculars text-primary me-1"></i> Wildlife</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Activities -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="section-title text-center">
+                <h6 class="text-uppercase text-primary mb-3">Island Experiences</h6>
+                <h1 class="display-5 mb-5">Zanzibar <span class="text-primary">Activities</span></h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center p-4">
+                        <div class="activity-icon">
+                            <i class="fas fa-archway fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="mb-3">Stone Town Tour</h5>
+                        <p class="mb-0">Explore the UNESCO-listed historic center with its Arab, Persian, Indian and European influences.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center p-4">
+                        <div class="activity-icon">
+                            <i class="fas fa-mortar-pestle fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="mb-3">Spice Farm Tour</h5>
+                        <p class="mb-0">Discover why Zanzibar is called the "Spice Island" with a guided tour of working plantations.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center p-4">
+                        <div class="activity-icon">
+                            <i class="fas fa-fish fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="mb-3">Snorkeling & Diving</h5>
+                        <p class="mb-0">Explore vibrant coral reefs at Mnemba Atoll and other marine sanctuaries teeming with tropical fish.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center p-4">
+                        <div class="activity-icon">
+                            <i class="fas fa-sailboat fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="mb-3">Dhow Sunset Cruise</h5>
+                        <p class="mb-0">Sail on a traditional wooden dhow while watching the sun set over the Indian Ocean.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Packages -->
+    <div class="container-fluid bg-light py-5" id="packages">
+        <div class="container py-5">
+            <div class="section-title text-center">
+                <h6 class="text-uppercase text-primary mb-3">Island Getaways</h6>
+                <h1 class="display-5 mb-5">Zanzibar <span class="text-primary">Packages</span></h1>
+            </div>
+            <div class="col-12 text-center" id="loading-indicator" style="display: none;">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p>Loading beach packages...</p>
+            </div>
+            <div id="beach-packages-container" class="row g-4">
+                <!-- Beach packages will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- When to Visit -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="section-title position-relative">
+                        <h6 class="text-uppercase text-primary mb-3">Travel Planning</h6>
+                        <h1 class="display-5 mb-4">Best Time to <span class="text-primary">Visit</span></h1>
+                    </div>
+                    <p>Zanzibar enjoys warm tropical weather year-round, but certain periods offer ideal conditions:</p>
+                    <div class="mb-4">
+                        <h5><i class="fas fa-sun text-primary me-2"></i> Dry Season (June-October)</h5>
+                        <p>Cooler temperatures (25-28°C) with low humidity. Perfect for beach activities and cultural tours.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h5><i class="fas fa-umbrella-beach text-primary me-2"></i> Short Rains (November-December)</h5>
+                        <p>Brief showers but still plenty of sunshine. Fewer crowds and lower prices.</p>
+                    </div>
+                    <div class="mb-4">
+                        <h5><i class="fas fa-cloud-sun text-primary me-2"></i> Hot Season (January-February)</h5>
+                        <p>Hottest months (28-32°C) but excellent for water activities. Great for kitesurfing.</p>
+                    </div>
+                    <div>
+                        <h5><i class="fas fa-cloud-rain text-primary me-2"></i> Long Rains (March-May)</h5>
+                        <p>Heavier rainfall, especially April. Some resorts close, but significant discounts available.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="img/zanzibar-weather.jpg" class="img-fluid rounded" alt="Zanzibar Weather" style="height: 100%; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <!-- <div class="container-fluid bg-light py-5">
+        <div class="container py-5">
+            <div class="section-title text-center">
+                <h6 class="text-uppercase text-primary mb-3">Guest Stories</h6>
+                <h1 class="display-5 mb-5">Zanzibar <span class="text-primary">Testimonials</span></h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="testimonial-item bg-white p-4 border">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="img/testimonial-1.jpg" class="rounded-circle me-3" width="60" alt="Guest">
+                            <div>
+                                <h6 class="mb-0">The Johnson Family</h6>
+                                <small>London, UK | July 2023</small>
+                                <div class="text-primary">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Our week at Baraza Resort was absolute paradise. The staff remembered all our preferences, and our villa with the private pool was stunning. The spice tour was surprisingly fascinating - our kids loved tasting fresh cinnamon and vanilla!"</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-item bg-white p-4 border">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="img/testimonial-2.jpg" class="rounded-circle me-3" width="60" alt="Guest">
+                            <div>
+                                <h6 class="mb-0">Sarah & Michael</h6>
+                                <small>New York, USA | Honeymoon, December 2023</small>
+                                <div class="text-primary">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">"The perfect honeymoon combination - safari first then unwinding in Zanzibar. Our beachfront suite at The Palms was magical, and the dhow sunset cruise was so romantic. We'll definitely be back for our anniversary!"</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-item bg-white p-4 border">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="img/testimonial-3.jpg" class="rounded-circle me-3" width="60" alt="Guest">
+                            <div>
+                                <h6 class="mb-0">Mark & Friends</h6>
+                                <small>Canada | Group Trip, February 2023</small>
+                                <div class="text-primary">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Paje Beach was perfect for our kitesurfing holiday. The conditions were ideal, and our instructors were fantastic. Evenings spent at the beach bars with fresh seafood were the perfect way to relax after a day on the water."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- CTA -->
+    <div class="container-fluid bg-primary text-white py-5">
+        <div class="container text-center py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="display-5 mb-4">Ready for Your Zanzibar Escape?</h2>
+                    <p class="fs-5 mb-5">Contact our Zanzibar specialists to design your perfect beach holiday</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="contact.html" class="btn btn-lg btn-light px-4 py-3">
+                            <i class="fas fa-envelope me-2"></i> Enquire Now
+                        </a>
+                        <a href="tel:+255681838482" class="btn btn-lg btn-outline-light px-4 py-3">
+                            <i class="fas fa-phone-alt me-2"></i> Call +255 681 838 482
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Contact Us</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Arusha, Tanzania</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+255 681 838 482</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@safarishuffle.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Our Services</h4>
+                <a class="btn btn-link" href="tailormade.html">Tailor-Made Safaris</a>
+                <a class="btn btn-link" href="groupsafari.html">Group Safaris</a>
+                <a class="btn btn-link" href="luxurysafaris.html">Luxury Safaris</a>
+                <a class="btn btn-link" href="zanzaibarbeachholidya.html">Zanzibar Beach Holidays</a>
+                <a class="btn btn-link" href="culturaltours.html">Cultural Tours</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Quick Links</h4>
+                <a class="btn btn-link" href="about us.html">About Us</a>
+                <!-- <a class="btn btn-link" href="#">Destinations</a> -->
+                <a class="btn btn-link" href="tours.html">Safari Packages</a>
+                <a class="btn btn-link" href="termsandconditions.html">Terms & Conditions</a>
+                <a class="btn btn-link" href="contact.html">Contact Us</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Newsletter</h4>
+                <p>Subscribe to receive updates on our latest safari offers and travel tips.</p>
+                <div class="position-relative mx-auto" style="max-width: 400px;">
+                    <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Safari Shuffle</a>, All Rights Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!-- Designed by <a class="border-bottom" href="#">Your</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+<a href="https://wa.me/yourwhatsappnumber" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp whatsapp-icon"></i>
+</a>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Custom Script for Beach Packages -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const beachContainer = document.getElementById('beach-packages-container');
+            const loadingIndicator = document.getElementById('loading-indicator');
+            const backendUrl = 'http://127.0.0.1:8000';
+
+            function createBeachPackageHTML(pkg) {
+                const imageUrl = pkg.hero_image ? `${backendUrl}/storage/${pkg.hero_image}` : 'img/placeholder.jpg';
+                const price = pkg.price ? `$${parseFloat(pkg.price).toFixed(0)}` : 'Contact for Price';
+                const title = pkg.title || 'Zanzibar Beach Package';
+                const duration = pkg.duration || 'Varies';
+                const shortDesc = pkg.short_description || 'Relax on the stunning beaches of Zanzibar.';
+                const detailUrl = `tourdetails.html?slug=${pkg.slug || pkg.id}`;
+
+                // Attempt to create a few highlights or inclusions
+                let featuresHTML = '';
+                if (pkg.highlights && pkg.highlights.length > 0) {
+                    pkg.highlights.slice(0, 3).forEach(h => { // Show max 3 highlights
+                        featuresHTML += `<li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> ${h.title}</li>`;
+                    });
+                } else if (pkg.inclusions && pkg.inclusions.length > 0) {
+                     pkg.inclusions.slice(0, 3).forEach(inc => { // Show max 3 inclusions
+                        featuresHTML += `<li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> ${inc}</li>`;
+                    });
+                } else {
+                     featuresHTML = `<li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Beach Accommodation</li>`;
+                }
+                
+
+                return `
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="position-relative">
+                                <img src="${imageUrl}" class="card-img-top" alt="${title}" style="height: 200px; object-fit: cover;">
+                                <div class="position-absolute top-0 end-0 bg-primary text-white p-2">${duration}</div>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">${title}</h5>
+                                <p class="text-primary mb-3">From ${price} ${pkg.price ? 'per person' : ''}</p>
+                                <p class="card-text small flex-grow-1">${shortDesc.substring(0, 100)}${shortDesc.length > 100 ? '...' : ''}</p>
+                                <ul class="list-unstyled mb-4 small">
+                                    ${featuresHTML}
+                                </ul>
+                            </div>
+                            <div class="card-footer bg-white border-0 pt-0">
+                                <!-- Using detailUrl instead of generic booking.html -->
+                                <a href="${detailUrl}" class="btn btn-primary w-100">View Details</a> 
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            async function fetchBeachPackages() {
+                loadingIndicator.style.display = 'block';
+                beachContainer.innerHTML = '';
+
+                try {
+                    const response = await fetch(`${backendUrl}/api/packages?category=beach`);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    const result = await response.json();
+
+                    if (result.data && result.data.length > 0) {
+                        // Display all beach packages
+                        result.data.forEach(pkg => {
+                             beachContainer.innerHTML += createBeachPackageHTML(pkg);
+                        });
+                    } else {
+                        beachContainer.innerHTML = '<div class="col-12"><p class="text-center">No beach packages currently available.</p></div>';
+                    }
+                } catch (error) {
+                    console.error("Error fetching beach packages:", error);
+                    beachContainer.innerHTML = `<div class="col-12"><p class="text-center text-danger">Failed to load beach packages.</p></div>`;
+                } finally {
+                    loadingIndicator.style.display = 'none';
+                }
+            }
+
+            fetchBeachPackages();
+        });
+    </script>
+    
+</body>
+
+</html>

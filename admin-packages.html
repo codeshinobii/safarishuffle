@@ -298,11 +298,11 @@
             // Delete package functionality
             packagesTableBody.on('click', '.delete-package-btn', function() {
                 const row = $(this).closest('tr');
-                const packageId = row.data('id');
+                const packageSlug = row.data('slug');
                 const packageTitle = row.find('td:first').text();
 
                 if (confirm(`Are you sure you want to delete "${packageTitle}"?`)) {
-                    fetch(`${apiUrl}/${packageId}`, {
+                    fetch(`${apiUrl}/${packageSlug}`, {
                         method: 'DELETE',
                     })
                     .then(response => {
@@ -311,7 +311,7 @@
                         }
                         row.remove();
                         // Update allPackages array
-                        allPackages = allPackages.filter(pkg => pkg.id !== packageId);
+                        allPackages = allPackages.filter(pkg => pkg.slug !== packageSlug);
                     })
                     .catch(error => {
                         console.error('Error deleting package:', error);

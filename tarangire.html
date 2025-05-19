@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Safari Shuffle | Tarangire</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/safarishuffleicon.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>Arusha, Tanzania</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Open 24/7</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+255 681 838 482</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    
+    <!-- Navbar Start -->
+	<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="img/safarilogo.png" alt="WooDY Logo" class="navbar-logo">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Destinations</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="serengeti.html" class="dropdown-item">Serengeti National Park</a>
+                        <a href="ngorongoro.html" class="dropdown-item">Ngorongoro Conservational Area</a>
+                        <a href="manyara.html" class="dropdown-item">Lake Manyara National Park</a>
+                        <a href="tarangire.html" class="dropdown-item">Tarangire National Park</a>
+                        <a href="zanzibar.html" class="dropdown-item">Zanzibar</a>
+                        <a href="kilimanjaro.html" class="dropdown-item">Mount Kilimanjaro</a>
+                    </div>
+                </div>
+                <a href="tours.html" class="nav-item nav-link">Tours</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our Services</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="tailormade.html" class="dropdown-item">Tailor Made Safaris</a>
+                        <a href="luxurysafaris.html" class="dropdown-item">Luxury Safaris</a>
+                        <a href="groupsafari.html" class="dropdown-item">Group Safaris</a>
+                        <a href="zanzaibarbeachholidya.html" class="dropdown-item">Zanzibar Beach Holidays</a>
+                        <a href="culturaltours.html" class="dropdown-item">Cultural Tours</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Travel Tips</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="packing.html" class="dropdown-item">Packing Tips</a>
+                        <a href="visa.html" class="dropdown-item">Visa Information</a>
+                        <a href="health&safety.html" class="dropdown-item">Health & Safety</a>
+                        <a href="besttimetovisit.html" class="dropdown-item">Best Time to Visit</a>
+                        <a href="localcustoms.html" class="dropdown-item">Local Customs</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            
+            <a href="booking.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5">
+    <div class="container py-5">
+        <h1 class="display-3 text-white mb-3 animated slideInDown">About Tarangire National Park</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                <li class="breadcrumb-item"><a class="text-white" href="#">Destinations</a></li>
+                <li class="breadcrumb-item text-white active" aria-current="page">Tarangire National Park</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<!-- About Start -->
+<div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+    <div class="container about px-lg-0">
+        <div class="row g-0 mx-lg-0">
+            <div class="col-lg-6 ps-lg-0" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="position-absolute img-fluid w-100 h-100" src="img/tarangire1.jpg" style="object-fit: cover;" alt="Tarangire National Park">
+                </div>
+            </div>
+            <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                <div class="p-lg-5 pe-lg-0">
+                    <div class="section-title text-start">
+                        <h1 class="display-5 mb-4">Tarangire National Park</h1>
+                    </div>
+                    <p class="mb-4 pb-2">
+                        Known as the "Land of Giants," Tarangire National Park is famous for its massive elephant herds, ancient baobab trees, and diverse wildlife. During the dry season, the Tarangire River becomes a lifeline, attracting thousands of animals in one of Tanzania's most spectacular wildlife concentrations.
+                    </p>
+                    <div class="row g-4 mb-4 pb-2">
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.1s">
+                            <div class="d-flex align-items-center">
+                                <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                    <i class="fa fa-elephant fa-2x text-primary"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h2 class="text-primary mb-1" data-toggle="counter-up">3000</h2>
+                                    <p class="fw-medium mb-0">Elephants</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+                            <div class="d-flex align-items-center">
+                                <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-white" style="width: 60px; height: 60px;">
+                                    <i class="fa fa-tree fa-2x text-primary"></i>
+                                </div>
+                                <div class="ms-3">
+                                    <h2 class="text-primary mb-1" data-toggle="counter-up">550</h2>
+                                    <p class="fw-medium mb-0">Bird Species</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- About End -->
+
+<!-- Detailed Overview Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="section-title text-center">
+            <h1 class="display-5 mb-5">Discover Tarangire National Park</h1>
+        </div>
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                <h3 class="mb-4">The Dry Season Spectacle</h3>
+                <p class="mb-4">From June to October, Tarangire transforms into one of Africa's greatest wildlife viewing destinations:</p>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fa fa-check text-primary me-3"></i>Massive elephant herds (up to 300 at once) gather along the river</li>
+                    <li class="mb-2"><i class="fa fa-check text-primary me-3"></i>Highest density of elephants in Tanzania</li>
+                    <li class="mb-2"><i class="fa fa-check text-primary me-3"></i>Ancient baobab trees create iconic African landscapes</li>
+                    <li class="mb-2"><i class="fa fa-check text-primary me-3"></i>Predators follow the migrating herbivores</li>
+                    <li class="mb-2"><i class="fa fa-check text-primary me-3"></i>Less crowded than northern circuit parks</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="position-relative h-100">
+                    <img class="img-fluid w-100 rounded" src="img/tarangire2.jpg" alt="Tarangire Elephants">
+                </div>
+            </div>
+        </div>
+        
+        <div class="row g-5 mt-0">
+            <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.5s">
+                <h3 class="mb-4">Wildlife Highlights</h3>
+                <p class="mb-4">Tarangire's diverse habitats support an incredible variety of wildlife:</p>
+                
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square bg-primary rounded-circle" style="width: 60px; height: 60px;">
+                                <i class="fa fa-elephant text-white"></i>
+                            </div>
+                            <div class="ms-4">
+                                <h5>Elephant Paradise</h5>
+                                <p>Home to Tanzania's largest elephant population with impressive tusks due to mineral-rich soil.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square bg-primary rounded-circle" style="width: 60px; height: 60px;">
+                                <i class="fa fa-tree text-white"></i>
+                            </div>
+                            <div class="ms-4">
+                                <h5>Baobab Forests</h5>
+                                <p>Iconic "upside-down" trees some over 1,000 years old dot the landscape.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square bg-primary rounded-circle" style="width: 60px; height: 60px;">
+                                <i class="fa fa-dove text-white"></i>
+                            </div>
+                            <div class="ms-4">
+                                <h5>Birdwatcher's Paradise</h5>
+                                <p>550 species including endemic ashy starlings and yellow-collared lovebirds.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0 btn-lg-square bg-primary rounded-circle" style="width: 60px; height: 60px;">
+                                <i class="fa fa-paw text-white"></i>
+                            </div>
+                            <div class="ms-4">
+                                <h5>Predator Action</h5>
+                                <p>Lions, leopards, cheetahs, and rare African wild dogs hunt the migratory herds.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row g-5 mt-2">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="position-relative h-100">
+                    <img class="img-fluid w-100 rounded" src="img/tarangire3.jpg" alt="Tarangire Wildlife">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.9s">
+                <h3 class="mb-4">Best Time to Visit</h3>
+                <p class="mb-4">Tarangire offers different experiences throughout the year:</p>
+                
+                <div class="mb-4">
+                    <h5><i class="fa fa-sun text-primary me-2"></i> Dry Season (June-October)</h5>
+                    <p>Peak wildlife viewing as animals concentrate along the Tarangire River. Best for elephant sightings.</p>
+                </div>
+                
+                <div class="mb-4">
+                    <h5><i class="fa fa-cloud-rain text-primary me-2"></i> Green Season (November-May)</h5>
+                    <p>Lush landscapes, migratory birds, and newborn animals. Fewer visitors and lower rates.</p>
+                </div>
+                
+                <div class="mb-4">
+                    <h5><i class="fa fa-calendar text-primary me-2"></i> Special Events</h5>
+                    <p>August-October for massive herds, November-April for bird migrations, March-May for dramatic skies.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Detailed Overview End -->
+
+<!-- Packages Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="section-title text-center">
+            <h1 class="display-5 mb-5">Tarangire Safari Packages</h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="package-item">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="img/tarangirepac2.jpg" alt="Elephant Safari">
+                    </div>
+                    <div class="text-center border border-5 border-light border-top-0 p-4">
+                        <h5 class="mb-0">Elephant Safari</h5>
+                        <small>2 Days / 1 Night</small>
+                        <div class="mb-3">
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                        </div>
+                        <div class="mb-2">
+                            <span class="text-primary h5">$650</span>
+                            <span class="text-body">/ person</span>
+                        </div>
+                        <p>Focus on elephant behavior and conservation with expert guides</p>
+                        <a href="" class="btn btn-sm btn-primary px-3">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="package-item">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="img/tarangirepac1.jpg" alt="Baobab & Birds">
+                    </div>
+                    <div class="text-center border border-5 border-light border-top-0 p-4">
+                        <h5 class="mb-0">Baobab & Birds</h5>
+                        <small>3 Days / 2 Nights</small>
+                        <div class="mb-3">
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                        </div>
+                        <div class="mb-2">
+                            <span class="text-primary h5">$950</span>
+                            <span class="text-body">/ person</span>
+                        </div>
+                        <p>Specialized birding and landscape photography tour</p>
+                        <a href="" class="btn btn-sm btn-primary px-3">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="package-item">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="img/tarangirepac3.jpg" alt="Predator Tracking">
+                    </div>
+                    <div class="text-center border border-5 border-light border-top-0 p-4">
+                        <h5 class="mb-0">Predator Tracking</h5>
+                        <small>3 Days / 2 Nights</small>
+                        <div class="mb-3">
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                        </div>
+                        <div class="mb-2">
+                            <span class="text-primary h5">$1100</span>
+                            <span class="text-body">/ person</span>
+                        </div>
+                        <p>Focus on lions, leopards and wild dogs with tracking experts</p>
+                        <a href="" class="btn btn-sm btn-primary px-3">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="package-item">
+                    <div class="overflow-hidden">
+                        <img class="img-fluid" src="img/tarangirepac4.jpg" alt="Luxury Tarangire">
+                    </div>
+                    <div class="text-center border border-5 border-light border-top-0 p-4">
+                        <h5 class="mb-0">Luxury Tarangire</h5>
+                        <small>4 Days / 3 Nights</small>
+                        <div class="mb-3">
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                            <small class="fa fa-star text-primary"></small>
+                        </div>
+                        <div class="mb-2">
+                            <span class="text-primary h5">$1800</span>
+                            <span class="text-body">/ person</span>
+                        </div>
+                        <p>Premium treehouse lodges with private game drives</p>
+                        <a href="" class="btn btn-sm btn-primary px-3">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Packages End -->
+
+  
+    <!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Contact Us</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Arusha, Tanzania</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+255 681 838 482</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@safarishuffle.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Our Services</h4>
+                <a class="btn btn-link" href="tailormade.html">Tailor-Made Safaris</a>
+                <a class="btn btn-link" href="groupsafari.html">Group Safaris</a>
+                <a class="btn btn-link" href="luxurysafaris.html">Luxury Safaris</a>
+                <a class="btn btn-link" href="zanzaibarbeachholidya.html">Zanzibar Beach Holidays</a>
+                <a class="btn btn-link" href="culturaltours.html">Cultural Tours</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Quick Links</h4>
+                <a class="btn btn-link" href="about us.html">About Us</a>
+                <!-- <a class="btn btn-link" href="#">Destinations</a> -->
+                <a class="btn btn-link" href="tours.html">Safari Packages</a>
+                <a class="btn btn-link" href="termsandconditions.html">Terms & Conditions</a>
+                <a class="btn btn-link" href="contact.html">Contact Us</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Newsletter</h4>
+                <p>Subscribe to receive updates on our latest safari offers and travel tips.</p>
+                <div class="position-relative mx-auto" style="max-width: 400px;">
+                    <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Safari Shuffle</a>, All Rights Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!-- Designed by <a class="border-bottom" href="#">Your</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+<a href="https://wa.me/yourwhatsappnumber" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp whatsapp-icon"></i>
+</a>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

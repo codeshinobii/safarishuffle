@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Safari Shuffle | About Our Tanzania Safari Company</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="about safari shuffle, tanzania safari company, our safari team, why choose us, tanzania tour operator" name="keywords">
+    <meta content="Discover the story behind Safari Shuffle - Tanzania's premier safari operator. Learn about our expert team, conservation values, and commitment to authentic safari experiences." name="description">
+
+    <!-- Favicon -->
+    <link href="img/safarishuffleicon.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- About Page Custom CSS -->
+    <style>
+        .about-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/about-hero.jpg') center/cover no-repeat;
+            min-height: 70vh;
+        }
+        .about-section {
+            margin-bottom: 60px;
+        }
+        .about-section h2 {
+            color:  #a5754c;
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+        .about-section h2:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 80px;
+            height: 3px;
+            background:  #a5754c;
+        }
+        .team-card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .team-img {
+            height: 300px;
+            object-fit: cover;
+        }
+        .value-card {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 10px;
+            background: #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s;
+            height: 100%;
+        }
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: rgba(13, 110, 253, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color:  #a5754c;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 50px;
+        }
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background:  #a5754c;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .timeline-year {
+            position: absolute;
+            left: -50px;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background:  #a5754c;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .stats-item {
+            text-align: center;
+            padding: 30px 15px;
+        }
+        .stats-number {
+            font-size: 50px;
+            font-weight: 700;
+            color:  #a5754c;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Topbar -->
+    <div class="container-fluid bg-light p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>Arusha, Tanzania</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Mon - Fri: 9AM - 6PM | Sat: 9AM - 1PM</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+255 789 456 123</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar Start -->
+	<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="img/safarilogo.png" alt="WooDY Logo" class="navbar-logo">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Destinations</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="serengeti.html" class="dropdown-item">Serengeti National Park</a>
+                        <a href="ngorongoro.html" class="dropdown-item">Ngorongoro Conservational Area</a>
+                        <a href="manyara.html" class="dropdown-item">Lake Manyara National Park</a>
+                        <a href="tarangire.html" class="dropdown-item">Tarangire National Park</a>
+                        <a href="zanzibar.html" class="dropdown-item">Zanzibar</a>
+                        <a href="kilimanjaro.html" class="dropdown-item">Mount Kilimanjaro</a>
+                    </div>
+                </div>
+                <a href="tours.html" class="nav-item nav-link">Tours</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our Services</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="tailormade.html" class="dropdown-item">Tailor Made Safaris</a>
+                        <a href="luxurysafaris.html" class="dropdown-item">Luxury Safaris</a>
+                        <a href="groupsafari.html" class="dropdown-item">Group Safaris</a>
+                        <a href="zanzaibarbeachholidya.html" class="dropdown-item">Zanzibar Beach Holidays</a>
+                        <a href="culturaltours.html" class="dropdown-item">Cultural Tours</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Travel Tips</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="packing.html" class="dropdown-item">Packing Tips</a>
+                        <a href="visa.html" class="dropdown-item">Visa Information</a>
+                        <a href="health&safety.html" class="dropdown-item">Health & Safety</a>
+                        <a href="besttimetovisit.html" class="dropdown-item">Best Time to Visit</a>
+                        <a href="localcustoms.html" class="dropdown-item">Local Customs</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            
+            <a href="booking.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section -->
+    <div class="container-fluid about-hero d-flex align-items-center">
+        <div class="container text-center text-white py-5">
+            <h1 class="display-3 mb-4">Our Story</h1>
+            <p class="fs-4 mb-5">Passion for Tanzania, Excellence in Safaris</p>
+        </div>
+    </div>
+
+    <!-- About Content -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <!-- Our Story Section -->
+            <div class="row g-5 align-items-center about-section">
+                <div class="col-lg-6">
+                    <div class="section-title position-relative">
+                        <h2>Welcome to Safari Shuffle</h2>
+                    </div>
+                    <p class="mb-4">Founded in 2010, Safari Shuffle was born from a shared passion for Tanzania's breathtaking wilderness and rich cultural heritage. What began as a small team of local guides with a single safari vehicle has grown into one of Tanzania's most respected safari operators, known for our authentic experiences and unwavering commitment to excellence.</p>
+                    <p>We're not just a tour company - we're storytellers, conservation advocates, and your personal connection to the heart of Africa. Our Tanzanian roots give us unparalleled access and knowledge, while our international standards ensure your comfort and safety throughout your journey.</p>
+                    <div class="row g-3 pt-3">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-check text-white"></i>
+                                </div>
+                                <h6 class="mb-0">Locally Owned & Operated</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-check text-white"></i>
+                                </div>
+                                <h6 class="mb-0">100+ Five-Star Reviews</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-check text-white"></i>
+                                </div>
+                                <h6 class="mb-0">Tanzania Tourism Certified</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-check text-white"></i>
+                                </div>
+                                <h6 class="mb-0">Sustainable Tourism Member</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-6 text-end">
+                            <img class="img-fluid rounded w-75" src="img/about-1.jpg" alt="Our First Safari Vehicle" style="margin-top: 25%;">
+                        </div>
+                        <div class="col-6 text-start">
+                            <img class="img-fluid rounded w-100" src="img/about-2.jpg" alt="Our Team Today">
+                        </div>
+                        <div class="col-6 text-end">
+                            <img class="img-fluid rounded w-50" src="img/about-3.jpg" alt="Award Winning">
+                        </div>
+                        <div class="col-6 text-start">
+                            <img class="img-fluid rounded w-75" src="img/about-4.jpg" alt="Happy Clients">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="row g-4 py-5 mb-5 text-center about-section" style="background: url('img/stats-bg.jpg') center/cover no-repeat; padding: 60px 0;">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stats-item bg-white p-4 rounded">
+                        <h1 class="stats-number" data-toggle="counter-up">14</h1>
+                        <h6 class="mb-0">Years Experience</h6>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stats-item bg-white p-4 rounded">
+                        <h1 class="stats-number" data-toggle="counter-up">3200</h1>
+                        <h6 class="mb-0">Happy Clients</h6>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stats-item bg-white p-4 rounded">
+                        <h1 class="stats-number" data-toggle="counter-up">28</h1>
+                        <h6 class="mb-0">Expert Guides</h6>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stats-item bg-white p-4 rounded">
+                        <h1 class="stats-number" data-toggle="counter-up">97</h1>
+                        <h6 class="mb-0">Wildlife Species</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Mission Section -->
+            <div class="row g-5 align-items-center about-section">
+                <div class="col-lg-6">
+                    <img class="img-fluid rounded" src="img/mission.jpg" alt="Our Mission">
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-title position-relative">
+                        <h2>Our Mission & Vision</h2>
+                    </div>
+                    <p class="mb-4">At Safari Shuffle, our mission is to create transformative travel experiences that connect people with Tanzania's extraordinary natural wonders while supporting conservation and local communities.</p>
+                    <p class="mb-4">We envision a future where tourism sustains Tanzania's wildlife and cultural heritage for generations to come. Every safari we operate contributes to this vision through:</p>
+                    <ul class="terms-list mb-4">
+                        <li>Direct employment of Tanzanian guides and staff</li>
+                        <li>Partnerships with community-owned conservancies</li>
+                        <li>Education initiatives in local schools</li>
+                        <li>Low-impact safari operations</li>
+                        <li>Anti-poaching support through park fees</li>
+                    </ul>
+                    <p>We measure our success not just by client satisfaction, but by the positive impact we create in Tanzania's ecosystems and communities.</p>
+                </div>
+            </div>
+
+            <!-- Our Values Section -->
+            <div class="about-section">
+                <div class="section-title text-center">
+                    <h2>Our Core Values</h2>
+                    <p class="mb-5">These principles guide every decision we make at Safari Shuffle</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <h4>Authenticity</h4>
+                            <p class="mb-0">We deliver genuine Tanzanian experiences, not tourist clichés. Our connections with local communities allow access to authentic cultural interactions.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-leaf"></i>
+                            </div>
+                            <h4>Sustainability</h4>
+                            <p class="mb-0">We operate responsibly to minimize environmental impact while maximizing benefits to local communities and conservation efforts.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4>Expertise</h4>
+                            <p class="mb-0">Our team combines deep local knowledge with professional training to provide insightful, safe, and enriching safari experiences.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="value-card">
+                            <div class="value-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h4>Passion</h4>
+                            <p class="mb-0">We love what we do, and it shows in every detail. Our enthusiasm for Tanzania's wildlife and culture is contagious.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Our Team Section -->
+            <div class="about-section">
+                <div class="section-title text-center">
+                    <h2>Meet Our Team</h2>
+                    <p class="mb-5">The passionate professionals behind your safari experience</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-card">
+                            <img class="img-fluid team-img w-100" src="img/team-1.jpg" alt="Juma Mwambene">
+                            <div class="p-4">
+                                <h5 class="mb-1">Juma Mwambene</h5>
+                                <small class="text-primary">Founder & Managing Director</small>
+                                <p class="mb-0 mt-2">Born in Arusha, Juma has 20+ years of safari experience and trained at the Tanzania Wildlife Research Institute.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-card">
+                            <img class="img-fluid team-img w-100" src="img/team-2.jpg" alt="Sarah Johnson">
+                            <div class="p-4">
+                                <h5 class="mb-1">Sarah Johnson</h5>
+                                <small class="text-primary">Operations Manager</small>
+                                <p class="mb-0 mt-2">Former lodge manager with decade of experience ensuring seamless safari operations across Tanzania.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-card">
+                            <img class="img-fluid team-img w-100" src="img/team-3.jpg" alt="Rajab Simba">
+                            <div class="p-4">
+                                <h5 class="mb-1">Rajab Simba</h5>
+                                <small class="text-primary">Head Safari Guide</small>
+                                <p class="mb-0 mt-2">FGASA-certified guide with exceptional birding knowledge and tracking skills. Fluent in 5 languages.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="team-card">
+                            <img class="img-fluid team-img w-100" src="img/team-4.jpg" alt="Grace Mushi">
+                            <div class="p-4">
+                                <h5 class="mb-1">Grace Mushi</h5>
+                                <small class="text-primary">Guest Relations</small>
+                                <p class="mb-0 mt-2">Ensures every detail of your safari exceeds expectations. Available 24/7 during your trip.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="team.html" class="btn btn-primary px-4">View Full Team</a>
+                </div>
+            </div>
+
+            <!-- Our History Section -->
+            <div class="about-section">
+                <div class="section-title">
+                    <h2>Our Journey</h2>
+                    <p class="mb-4">Milestones in our Tanzanian safari story</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2010</div>
+                        <h4>Founded in Arusha</h4>
+                        <p>Juma Mwambene starts Safari Shuffle with one Land Cruiser and a vision to share Tanzania's wilderness with discerning travelers.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2013</div>
+                        <h4>First International Recognition</h4>
+                        <p>Featured in Lonely Planet as a "Top Local Operator" for authentic Northern Circuit safaris.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2016</div>
+                        <h4>Conservation Partnership</h4>
+                        <p>Began working with Serengeti Conservation Foundation, directing 5% of profits to anti-poaching efforts.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2019</div>
+                        <h4>Luxury Division Launch</h4>
+                        <p>Expanded services to include high-end safaris with partnerships at top lodges like Singita and &Beyond.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2022</div>
+                        <h4>Sustainability Certification</h4>
+                        <p>Awarded Gold Certification by Sustainable Tourism Tanzania for our eco-friendly operations.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2024</div>
+                        <h4>New Headquarters</h4>
+                        <p>Opened our eco-designed office in Arusha with solar power and water recycling systems.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Awards Section -->
+            <div class="about-section">
+                <div class="section-title text-center">
+                    <h2>Recognition & Awards</h2>
+                    <p class="mb-5">Our commitment to excellence has been recognized by</p>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <img src="img/award-1.png" class="img-fluid" alt="Tanzania Tourism Excellence Award">
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <img src="img/award-2.png" class="img-fluid" alt="Sustainable Tourism Gold Certified">
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <img src="img/award-3.png" class="img-fluid" alt="TripAdvisor Excellence Award">
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <img src="img/award-4.png" class="img-fluid" alt="African Travel Association Member">
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-6">
+                        <img src="img/award-5.png" class="img-fluid" alt="Wildlife Conservation Partner">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="container-fluid bg-primary text-white py-5">
+        <div class="container text-center py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="display-5 mb-4">Ready for Your Tanzanian Adventure?</h2>
+                    <p class="fs-5 mb-5">Let our team create a personalized safari experience just for you</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="contact.html" class="btn btn-lg btn-light px-4 py-3">
+                            <i class="fas fa-envelope me-2"></i> Contact Us
+                        </a>
+                        <a href="tours.html" class="btn btn-lg btn-outline-light px-4 py-3">
+                            <i class="fas fa-safari me-2"></i> Explore Tours
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Contact Us</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Arusha, Tanzania</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+255 681 838 482</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@safarishuffle.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Our Services</h4>
+                <a class="btn btn-link" href="tailormade.html">Tailor-Made Safaris</a>
+                <a class="btn btn-link" href="groupsafari.html">Group Safaris</a>
+                <a class="btn btn-link" href="luxurysafaris.html">Luxury Safaris</a>
+                <a class="btn btn-link" href="zanzaibarbeachholidya.html">Zanzibar Beach Holidays</a>
+                <a class="btn btn-link" href="culturaltours.html">Cultural Tours</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Quick Links</h4>
+                <a class="btn btn-link" href="about us.html">About Us</a>
+                <!-- <a class="btn btn-link" href="#">Destinations</a> -->
+                <a class="btn btn-link" href="tours.html">Safari Packages</a>
+                <a class="btn btn-link" href="termsandconditions.html">Terms & Conditions</a>
+                <a class="btn btn-link" href="contact.html">Contact Us</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Newsletter</h4>
+                <p>Subscribe to receive updates on our latest safari offers and travel tips.</p>
+                <div class="position-relative mx-auto" style="max-width: 400px;">
+                    <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Safari Shuffle</a>, All Rights Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!-- Designed by <a class="border-bottom" href="#">Your</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+<a href="https://wa.me/yourwhatsappnumber" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp whatsapp-icon"></i>
+</a>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

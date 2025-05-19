@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Safari Shuffle | Health & Safety</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/safarishuffleicon.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .safety-card {
+            transition: all 0.3s;
+            height: 100%;
+        }
+        .safety-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .requirement-item {
+            border-left: 3px solid #0d6efd;
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+        .checklist-item {
+            margin-bottom: 10px;
+        }
+        .checklist-item i {
+            color: #28a745;
+            margin-right: 10px;
+        }
+        .warning-item {
+            margin-bottom: 10px;
+        }
+        .warning-item i {
+            color: #dc3545;
+            margin-right: 10px;
+        }
+        .health-tip {
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>Arusha, Tanzania</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Open 24/7</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+255 681 838 482</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    
+    <!-- Navbar Start -->
+	<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="img/safarilogo.png" alt="WooDY Logo" class="navbar-logo">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Destinations</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="serengeti.html" class="dropdown-item">Serengeti National Park</a>
+                        <a href="ngorongoro.html" class="dropdown-item">Ngorongoro Conservational Area</a>
+                        <a href="manyara.html" class="dropdown-item">Lake Manyara National Park</a>
+                        <a href="tarangire.html" class="dropdown-item">Tarangire National Park</a>
+                        <a href="zanzibar.html" class="dropdown-item">Zanzibar</a>
+                        <a href="kilimanjaro.html" class="dropdown-item">Mount Kilimanjaro</a>
+                    </div>
+                </div>
+                <a href="tours.html" class="nav-item nav-link">Tours</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our Services</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="tailormade.html" class="dropdown-item">Tailor Made Safaris</a>
+                        <a href="luxurysafaris.html" class="dropdown-item">Luxury Safaris</a>
+                        <a href="groupsafari.html" class="dropdown-item">Group Safaris</a>
+                        <a href="zanzaibarbeachholidya.html" class="dropdown-item">Zanzibar Beach Holidays</a>
+                        <a href="culturaltours.html" class="dropdown-item">Cultural Tours</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Travel Tips</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="packing.html" class="dropdown-item">Packing Tips</a>
+                        <a href="visa.html" class="dropdown-item">Visa Information</a>
+                        <a href="health&safety.html" class="dropdown-item">Health & Safety</a>
+                        <a href="besttimetovisit.html" class="dropdown-item">Best Time to Visit</a>
+                        <a href="localcustoms.html" class="dropdown-item">Local Customs</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            
+            <a href="booking.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Health & Safety Guide</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Travel Tips</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Health & Safety</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Health Overview Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h1 class="display-6 mb-4">Your Health & Safety on Safari</h1>
+                    <p class="mb-4">At Safari Shuffle, your wellbeing is our top priority. Tanzania is generally a safe destination, but it's important to be prepared. Here's everything you need to know to stay healthy and safe during your adventure.</p>
+                    
+                    <div class="row g-4 mb-4">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-shield-alt text-white"></i>
+                                </div>
+                                <h6 class="mb-0">Safety First Policy</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-first-aid text-white"></i>
+                                </div>
+                                <h6 class="mb-0">Medical Support</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#vaccinations" class="btn btn-primary py-3 px-5">View Health Requirements</a>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid rounded" src="img/health1.jpg" alt="Safe Safari Experience">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Health Overview End -->
+
+    <!-- Safety Essentials Start -->
+    <div class="container-xxl py-5 bg-light">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h1 class="display-6 mb-4">Safari Safety Essentials</h1>
+                <p class="mb-4">Our expert guides are trained in wilderness first aid and safety protocols. Here's what we do to keep you safe, and how you can help:</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="card safety-card h-100">
+                        <div class="card-body text-center">
+                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px; margin: 0 auto;">
+                                <i class="fa fa-car-side fa-2x text-white"></i>
+                            </div>
+                            <h5 class="mb-3">Vehicle Safety</h5>
+                            <p>All our safari vehicles are regularly maintained and equipped with first aid kits, communication devices, and emergency supplies.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="card safety-card h-100">
+                        <div class="card-body text-center">
+                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px; margin: 0 auto;">
+                                <i class="fa fa-user-shield fa-2x text-white"></i>
+                            </div>
+                            <h5 class="mb-3">Guide Training</h5>
+                            <p>Our guides undergo rigorous safety training including wildlife behavior, emergency response, and first aid certification.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="card safety-card h-100">
+                        <div class="card-body text-center">
+                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px; margin: 0 auto;">
+                                <i class="fa fa-clinic-medical fa-2x text-white"></i>
+                            </div>
+                            <h5 class="mb-3">Medical Support</h5>
+                            <p>We maintain relationships with clinics in all safari areas and can arrange medical evacuation if needed.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="card safety-card h-100">
+                        <div class="card-body text-center">
+                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px; margin: 0 auto;">
+                                <i class="fa fa-phone-alt fa-2x text-white"></i>
+                            </div>
+                            <h5 class="mb-3">24/7 Support</h5>
+                            <p>Our operations team is available around the clock to assist with any safety concerns during your trip.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row g-4 mt-4">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h3 class="mb-4"><i class="fa fa-lion text-primary me-2"></i> Wildlife Safety Tips</h3>
+                    <div class="checklist-item"><i class="fa fa-check"></i> Always remain in your vehicle during game drives unless at designated safe areas</div>
+                    <div class="checklist-item"><i class="fa fa-check"></i> Never approach or feed wild animals</div>
+                    <div class="checklist-item"><i class="fa fa-check"></i> Follow your guide's instructions at all times</div>
+                    <div class="checklist-item"><i class="fa fa-check"></i> Keep noise levels low to avoid startling animals</div>
+                    <div class="checklist-item"><i class="fa fa-check"></i> Never stand up or hang out of the safari vehicle</div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h3 class="mb-4"><i class="fa fa-hiking text-primary me-2"></i> General Safety</h3>
+                    <div class="checklist-item"><i class="fa fa-check"></i> Stay hydrated and protect yourself from the sun</div>
+                    <div class="checklist-item"><i class="fa fa-check"></i> Use insect repellent to prevent mosquito bites</div>
+                    <div class="checklist-item"><i class="fa fa-check"></i> Keep valuables secure and be aware of your surroundings</div>
+                    <div class="checklist-item"><i class="fa fa-check"></i> Only drink bottled or purified water</div>
+                    <div class="checklist-item"><i class="fa fa-check"></i> Carry a copy of your passport and important documents</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Safety Essentials End -->
+
+    <!-- Health Requirements Start -->
+    <div class="container-xxl py-5" id="vaccinations">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <h2 class="display-6 mb-4">Health Requirements & Vaccinations</h2>
+                    
+                    <div class="requirement-item">
+                        <h5><i class="fa fa-syringe text-primary me-2"></i> Yellow Fever</h5>
+                        <p>A Yellow Fever vaccination certificate is required if arriving from a country with risk of transmission. Recommended for all travelers.</p>
+                    </div>
+                    
+                    <div class="requirement-item">
+                        <h5><i class="fa fa-pills text-primary me-2"></i> Malaria Prophylaxis</h5>
+                        <p>Tanzania is a malaria zone. Consult your doctor about antimalarial medication. We recommend bringing mosquito repellent and sleeping under nets.</p>
+                    </div>
+                    
+                    <!-- <div class="requirement-item">
+                        <h5><i class="fa fa-head-side-mask text-primary me-2"></i> COVID-19</h5>
+                        <p>Check current Tanzania entry requirements regarding COVID-19 testing or vaccination before travel.</p>
+                    </div> -->
+                    
+                    <div class="requirement-item">
+                        <h5><i class="fa fa-prescription-bottle-alt text-primary me-2"></i> Other Recommended Vaccines</h5>
+                        <p>Hepatitis A & B, Typhoid, Tetanus, Cholera (for high-risk areas), and Rabies (for extended stays).</p>
+                    </div>
+                    
+                    <div class="alert alert-primary mt-4">
+                        <i class="fa fa-info-circle me-2"></i> Consult a travel medicine specialist 6-8 weeks before your trip for personalized advice.
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="health-tip">
+                        <h4><i class="fa fa-briefcase-medical text-primary me-2"></i> Travel Medical Kit</h4>
+                        <p>We recommend bringing:</p>
+                        <ul>
+                            <li>Prescription medications (with original labels)</li>
+                            <li>Antimalarial medication</li>
+                            <li>Diarrhea treatment (oral rehydration salts, loperamide)</li>
+                            <li>Antihistamines for allergies</li>
+                            <li>Motion sickness tablets</li>
+                            <li>Pain/fever relievers (paracetamol, ibuprofen)</li>
+                            <li>Antibacterial ointment</li>
+                            <li>Bandages and blister treatment</li>
+                            <li>Insect repellent (DEET 30-50%)</li>
+                            <li>High SPF sunscreen</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="health-tip">
+                        <h4><i class="fa fa-exclamation-triangle text-primary me-2"></i> Health Warnings</h4>
+                        <div class="warning-item"><i class="fa fa-times"></i> Avoid swimming in freshwater lakes/rivers due to bilharzia risk</div>
+                        <div class="warning-item"><i class="fa fa-times"></i> Only eat well-cooked food and peeled fruits</div>
+                        <div class="warning-item"><i class="fa fa-times"></i> Drink only bottled or purified water</div>
+                        <div class="warning-item"><i class="fa fa-times"></i> Be cautious with street food</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Health Requirements End -->
+
+    <!-- Emergency Info Start -->
+    <div class="container-xxl py-5 bg-light">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                <h1 class="display-6 mb-4">Emergency Information</h1>
+                <p class="mb-4">We hope you'll never need it, but here's important information in case of emergency:</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="bg-white p-4 rounded">
+                        <h4 class="mb-4"><i class="fa fa-ambulance text-primary me-2"></i> Emergency Contacts</h4>
+                        <p><strong>General Emergency:</strong> 112 (Tanzania emergency number)</p>
+                        <p><strong>Safari Shuffle 24/7:</strong> +255 681 838 482</p>
+                        <p><strong>Police:</strong> 112 </p>
+                        <a href="contact.html" class="btn btn-primary px-4">Ask About Emergency Contacts</a>
+                    </div>
+                    
+                </div>
+                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="bg-white p-4 rounded">
+                        <h4 class="mb-4"><i class="fa fa-hospital text-primary me-2"></i> Medical Facilities</h4>
+                        <p><strong>Arusha Lutheran Medical Centre:</strong> +255 681 838 482</p>
+                        <p><strong>Mount Meru Regional Hospital:</strong> +255 748 535 480</p>
+                      
+                       
+                        <p class="mt-3"><em>Most safari lodges have first aid facilities and can arrange medical evacuation if needed.</em></p>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+    <!-- Emergency Info End -->
+
+    <!-- Insurance Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="position-relative h-100">
+                        <img class="img-fluid rounded" src="img/health2.jpg" alt="Travel Insurance">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <h2 class="display-6 mb-4">Travel Insurance</h2>
+                    <p class="mb-4">We <strong>strongly recommend</strong> comprehensive travel insurance that covers:</p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Medical expenses (minimum $200,000 coverage)</li>
+                        <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Emergency medical evacuation</li>
+                        <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Trip cancellation/interruption</li>
+                        <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Lost/stolen baggage</li>
+                        <li class="mb-2"><i class="fa fa-check text-primary me-2"></i> Adventure activities coverage</li>
+                    </ul>
+                    <div class="alert alert-warning">
+                        <i class="fa fa-exclamation-triangle me-2"></i> Many standard policies exclude "high-risk" activities like safaris. Ensure your policy explicitly covers safari activities.
+                    </div>
+                    <a href="contact.html" class="btn btn-primary px-4">Ask About Insurance Options</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Insurance End -->
+
+    
+    <!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Contact Us</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Arusha, Tanzania</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+255 681 838 482</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@safarishuffle.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Our Services</h4>
+                <a class="btn btn-link" href="tailormade.html">Tailor-Made Safaris</a>
+                <a class="btn btn-link" href="groupsafari.html">Group Safaris</a>
+                <a class="btn btn-link" href="luxurysafaris.html">Luxury Safaris</a>
+                <a class="btn btn-link" href="zanzaibarbeachholidya.html">Zanzibar Beach Holidays</a>
+                <a class="btn btn-link" href="culturaltours.html">Cultural Tours</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Quick Links</h4>
+                <a class="btn btn-link" href="about us.html">About Us</a>
+                <!-- <a class="btn btn-link" href="#">Destinations</a> -->
+                <a class="btn btn-link" href="tours.html">Safari Packages</a>
+                <a class="btn btn-link" href="termsandconditions.html">Terms & Conditions</a>
+                <a class="btn btn-link" href="contact.html">Contact Us</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Newsletter</h4>
+                <p>Subscribe to receive updates on our latest safari offers and travel tips.</p>
+                <div class="position-relative mx-auto" style="max-width: 400px;">
+                    <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Safari Shuffle</a>, All Rights Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!-- Designed by <a class="border-bottom" href="#">Your</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+<a href="https://wa.me/yourwhatsappnumber" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp whatsapp-icon"></i>
+</a>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Safari Shuffle | Create New Package</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="img/safarishuffleicon.png" rel="icon"> <!-- Make sure this path is correct -->
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> <!-- Updated Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet"> <!-- Updated Bootstrap Icons -->
+
+    <!-- Bootstrap Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- Using a specific stable version -->
+
+    <!-- Admin Panel Styles -->
+    <style>
+        :root {
+            --primary: #0d6efd;
+            --secondary: #6c757d;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --danger: #dc3545;
+            --success: #198754;
+            --light-gray: #f1f4f8;
+            --border-color: #dee2e6;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #eef2f5; /* Light background for the whole page */
+        }
+
+        .top-nav {
+            background: var(--dark);
+            padding: 0.75rem 1rem;
+            color: white;
+            margin-bottom: 1.5rem; /* Spacing below nav */
+        }
+
+         .navbar-brand img {
+            max-height: 40px;
+        }
+
+        .navbar-brand-text {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: white;
+            text-decoration: none;
+        }
+         .navbar-brand-text:hover {
+            color: #eee;
+         }
+
+        .content-wrapper {
+             padding: 1.5rem;
+        }
+
+        .page-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        .card, .form-section {
+            border: none;
+            border-radius: 0.5rem; /* Slightly less round */
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Softer shadow */
+            background: white;
+            padding: 1.5rem; /* Consistent padding */
+            margin-bottom: 1.5rem; /* Consistent spacing */
+        }
+
+        .form-section h4 {
+            color: var(--primary);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.75rem;
+            margin-bottom: 1.25rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        .form-section h4 i {
+            font-size: 1.1rem; /* Slightly smaller icon */
+        }
+
+         .form-label {
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+         .btn-primary:hover {
+             background-color: #0b5ed7;
+             border-color: #0a58ca;
+         }
+
+        .btn-danger {
+             background-color: var(--danger);
+             border-color: var(--danger);
+        }
+         .btn-danger:hover {
+             background-color: #bb2d3b;
+             border-color: #b02a37;
+         }
+        .btn-outline-danger {
+            color: var(--danger);
+            border-color: var(--danger);
+        }
+         .btn-outline-danger:hover {
+            color: white;
+            background-color: var(--danger);
+            border-color: var(--danger);
+        }
+
+        .package-preview {
+            background: white;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+             margin-bottom: 1.5rem;
+            box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+        }
+
+        .preview-container {
+            max-height: 600px; /* Limit height */
+            overflow-y: auto; /* Add scroll if content exceeds height */
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            background: #ffffff; /* White background inside */
+             border-radius: 0.375rem;
+             margin-top: 1rem;
+        }
+        /* Style for preview elements mimicking tourdetails.html */
+        .preview-container .itinerary-day {
+             border-left: 3px solid var(--primary);
+             padding-left: 15px;
+             margin-bottom: 20px;
+         }
+         .preview-container .included-item, .preview-container .excluded-item {
+             margin-bottom: 8px;
+         }
+         .preview-container .included-item i {
+             color: var(--success);
+         }
+         .preview-container .excluded-item i {
+             color: var(--danger);
+         }
+          .preview-container .gallery-img {
+             transition: transform 0.3s;
+             width: 100%;
+             height: 150px; /* Fixed height for consistency */
+             object-fit: cover;
+             margin-bottom: 1rem;
+         }
+         .preview-container .gallery-img:hover {
+             transform: scale(1.03);
+         }
+
+        .dynamic-item { /* Class for repeatable sections */
+            background: var(--light-gray);
+            padding: 1rem;
+            border-radius: 0.375rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+            position: relative; /* For absolute positioning remove button */
+        }
+        .remove-item-btn {
+             position: absolute;
+             top: 8px;
+             right: 8px;
+             border-radius: 50%;
+             width: 26px;
+             height: 26px;
+             padding: 0;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             font-size: 0.8rem;
+        }
+
+        .add-btn {
+            margin-top: 0.5rem; /* Reduced margin */
+        }
+
+        .gallery-upload {
+            border: 2px dashed var(--border-color);
+            padding: 2rem 1rem;
+            text-align: center;
+            cursor: pointer;
+            margin-bottom: 1.5rem;
+            background-color: var(--light-gray);
+            border-radius: 0.375rem;
+            transition: border-color 0.3s ease, background-color 0.3s ease;
+        }
+        .gallery-upload:hover {
+            border-color: var(--primary);
+            background-color: #e9ecef;
+        }
+
+        .gallery-thumbnail {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+        .gallery-thumbnail img {
+            border-radius: 0.375rem;
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border: 1px solid var(--border-color);
+        }
+        .gallery-thumbnail .delete-img {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: rgba(220, 53, 69, 0.8); /* Danger with transparency */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+         .gallery-thumbnail .delete-img:hover {
+             background: rgba(220, 53, 69, 1);
+         }
+
+        .required-field::after {
+            content: " *";
+            color: var(--danger);
+        }
+
+        footer {
+             background-color: #ffffff;
+             padding: 1rem 0;
+             margin-top: 2rem;
+             border-top: 1px solid var(--border-color);
+             text-align: center;
+             color: var(--secondary);
+             font-size: 0.9em;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Simplified Top Navigation -->
+    <nav class="top-nav shadow-sm">
+        <div class="container-fluid">
+             <a href="index.html" class="navbar-brand-text d-flex align-items-center"> <!-- Link to home or dashboard -->
+                 <img src="img/safarilogo.png" alt="Safari Shuffle Logo" class="me-2" height="40"> <!-- Make sure path is correct -->
+                 <span>Safari Shuffle Admin</span>
+             </a>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <div class="content-wrapper">
+        <div class="container-fluid">
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="h3 mb-0 text-gray-800">Create New Safari Package</h1>
+                <a href="admin-packages.html" class="btn btn-sm btn-outline-secondary"> <!-- Link to hypothetical package list page -->
+                    <i class="fas fa-arrow-left fa-sm"></i> Back to Packages
+                </a>
+                <button type="button" class="btn btn-sm btn-outline-primary ms-2" id="fillTestData"><i class="fas fa-magic me-1"></i> Fill Test Data</button>
+            </div>
+
+            <form id="packageForm">
+                <div class="row">
+                    <!-- Left Column: Main Form Fields -->
+                    <div class="col-lg-8">
+
+                        <!-- Basic Information Section -->
+                        <div class="form-section">
+                            <h4><i class="fas fa-info-circle me-2"></i> Basic Information</h4>
+                            <div class="row g-3"> 
+                                <div class="col-md-6">
+                                    <label for="packageTitle" class="form-label required-field">Package Title</label>
+                                    <input type="text" class="form-control" id="packageTitle" placeholder="e.g. Great Migration Safari" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="packageSlug" class="form-label required-field">URL Slug</label>
+                                    <input type="text" class="form-control" id="packageSlug" placeholder="e.g. great-migration-safari" required>
+                                     <small class="form-text text-muted">Auto-generate or enter manually (lowercase, dashes).</small>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="packageDuration" class="form-label required-field">Duration</label>
+                                    <input type="text" class="form-control" id="packageDuration" placeholder="e.g. 5 Days / 4 Nights" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="packageMinPrice" class="form-label required-field">Minimum Price</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">$</span>
+                                        <input type="number" class="form-control" id="packageMinPrice" placeholder="e.g. 1800" required min="0" step="1">
+                                        <span class="input-group-text">USD</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="packageMaxPrice" class="form-label required-field">Maximum Price</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text">$</span>
+                                        <input type="number" class="form-control" id="packageMaxPrice" placeholder="e.g. 2500" required min="0" step="1">
+                                        <span class="input-group-text">USD</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="packageLocation" class="form-label required-field">Main Location(s)</label>
+                                    <input type="text" class="form-control" id="packageLocation" placeholder="e.g. Serengeti National Park, Ngorongoro Crater" required>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="packageShortDesc" class="form-label">Short Description (Optional)</label>
+                                    <textarea class="form-control" id="packageShortDesc" rows="2" placeholder="Brief description for listings (1-2 sentences)"></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="packageOverview" class="form-label required-field">Detailed Overview</label>
+                                    <textarea class="form-control" id="packageOverview" rows="5" placeholder="Full description for the package page" required></textarea>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="packageRating" class="form-label">Rating Display Text</label>
+                                    <input type="text" class="form-control" id="packageRating" placeholder="e.g. 5.0 (24 Reviews)">
+                                     <small class="form-text text-muted">Text shown next to stars (manual input).</small>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="packageTags" class="form-label">Display Tags</label>
+                                    <input type="text" class="form-control" id="packageTags" placeholder="e.g. Popular, Great Migration (comma separated)">
+                                     <small class="form-text text-muted">Tags shown visually on the package page.</small>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="packageHeroImage" class="form-label">Hero Image</label>
+                                    <input type="file" class="form-control" id="packageHeroImage" accept="image/jpeg, image/png, image/webp">
+                                    <small class="text-muted">Main banner image (e.g., 1920x800px). JPG, PNG, WEBP.</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Highlights Section -->
+                        <div class="form-section">
+                            <h4><i class="fas fa-star me-2"></i> Tour Highlights</h4>
+                            <div id="highlightsContainer">
+                                <!-- Highlight Template -->
+                                <div class="dynamic-item highlight-item">
+                                    <button type="button" class="btn btn-sm btn-danger remove-item-btn remove-highlight"><i class="fas fa-times"></i></button>
+                                    <div class="row g-2 align-items-center">
+                                        <div class="col-md-5">
+                                             <label class="form-label visually-hidden">Highlight Title</label>
+                                            <input type="text" class="form-control highlight-title" placeholder="Highlight title (e.g. Migration Viewing)" required>
+                                        </div>
+                                        <div class="col-md-7">
+                                             <label class="form-label visually-hidden">Highlight Description</label>
+                                            <input type="text" class="form-control highlight-desc" placeholder="Highlight description" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Highlight Template -->
+                            </div>
+                            <button type="button" class="btn btn-sm btn-secondary add-btn" id="addHighlight"><i class="fas fa-plus me-1"></i> Add Highlight</button>
+                        </div>
+
+                        <!-- Itinerary Section -->
+                        <div class="form-section">
+                            <h4><i class="fas fa-calendar-alt me-2"></i> Itinerary</h4>
+                            <div id="itineraryContainer">
+                                <!-- Itinerary Template -->
+                                <div class="dynamic-item day-item">
+                                     <button type="button" class="btn btn-sm btn-danger remove-item-btn remove-day"><i class="fas fa-times"></i></button>
+                                    <div class="row g-2">
+                                        <div class="col-md-12 mb-2">
+                                             <label class="form-label visually-hidden">Day Title</label>
+                                            <input type="text" class="form-control day-title" placeholder="Day title (e.g. Day 1: Arrival in Arusha)" required>
+                                        </div>
+                                        <div class="col-md-12 mb-2">
+                                             <label class="form-label visually-hidden">Day Description</label>
+                                            <textarea class="form-control day-desc" rows="2" placeholder="Day description" required></textarea>
+                                        </div>
+                                        <div class="col-md-12">
+                                             <label class="form-label visually-hidden">Accommodation</label>
+                                            <input type="text" class="form-control day-accommodation" placeholder="Accommodation (e.g. Arusha Coffee Lodge - Optional)">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Itinerary Template -->
+                            </div>
+                            <button type="button" class="btn btn-sm btn-secondary add-btn" id="addDay"><i class="fas fa-plus me-1"></i> Add Day</button>
+                        </div>
+
+                        <!-- Inclusions & Exclusions Section -->
+                        <div class="form-section">
+                            <h4><i class="fas fa-list-check me-2"></i> Inclusions & Exclusions</h4>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h5><i class="fas fa-check-circle text-success me-1"></i> Included</h5>
+                                    <div id="inclusionsContainer">
+                                        <!-- Inclusion Template -->
+                                        <div class="dynamic-item inclusion-item mb-2">
+                                            <div class="input-group input-group-sm"> 
+                                                <input type="text" class="form-control inclusion-text" placeholder="e.g. All park fees" required>
+                                                <button class="btn btn-outline-danger remove-inclusion" type="button"><i class="fas fa-times"></i></button>
+                                            </div>
+                                        </div>
+                                        <!-- End Inclusion Template -->
+                                    </div>
+                                    <button type="button" class="btn btn-sm btn-secondary add-btn" id="addInclusion"><i class="fas fa-plus me-1"></i> Add Inclusion</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <h5><i class="fas fa-times-circle text-danger me-1"></i> Not Included</h5>
+                                    <div id="exclusionsContainer">
+                                        <!-- Exclusion Template -->
+                                        <div class="dynamic-item exclusion-item mb-2">
+                                            <div class="input-group input-group-sm">
+                                                <input type="text" class="form-control exclusion-text" placeholder="e.g. International flights" required>
+                                                <button class="btn btn-outline-danger remove-exclusion" type="button"><i class="fas fa-times"></i></button>
+                                            </div>
+                                        </div>
+                                        <!-- End Exclusion Template -->
+                                    </div>
+                                    <button type="button" class="btn btn-sm btn-secondary add-btn" id="addExclusion"><i class="fas fa-plus me-1"></i> Add Exclusion</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Gallery Section -->
+                        <div class="form-section">
+                            <h4><i class="fas fa-images me-2"></i> Gallery</h4>
+                            <div class="gallery-upload" id="galleryUploadArea">
+                                <i class="fas fa-cloud-upload-alt fa-3x mb-2 text-primary"></i>
+                                <p class="mb-1">Click to upload images or drag and drop</p>
+                                <p class="small text-muted">Upload up to 10 images (JPG, PNG, WEBP). Recommended size: 1200x800px.</p>
+                                <input type="file" id="galleryInput" multiple accept="image/jpeg, image/png, image/webp" class="d-none">
+                            </div>
+                            <div class="row" id="galleryPreviewContainer">
+                                <!-- Gallery thumbnails will appear here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Publish, Categories, Preview -->
+                    <div class="col-lg-4">
+                        <!-- Publish Section -->
+                        <div class="form-section">
+                            <h4><i class="fas fa-paper-plane me-2"></i> Publish Settings</h4>
+                            <div class="mb-3">
+                                <label for="packageStatus" class="form-label">Status</label>
+                                <select class="form-select" id="packageStatus">
+                                    <option value="draft">Draft</option>
+                                    <option value="published" selected>Published</option>
+                                    <option value="archived">Archived</option>
+                                </select>
+                            </div>
+                            <div class="mb-3 form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="packageFeatured">
+                                <label class="form-check-label" for="packageFeatured">Mark as Featured</label>
+                             </div>
+                              <div class="mb-3 form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="packagePopular" checked>
+                                <label class="form-check-label" for="packagePopular">Show 'Popular' Tag</label>
+                             </div>
+
+                            <div class="d-grid gap-2 mt-4">
+                                <button type="submit" class="btn btn-primary"><i class="fas fa-save me-2"></i> Save Package</button>
+                                <button type="button" class="btn btn-outline-secondary" id="previewBtn"><i class="fas fa-eye me-2"></i> Update Preview</button>
+                            </div>
+                        </div>
+
+                        <!-- Categories Section -->
+                        <div class="form-section">
+                            <h4><i class="fas fa-tags me-2"></i> Categories</h4>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Destinations</label>
+                                <div class="category-list" style="max-height: 150px; overflow-y: auto; padding-right: 10px;">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="serengeti" id="destSerengeti">
+                                        <label class="form-check-label" for="destSerengeti">Serengeti National Park</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="ngorongoro" id="destNgorongoro">
+                                        <label class="form-check-label" for="destNgorongoro">Ngorongoro Conservation Area</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="manyara" id="destManyara">
+                                        <label class="form-check-label" for="destManyara">Lake Manyara National Park</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="tarangire" id="destTarangire">
+                                        <label class="form-check-label" for="destTarangire">Tarangire National Park</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="zanzibar" id="destZanzibar">
+                                        <label class="form-check-label" for="destZanzibar">Zanzibar</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="kilimanjaro" id="destKilimanjaro">
+                                        <label class="form-check-label" for="destKilimanjaro">Mount Kilimanjaro</label>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">Safari Types</label>
+                                 <div class="category-list" style="max-height: 150px; overflow-y: auto; padding-right: 10px;">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="luxury" id="typeLuxury">
+                                        <label class="form-check-label" for="typeLuxury">Luxury Safaris</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="group" id="typeGroup">
+                                        <label class="form-check-label" for="typeGroup">Group Safaris</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="tailormade" id="typeTailormade">
+                                        <label class="form-check-label" for="typeTailormade">Tailor Made Safaris</label>
+                                    </div>
+                                     <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="budget" id="typeBudget">
+                                        <label class="form-check-label" for="typeBudget">Budget Safaris</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="beach" id="typeBeach">
+                                        <label class="form-check-label" for="typeBeach">Beach Holidays</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="cultural" id="typeCultural">
+                                        <label class="form-check-label" for="typeCultural">Cultural Tours</label>
+                                    </div>
+                                    <div class="form-check">
+                                         <input class="form-check-input" type="checkbox" value="migration" id="typeMigration">
+                                         <label class="form-check-label" for="typeMigration">Migration Safaris</label>
+                                    </div>
+                                  
+                                 </div>
+                            </div>
+                        </div>
+
+                        <!-- Live Preview Section -->
+                        <div class="form-section">
+                            <h4><i class="fas fa-desktop me-2"></i> Live Preview</h4>
+                            <div class="preview-container" id="livePreviewContainer">
+                                <p class="text-muted text-center small">Preview will appear here as you fill the form.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-4">
+             Copyright © Safari Shuffle <script>document.write(new Date().getFullYear())</script>
+        </footer>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Admin Panel Script -->
+    <script>
+        $(document).ready(function() {
+
+            // --- Global Variables --- 
+            let isEditMode = false;
+            let editPackageSlug = null;
+            const apiUrlBase = 'http://127.0.0.1:8000/api/packages'; // Backend API
+
+            // --- Check for Edit Mode --- 
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('edit')) {
+                isEditMode = true;
+                editPackageSlug = urlParams.get('edit');
+                console.log('Edit mode detected for slug:', editPackageSlug);
+                initializeEditForm(editPackageSlug);
+            }
+
+            // --- Slug Generation (Only in Create Mode) ---
+            if (!isEditMode) {
+                $('#packageTitle').on('input', function() {
+                    const title = $(this).val();
+                    const slug = title.toLowerCase()
+                                    .replace(/\s+/g, '-')      // Replace spaces with -
+                                    .replace(/[^\w\-]+/g, '')   // Remove all non-word chars except -
+                                    .replace(/\-\-+/g, '-')    // Replace multiple - with single -
+                                    .replace(/^-+/, '')        // Trim - from start of text
+                                    .replace(/-+$/, '');       // Trim - from end of text
+                    $('#packageSlug').val(slug);
+                });
+            } else {
+                // Disable slug editing in edit mode (usually not changed)
+                // $('#packageSlug').prop('readonly', true);
+            }
+
+
+            // --- Highlight Management --- 
+            const highlightsContainer = $('#highlightsContainer');
+            const highlightTemplateHtml = highlightsContainer.find('.highlight-item').first().prop('outerHTML'); // Get template HTML
+            highlightsContainer.empty(); // Start empty in both modes
+
+            function addHighlight(title = '', description = '') {
+                const newHighlight = $(highlightTemplateHtml);
+                newHighlight.find('.highlight-title').val(title);
+                newHighlight.find('.highlight-desc').val(description);
+                highlightsContainer.append(newHighlight);
+            }
+
+            $('#addHighlight').click(function() {
+                addHighlight(); // Add empty
+                updatePreview(); // Update preview on add
+            });
+
+            // Use event delegation for removing dynamic items
+            highlightsContainer.on('click', '.remove-highlight', function() {
+                // Always allow removing highlights
+                 $(this).closest('.highlight-item').fadeOut(300, function() { $(this).remove(); updatePreview(); });
+            });
+
+
+            // --- Itinerary Management --- 
+            const itineraryContainer = $('#itineraryContainer');
+            const dayTemplateHtml = itineraryContainer.find('.day-item').first().prop('outerHTML');
+            itineraryContainer.empty(); // Start empty
+
+            function addDay(title = '', description = '', accommodation = '') {
+                const newDay = $(dayTemplateHtml);
+                newDay.find('.day-title').val(title);
+                newDay.find('.day-desc').val(description);
+                newDay.find('.day-accommodation').val(accommodation);
+                 // Optional: update placeholder if adding empty in create mode
+                if (!title && !isEditMode) {
+                    const dayCount = itineraryContainer.find('.day-item').length + 1;
+                    newDay.find('.day-title').attr('placeholder', `Day ${dayCount}: Title`);
+                }
+                itineraryContainer.append(newDay);
+            }
+
+            $('#addDay').click(function() {
+                addDay(); // Add empty
+                updatePreview();
+            });
+
+            itineraryContainer.on('click', '.remove-day', function() {
+                 // Always allow removing days
+                 $(this).closest('.day-item').fadeOut(300, function() { $(this).remove(); updatePreview(); });
+            });
+
+            // --- Inclusion Management --- 
+            const inclusionsContainer = $('#inclusionsContainer');
+            const inclusionTemplateHtml = inclusionsContainer.find('.inclusion-item').first().prop('outerHTML');
+            inclusionsContainer.empty(); // Start empty
+
+            function addInclusion(text = '') {
+                const newInclusion = $(inclusionTemplateHtml);
+                newInclusion.find('.inclusion-text').val(text);
+                inclusionsContainer.append(newInclusion);
+            }
+
+            $('#addInclusion').click(function() {
+                addInclusion(); // Add empty
+                updatePreview();
+            });
+
+            inclusionsContainer.on('click', '.remove-inclusion', function() {
+                 $(this).closest('.inclusion-item').fadeOut(300, function() { $(this).remove(); updatePreview(); });
+            });
+
+
+            // --- Exclusion Management --- 
+            const exclusionsContainer = $('#exclusionsContainer');
+            const exclusionTemplateHtml = exclusionsContainer.find('.exclusion-item').first().prop('outerHTML');
+            exclusionsContainer.empty(); // Start empty
+
+            function addExclusion(text = '') {
+                const newExclusion = $(exclusionTemplateHtml);
+                newExclusion.find('.exclusion-text').val(text);
+                exclusionsContainer.append(newExclusion);
+            }
+
+            $('#addExclusion').click(function() {
+                addExclusion(); // Add empty
+                updatePreview();
+            });
+
+            exclusionsContainer.on('click', '.remove-exclusion', function() {
+                 $(this).closest('.exclusion-item').fadeOut(300, function() { $(this).remove(); updatePreview(); });
+            });
+
+
+            // --- Gallery Management --- 
+            const galleryUploadArea = $('#galleryUploadArea');
+            const galleryInput = $('#galleryInput');
+            const galleryPreviewContainer = $('#galleryPreviewContainer');
+            let galleryFiles = []; // Array to hold NEW File objects for upload
+            let existingGalleryImages = []; // Array to hold URLs of existing images in edit mode
+
+            galleryUploadArea.click(function() {
+                console.log('#galleryUploadArea clicked. Triggering #galleryInput click.');
+                galleryInput[0].click();
+            });
+
+            // Drag and Drop functionality
+            galleryUploadArea.on('dragover', function(e) {
+                e.preventDefault(); e.stopPropagation(); $(this).addClass('border-primary');
+            });
+            galleryUploadArea.on('dragleave', function(e) {
+                e.preventDefault(); e.stopPropagation(); $(this).removeClass('border-primary');
+            });
+            galleryUploadArea.on('drop', function(e) {
+                console.log('Drop event detected.');
+                e.preventDefault(); e.stopPropagation(); $(this).removeClass('border-primary');
+                const files = e.originalEvent.dataTransfer.files;
+                handleGalleryFiles(files);
+            });
+
+            galleryInput.change(function(e) {
+                 console.log('#galleryInput change event detected.');
+                handleGalleryFiles(e.target.files);
+            });
+
+            function handleGalleryFiles(files) {
+                 console.log('handleGalleryFiles called with:', files);
+                 const maxFiles = 10;
+                 // Count both existing (in edit mode) and newly added thumbnails
+                 const currentCount = galleryPreviewContainer.children('.gallery-thumbnail').length;
+                 const allowedToAdd = maxFiles - currentCount;
+
+                if (files.length > allowedToAdd) {
+                    alert(`You can only add ${allowedToAdd} more image(s). Maximum is ${maxFiles}.`);
+                }
+
+                let filesAdded = 0;
+                for (let i = 0; i < files.length && filesAdded < allowedToAdd; i++) {
+                    const file = files[i];
+                    if (!file.type.match('image/jpeg') && !file.type.match('image/png') && !file.type.match('image/webp')) {
+                        console.warn(`Skipping non-image file: ${file.name}`);
+                        continue;
+                    }
+
+                    galleryFiles.push(file); // Add NEW file to our array for upload
+
+                    const reader = new FileReader();
+                    reader.onload = (function(theFile) {
+                        return function(e) {
+                             // Add a data attribute to distinguish new uploads from existing ones
+                            const thumbnailId = 'new-thumb-' + Date.now() + '-' + Math.random().toString(36).substring(2, 7);
+                            const thumbnail = `
+                                <div class="col-6 col-md-4 col-lg-3 gallery-thumbnail new-upload" id="${thumbnailId}" data-filename="${theFile.name}">
+                                    <img src="${e.target.result}" alt="${theFile.name}">
+                                    <button class="delete-img" type="button" data-target="#${thumbnailId}"><i class="fas fa-times"></i></button>
+                                </div>`;
+                            galleryPreviewContainer.append(thumbnail);
+                            updatePreview();
+                        };
+                    })(file);
+                    reader.readAsDataURL(file);
+                    filesAdded++;
+                }
+                 galleryInput.val('');
+            }
+
+            // Updated remove gallery image logic
+            galleryPreviewContainer.on('click', '.delete-img', function() {
+                const targetId = $(this).data('target');
+                const thumbnailElement = $(targetId);
+                const filenameToRemove = thumbnailElement.data('filename');
+                const imageUrlToRemove = thumbnailElement.data('image-url'); // For existing images
+
+                // Remove the thumbnail visually
+                thumbnailElement.fadeOut(300, function() {
+                    $(this).remove();
+                    updatePreview();
+                });
+
+                if (thumbnailElement.hasClass('new-upload')) {
+                    // If it was a NEW upload, remove from the galleryFiles array
+                    galleryFiles = galleryFiles.filter(file => file.name !== filenameToRemove);
+                    console.log("Removed NEW file. Remaining new files:", galleryFiles.map(f => f.name));
+                } else {
+                    // If it was an EXISTING image, mark it for removal (e.g., add to a separate array)
+                    // We need a way to tell the backend to delete this specific existing image.
+                    // A simple way is to add a hidden input field for images to delete.
+                    $('#packageForm').append(`<input type="hidden" name="delete_gallery_images[]" value="${imageUrlToRemove}">`);
+                    console.log("Marked existing image for deletion:", imageUrlToRemove);
+                }
+            });
+
+
+            // --- Live Preview Generation --- 
+            function updatePreview() {
+                const previewContainer = $('#livePreviewContainer');
+
+                // Basic Info
+                const title = $('#packageTitle').val() || (isEditMode ? 'Editing Package...' : 'Package Title');
+                const duration = $('#packageDuration').val() || 'X Days / Y Nights';
+                const location = $('#packageLocation').val() || 'Location';
+                const price = $('#packageMinPrice').val() ? '$' + $('#packageMinPrice').val() + ' - $' + $('#packageMaxPrice').val() : '$XXXX - $XXXX';
+                const rating = $('#packageRating').val() || 'Not Rated Yet';
+                const displayTagsInput = $('#packageTags').val() || '';
+                const overview = $('#packageOverview').val().replace(/\n/g, '<br>') || 'Package overview will appear here.';
+                 const showPopular = $('#packagePopular').is(':checked');
+
+                // Highlights
+                let highlightsHtml = '';
+                $('.highlight-item').each(function() {
+                    const hTitle = $(this).find('.highlight-title').val();
+                    const hDesc = $(this).find('.highlight-desc').val();
+                    if (hTitle || hDesc) { // Only show if there's content
+                        highlightsHtml += `
+                            <div class="col-md-6 mb-3">
+                                <div class="d-flex align-items-start">
+                                    <div class="flex-shrink-0 btn-lg-square bg-primary text-white rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">${hTitle || 'Highlight Title'}</h5>
+                                        <p class="mb-0 text-muted small">${hDesc || 'Highlight description'}</p>
+                                    </div>
+                                </div>
+                            </div>`;
+                    }
+                });
+
+                // Itinerary
+                let itineraryHtml = '';
+                $('.day-item').each(function() {
+                    const dTitle = $(this).find('.day-title').val();
+                    const dDesc = $(this).find('.day-desc').val().replace(/\n/g, '<br>');
+                    const dAccom = $(this).find('.day-accommodation').val();
+                     if (dTitle || dDesc) {
+                        itineraryHtml += `
+                            <div class="itinerary-day">
+                                <h4 class="h6 fw-bold text-primary">${dTitle || 'Day X: Title'}</h4>
+                                <p class="small mb-1">${dDesc || 'Day description'}</p>
+                                ${dAccom ? `<p class="small mb-0"><strong>Accommodation:</strong> ${dAccom}</p>` : ''}
+                            </div>`;
+                     }
+                });
+
+                // Inclusions
+                let inclusionsHtml = '';
+                $('.inclusion-item .inclusion-text').each(function() {
+                    const text = $(this).val();
+                    if (text) {
+                         inclusionsHtml += `<div class="included-item small"><i class="fa fa-check me-2 text-success"></i> ${text}</div>`;
+                    }
+                });
+
+                // Exclusions
+                let exclusionsHtml = '';
+                $('.exclusion-item .exclusion-text').each(function() {
+                     const text = $(this).val();
+                     if (text) {
+                         exclusionsHtml += `<div class="excluded-item small"><i class="fa fa-times me-2 text-danger"></i> ${text}</div>`;
+                     }
+                });
+
+                // Display Tags
+                 let tagsHtml = '';
+                 if (showPopular) {
+                     tagsHtml += `<span class="badge bg-primary me-2">Popular</span>`;
+                 }
+                if (displayTagsInput) {
+                    const tagArray = displayTagsInput.split(',').map(tag => tag.trim()).filter(tag => tag !== '');
+                    tagArray.forEach(tag => {
+                        tagsHtml += `<span class="badge bg-light text-dark border me-2">${tag}</span>`;
+                    });
+                }
+
+
+                // Gallery Preview (Combine existing and new)
+                let galleryHtml = '';
+                $('#galleryPreviewContainer .gallery-thumbnail img').each(function() {
+                    const imgSrc = $(this).attr('src');
+                    galleryHtml += `<div class="col-lg-4 col-md-6 mb-2"><img src="${imgSrc}" class="img-fluid rounded gallery-img" alt="Preview Image"></div>`;
+                });
+
+                // Assemble Preview HTML 
+                const previewContent = `
+                    <div class="package-preview-content">
+                        <!-- Hero-like Section -->
+                        <div class="mb-4 p-3 bg-light rounded">
+                            <h1 class="h3 fw-bold mb-3">${title}</h1>
+                            <div class="d-flex flex-wrap align-items-center small mb-3 text-muted">
+                                <div class="me-3 mb-1"><i class="fa fa-calendar-alt text-primary me-1"></i> ${duration}</div>
+                                <div class="me-3 mb-1"><i class="fa fa-map-marker-alt text-primary me-1"></i> ${location}</div>
+                                <div class="mb-1"><i class="fa fa-star text-primary me-1"></i> ${rating}</div>
+                            </div>
+                            <div class="d-flex flex-wrap mb-3">
+                                ${tagsHtml || '<span class="small text-muted">No tags specified</span>'}
+                            </div>
+                            <div class="text-end">
+                                <h2 class="h4 fw-bold text-primary mb-1">From ${$('#packageMinPrice').val() ? '$' + $('#packageMinPrice').val() : '$XXXX'} to ${$('#packageMaxPrice').val() ? '$' + $('#packageMaxPrice').val() : '$XXXX'}</h2>
+                                <span class="small text-muted">per person</span>
+                            </div>
+                        </div>
+
+                        <!-- Overview -->
+                        <div class="mb-4">
+                            <h2 class="h5 fw-bold mb-2">Tour Overview</h2>
+                            <p class="small">${overview}</p>
+                        </div>
+
+                        <!-- Highlights -->
+                         ${highlightsHtml ? `<div class="mb-4"><h2 class="h5 fw-bold mb-3">Tour Highlights</h2><div class="row">${highlightsHtml}</div></div>` : '<p class="small text-muted">No highlights added yet.</p>'} 
+
+
+                        <!-- Itinerary -->
+                         ${itineraryHtml ? `<div class="mb-4"><h2 class="h5 fw-bold mb-3">Detailed Itinerary</h2>${itineraryHtml}</div>` : '<p class="small text-muted">No itinerary added yet.</p>'} 
+
+
+                        <!-- Inclusions/Exclusions -->
+                        <div class="row mb-4 g-3">
+                            <div class="col-md-6">
+                                <div class="bg-light p-3 rounded border h-100">
+                                    <h4 class="h6 fw-bold mb-2">Included</h4>
+                                    ${inclusionsHtml || '<p class="small text-muted">None specified.</p>'}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="bg-light p-3 rounded border h-100">
+                                    <h4 class="h6 fw-bold mb-2">Not Included</h4>
+                                    ${exclusionsHtml || '<p class="small text-muted">None specified.</p>'}
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Gallery -->
+                         ${galleryHtml ? `<div class="mb-4"><h2 class="h5 fw-bold mb-3">Gallery</h2><div class="row g-2">${galleryHtml}</div></div>` : '<p class="small text-muted">No gallery images added yet.</p>'} 
+
+                    </div>`;
+
+                previewContainer.html(previewContent || '<p class="text-muted text-center small">Preview will appear here as you fill the form.</p>');
+            }
+
+            $('#previewBtn').click(function() {
+                 $('html, body').animate({
+                     scrollTop: $("#livePreviewContainer").offset().top - 80
+                 }, 500);
+                updatePreview();
+            });
+
+            // Auto-update preview on form changes 
+            $('#packageForm').on('input change', 'input, textarea, select', function() {
+                updatePreview();
+            });
+             // Also update preview when dynamic items are added/removed (handled within their functions)
+
+            // --- Populate Form in Edit Mode ---
+            function initializeEditForm(slug) {
+                $('.page-header h1').text('Edit Safari Package');
+                $('#packageForm button[type="submit"]').html('<i class="fas fa-save me-2"></i> Update Package');
+
+                fetch(`${apiUrlBase}/${slug}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error ${response.status}: Could not fetch package data.`);
+                        }
+                        return response.json();
+                    })
+                    .then(pkg => {
+                        populateForm(pkg);
+                    })
+                    .catch(error => {
+                        console.error('Error fetching package data:', error);
+                        alert(`Failed to load package data: ${error.message}`);
+                        // Maybe redirect back to list page
+                        // window.location.href = 'admin-packages.html';
+                    });
+            }
+
+            function populateForm(pkg) {
+                console.log("Populating form with:", pkg);
+                const backendUrl = 'http://127.0.0.1:8000'; // Define backend base URL
+
+                // Basic Info
+                $('#packageTitle').val(pkg.title);
+                $('#packageSlug').val(pkg.slug); // Populate slug, maybe disable editing
+                $('#packageDuration').val(pkg.duration);
+                $('#packageMinPrice').val(pkg.min_price);
+                $('#packageMaxPrice').val(pkg.max_price);
+                $('#packageLocation').val(pkg.location);
+                $('#packageShortDesc').val(pkg.short_description);
+                $('#packageOverview').val(pkg.overview);
+                $('#packageRating').val(pkg.rating_display);
+                $('#packageTags').val(pkg.display_tags);
+
+                // Clear previous hero image preview if any
+                $('#packageHeroImage').next('.mt-2').remove();
+                // Hero image
+                if (pkg.hero_image) {
+                    // Check if the path is a temporary path
+                    const isTempPath = pkg.hero_image.includes('/tmp/');
+                    const cleanHeroPath = pkg.hero_image.replace(/^\/+/, '');
+                    const heroImageUrl = isTempPath ? 
+                        `${backendUrl}/storage/package-hero/${cleanHeroPath.split('/').pop()}` : 
+                        `${backendUrl}/storage/${cleanHeroPath}`;
+                    
+                    console.log('Setting hero image preview:', heroImageUrl);
+                    $('#packageHeroImage').after(`
+                        <div class="mt-2">
+                            <small>Current Hero:</small>
+                            <img src="${heroImageUrl}" height="50" alt="Current Hero" 
+                                onerror="this.style.display='none'; console.error('Failed to load hero image:', '${heroImageUrl}');">
+                            <input type="hidden" name="existing_hero_image" value="${cleanHeroPath}">
+                            <button type="button" class="btn btn-sm btn-outline-danger ms-2" id="removeHeroImage">
+                                <i class="fas fa-times"></i> Remove
+                            </button>
+                        </div>
+                    `);
+                }
+
+                // Add event handler for remove hero image button
+                $(document).on('click', '#removeHeroImage', function() {
+                    $(this).closest('.mt-2').remove();
+                    $('#packageHeroImage').val('');
+                    formData.append('remove_hero_image', '1');
+                });
+
+                // Highlights (check if array and not empty)
+                highlightsContainer.empty(); // Clear container first
+                if (Array.isArray(pkg.highlights) && pkg.highlights.length > 0) {
+                    pkg.highlights.forEach(h => addHighlight(h.title, h.description));
+                } else {
+                    addHighlight(); // Add one empty if none exist
+                }
+
+                // Itinerary
+                itineraryContainer.empty();
+                if (Array.isArray(pkg.itinerary) && pkg.itinerary.length > 0) {
+                    pkg.itinerary.forEach(d => addDay(d.title, d.description, d.accommodation));
+                } else {
+                    addDay();
+                }
+
+                // Inclusions
+                inclusionsContainer.empty();
+                if (Array.isArray(pkg.inclusions) && pkg.inclusions.length > 0) {
+                    pkg.inclusions.forEach(inc => addInclusion(inc));
+                } else {
+                    addInclusion();
+                }
+
+                // Exclusions
+                exclusionsContainer.empty();
+                if (Array.isArray(pkg.exclusions) && pkg.exclusions.length > 0) {
+                    pkg.exclusions.forEach(ex => addExclusion(ex));
+                } else {
+                    addExclusion();
+                }
+
+                // Gallery - Show existing images
+                galleryPreviewContainer.empty(); // Clear previews
+                galleryFiles = []; // Reset new files array
+                existingGalleryImages = []; // Reset existing image tracker
+                if (Array.isArray(pkg.gallery_images) && pkg.gallery_images.length > 0) {
+                    pkg.gallery_images.forEach(imageUrl => {
+                        // Skip invalid entries
+                        if (!imageUrl || typeof imageUrl !== 'string') return;
+
+                        // Clean the image path and handle temporary paths
+                        const isTempPath = imageUrl.includes('/tmp/');
+                        const cleanImagePath = imageUrl.replace(/^\/+/, '');
+                        const filename = cleanImagePath.split('/').pop();
+                        const thumbnailUrl = isTempPath ? 
+                            `${backendUrl}/storage/package-gallery/${filename}` : 
+                            `${backendUrl}/storage/${cleanImagePath}`;
+                        
+                        existingGalleryImages.push(cleanImagePath);
+                        const thumbnailId = 'existing-thumb-' + cleanImagePath.replace(/[^a-zA-Z0-9\-]/g, '-');
+
+                        const thumbnail = `
+                            <div class="col-6 col-md-4 col-lg-3 gallery-thumbnail" id="${thumbnailId}" data-filename="${filename}" data-image-url="${cleanImagePath}">
+                                <img src="${thumbnailUrl}" alt="${filename}" onerror="this.style.display='none'; console.error('Failed to load gallery image:', '${thumbnailUrl}');">
+                                <button class="delete-img" type="button" data-target="#${thumbnailId}"><i class="fas fa-times"></i></button>
+                            </div>`;
+                        galleryPreviewContainer.append(thumbnail);
+                    });
+                }
+
+                // Categories - Destinations
+                if (Array.isArray(pkg.destinations)) {
+                    pkg.destinations.forEach(dest => {
+                        $(`input[type="checkbox"][value="${dest}"][id^="dest"]`).prop('checked', true);
+                    });
+                }
+                 // Categories - Safari Types
+                if (Array.isArray(pkg.safari_types)) {
+                     pkg.safari_types.forEach(type => {
+                        $(`input[type="checkbox"][value="${type}"][id^="type"]`).prop('checked', true);
+                    });
+                }
+
+                // Publish Settings
+                $('#packageStatus').val(pkg.status);
+                $('#packageFeatured').prop('checked', pkg.is_featured);
+                $('#packagePopular').prop('checked', pkg.show_popular_tag);
+
+                // Update the preview once form is populated
+                updatePreview();
+            }
+
+
+            // --- Form Submission (Handles Create and Update) ---
+            $('#packageForm').submit(function(e) {
+                e.preventDefault();
+                console.log('Form Submitted. Edit mode:', isEditMode);
+
+                // Create FormData
+                const formData = new FormData();
+
+                // *** IMPORTANT: Method Spoofing for PUT ***
+                if (isEditMode) {
+                    formData.append('_method', 'PUT');
+                }
+
+                // Append basic fields
+                formData.append('title', $('#packageTitle').val());
+                formData.append('slug', $('#packageSlug').val()); // Send slug even in edit mode
+                formData.append('short_description', $('#packageShortDesc').val());
+                formData.append('overview', $('#packageOverview').val());
+                formData.append('min_price', $('#packageMinPrice').val());
+                formData.append('max_price', $('#packageMaxPrice').val());
+                formData.append('duration', $('#packageDuration').val());
+                formData.append('location', $('#packageLocation').val());
+                formData.append('rating_display', $('#packageRating').val());
+                formData.append('display_tags', $('#packageTags').val());
+                formData.append('status', $('#packageStatus').val());
+                formData.append('is_featured', $('#packageFeatured').is(':checked') ? '1' : '0');
+                formData.append('show_popular_tag', $('#packagePopular').is(':checked') ? '1' : '0');
+
+                // Handle hero image
+                const heroImage = $('#packageHeroImage')[0].files[0];
+                console.log('Hero image file:', heroImage);
+                
+                if (heroImage) {
+                    formData.append('hero_image', heroImage);
+                    console.log('Appending new hero image to formData');
+                } else if (isEditMode) {
+                    const existingHeroImage = $('input[name="existing_hero_image"]').val();
+                    console.log('Existing hero image path:', existingHeroImage);
+                    if (existingHeroImage) {
+                        // Clean the path before sending
+                        const cleanPath = existingHeroImage.replace(/^\/+/, '');
+                        // If it's a temporary path, extract just the filename
+                        const finalPath = cleanPath.includes('/tmp/') ? 
+                            `package-hero/${cleanPath.split('/').pop()}` : 
+                            cleanPath;
+                        formData.append('existing_hero_image', finalPath);
+                        console.log('Appending existing hero image path to formData:', finalPath);
+                    }
+                }
+
+                // Append highlights
+                $('.highlight-item').each(function(index) {
+                    formData.append(`highlights[${index}][title]`, $(this).find('.highlight-title').val());
+                    formData.append(`highlights[${index}][description]`, $(this).find('.highlight-desc').val());
+                });
+
+                // Append itinerary
+                $('.day-item').each(function(index) {
+                    formData.append(`itinerary[${index}][title]`, $(this).find('.day-title').val());
+                    formData.append(`itinerary[${index}][description]`, $(this).find('.day-desc').val());
+                    formData.append(`itinerary[${index}][accommodation]`, $(this).find('.day-accommodation').val());
+                });
+
+                // Append inclusions
+                $('.inclusion-item .inclusion-text').each(function(index) {
+                    formData.append(`inclusions[${index}]`, $(this).val());
+                });
+
+                // Append exclusions
+                $('.exclusion-item .exclusion-text').each(function(index) {
+                    formData.append(`exclusions[${index}]`, $(this).val());
+                });
+
+                // Append NEW gallery images
+                galleryFiles.forEach((file, index) => {
+                    // Use a specific key for NEW images to differentiate on backend if needed, or just append
+                    formData.append(`gallery_images[${index}]`, file, file.name);
+                });
+                // Append list of gallery images marked for deletion (added by the delete button handler)
+                 $(this).find('input[name="delete_gallery_images[]"]').each(function() {
+                     formData.append('delete_gallery_images[]', $(this).val());
+                 });
+
+                // Append destinations
+                $('input[id^="dest"]:checked').each(function(index) {
+                    formData.append(`destinations[${index}]`, $(this).val());
+                });
+
+                // Append safari types
+                $('input[id^="type"]:checked').each(function(index) {
+                    formData.append(`safari_types[${index}]`, $(this).val());
+                });
+
+                // Debug log form data
+                console.log('Form data being sent:');
+                for (let pair of formData.entries()) {
+                    console.log(pair[0] + ': ' + (pair[1] instanceof File ? pair[1].name : pair[1]));
+                }
+
+                // Determine URL and Method
+                const url = isEditMode ? `${apiUrlBase}/${editPackageSlug}` : apiUrlBase;
+                const method = 'POST'; // Always POST, use _method=PUT for updates
+
+                // Show loading state
+                const submitBtn = $(this).find('button[type="submit"]');
+                const originalText = submitBtn.html();
+                submitBtn.prop('disabled', true).html('<i class="fas fa-spinner fa-spin me-2"></i> Saving...');
+
+                 // Remove temporary hidden inputs for deleted images before sending
+                 $(this).find('input[name="delete_gallery_images[]"]').remove();
+
+                // Send to backend
+                fetch(url, {
+                    method: method,
+                    headers: {
+                        'Accept': 'application/json',
+                    },
+                    body: formData
+                })
+                .then(async response => {
+                    if (!response.ok) {
+                        let errorData = { message: `HTTP error ${response.status}` };
+                        try {
+                            errorData = await response.json();
+                            console.log("Parsed error JSON:", errorData);
+                        } catch (e) {
+                            console.error("Could not parse error response as JSON.", e);
+                            errorData.message = response.statusText || errorData.message;
+                        }
+                        throw { 
+                            status: response.status, 
+                            data: errorData,
+                            message: errorData.message || `HTTP error ${response.status}`
+                        };
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Success:', data);
+                    alert(isEditMode ? 'Package updated successfully!' : 'Package saved successfully!');
+                    window.location.href = 'admin-packages.html';
+                })
+                .catch(error => {
+                    console.error('Submission Error:', error);
+                    let errorMessage = 'An unexpected error occurred.';
+
+                    if (error && error.status === 422 && error.data && typeof error.data.errors === 'object') {
+                        errorMessage = 'Validation failed:\n';
+                        const errorMessages = [];
+                        for (const field in error.data.errors) {
+                            if (error.data.errors.hasOwnProperty(field)) {
+                                errorMessages.push(`- ${field}: ${error.data.errors[field].join(', ')}`);
+                            }
+                        }
+                        errorMessage += errorMessages.join('\n');
+                    } else if (error && error.message) {
+                        errorMessage = error.message;
+                    }
+
+                    alert(`${isEditMode ? 'Update' : 'Submission'} failed: \n${errorMessage}`);
+                })
+                .finally(() => {
+                    submitBtn.prop('disabled', false).html(originalText);
+                });
+            });
+
+            // --- Initial Setup --- 
+            // Add required indicators
+             $('input[required], textarea[required], select[required]').each(function(){
+                 $('label[for="' + $(this).attr('id') + '"]').addClass('required-field');
+             });
+
+            // Initialize dynamic sections with one item if in create mode
+            if (!isEditMode) {
+                addHighlight();
+                addDay();
+                addInclusion();
+                addExclusion();
+                updatePreview(); // Initial preview for create mode
+            }
+
+             // --- Test Data Button --- (Keep existing logic)
+            function fillFormWithTestData() {
+                 if (isEditMode) {
+                     alert("Test data cannot be filled in edit mode.");
+                     return;
+                 }
+                 // Basic Information
+                 $('#packageTitle').val('Amazing Test Safari').trigger('input'); // Trigger input for slug generation
+                // $('#packageSlug').val('amazing-test-safari'); // Slug auto-generated
+                $('#packageDuration').val('7 Days / 6 Nights');
+                $('#packageMinPrice').val('2500');
+                $('#packageMaxPrice').val('3000');
+                $('#packageLocation').val('Masai Mara, Lake Nakuru');
+                $('#packageShortDesc').val('Witness incredible wildlife in Kenya.');
+                $('#packageOverview').val('A fantastic journey through Kenya\'s most famous parks. See the Big Five and enjoy stunning landscapes.');
+                $('#packageRating').val('4.8 (15 Reviews)');
+                $('#packageTags').val('Kenya, Big Five, Bird Watching');
+
+                // Highlights
+                highlightsContainer.empty(); // Clear first
+                addHighlight('Big Five Spotting', 'High chances to see lions, leopards, elephants, rhinos, and buffalo.');
+                addHighlight('Flamingo Spectacle', 'Witness millions of flamingos at Lake Nakuru.');
+
+                // Itinerary
+                itineraryContainer.empty();
+                addDay('Day 1: Arrival Nairobi', 'Arrive at Jomo Kenyatta Airport, transfer to hotel.', 'Nairobi Serena Hotel');
+                addDay('Day 2-4: Masai Mara', 'Fly to Masai Mara, game drives.', 'Mara Explorer Camp');
+                addDay('Day 5: Lake Nakuru', 'Drive to Lake Nakuru National Park.', 'Lake Nakuru Lodge');
+
+                // Inclusions
+                inclusionsContainer.empty();
+                addInclusion('Airport transfers');
+                addInclusion('All meals on safari');
+                addInclusion('Park fees');
+
+                // Exclusions
+                exclusionsContainer.empty();
+                addExclusion('International flights');
+                addExclusion('Visa fees');
+                addExclusion('Drinks');
+
+                // Destinations
+                $('input[id^="dest"]').prop('checked', false); // Uncheck all first
+                $('#destSerengeti').prop('checked', false); // Example: Assuming test data is for Kenya
+                $('#destNgorongoro').prop('checked', false);
+                 // Add Kenya checkboxes if they exist or simulate adding them
+                 // $('#destMasaiMara').prop('checked', true); 
+
+                // Safari Types
+                $('input[id^="type"]').prop('checked', false);
+                $('#typeLuxury').prop('checked', true);
+                $('#typeGroup').prop('checked', true);
+
+                // Status
+                $('#packageStatus').val('published');
+                $('#packageFeatured').prop('checked', false);
+                $('#packagePopular').prop('checked', true);
+
+                // Update preview
+                updatePreview();
+            }
+
+             // Move test button creation inside ready() to ensure it's only added once
+            if (!$('#fillTestData').length) { // Check if button already exists
+                $('.page-header').append('<button type="button" class="btn btn-sm btn-outline-primary ms-2" id="fillTestData"><i class="fas fa-magic me-1"></i> Fill Test Data</button>');
+            }
+
+            // Use event delegation for test button click
+            $(document).on('click', '#fillTestData', function() {
+                fillFormWithTestData();
+            });
+
+        });
+    </script>
+</body>
+</html>

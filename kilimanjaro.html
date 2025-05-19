@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Safari Shuffle | Kilimanjaro</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/safarishuffleicon.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Embedded Custom Styles -->
+    <style>
+        /* Custom Kilimanjaro Styles */
+        .mountain-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url('img/kilimanjaroheader.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 82, 155, 0.2), rgba(0, 180, 216, 0.1));
+        }
+        
+        .mountain-elevation-chart {
+            position: relative;
+        }
+        
+        .elevation-markers {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .marker {
+            position: absolute;
+            left: 30px;
+            transform: translateX(-50%);
+        }
+        
+        .marker-dot {
+            width: 12px;
+            height: 12px;
+            background:  #a5754c;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px  #a5754c;
+        }
+        
+        .marker-label {
+            position: absolute;
+            left: 25px;
+            width: 120px;
+            background: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            font-weight: bold;
+        }
+        
+        .route-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            background: white;
+            position: relative;
+        }
+        
+        .route-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .route-image {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+        .route-content {
+            padding: 20px;
+        }
+        
+        .route-footer {
+            padding: 0 20px 20px;
+        }
+        
+        .route-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            z-index: 1;
+        }
+        
+        .route-badge.popular {
+            background: #ff6b6b;
+        }
+        
+        .route-badge.premium {
+            background: #5cb85c;
+        }
+        
+        .package-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            background: white;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .package-card.featured {
+            border: 2px solid #a5754c;
+            transform: scale(1.02);
+        }
+        
+        .package-header {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .package-price {
+            margin-top: 10px;
+        }
+        
+        .package-price .amount {
+            font-size: 28px;
+            font-weight: bold;
+            color:  #a5754c;
+        }
+        
+        .package-price .duration {
+            color: #6c757d;
+            font-size: 14px;
+        }
+        
+        .package-body {
+            padding: 20px;
+            flex-grow: 1;
+        }
+        
+        .package-footer {
+            padding: 0 20px 20px;
+        }
+        
+        .package-features li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+        }
+        
+        .package-features li.na {
+            color: #ccc;
+            text-decoration: line-through;
+        }
+        
+        .package-badge {
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            background:  #a5754c;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .divider {
+            width: 80px;
+            height: 3px;
+            background:  #a5754c;
+        }
+        
+        .icon-square {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .icon-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .accordion-button {
+            font-weight: bold;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            color:  #a5754c;
+            background-color: rgba(0,123,255,0.05);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>Arusha, Tanzania</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Open 24/7</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+255 681 838 482</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+	<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="img/safarilogo.png" alt="WooDY Logo" class="navbar-logo">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Destinations</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="serengeti.html" class="dropdown-item">Serengeti National Park</a>
+                        <a href="ngorongoro.html" class="dropdown-item">Ngorongoro Conservational Area</a>
+                        <a href="manyara.html" class="dropdown-item">Lake Manyara National Park</a>
+                        <a href="tarangire.html" class="dropdown-item">Tarangire National Park</a>
+                        <a href="zanzibar.html" class="dropdown-item">Zanzibar</a>
+                        <a href="kilimanjaro.html" class="dropdown-item">Mount Kilimanjaro</a>
+                    </div>
+                </div>
+                <a href="tours.html" class="nav-item nav-link">Tours</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our Services</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="tailormade.html" class="dropdown-item">Tailor Made Safaris</a>
+                        <a href="luxurysafaris.html" class="dropdown-item">Luxury Safaris</a>
+                        <a href="groupsafari.html" class="dropdown-item">Group Safaris</a>
+                        <a href="zanzaibarbeachholidya.html" class="dropdown-item">Zanzibar Beach Holidays</a>
+                        <a href="culturaltours.html" class="dropdown-item">Cultural Tours</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Travel Tips</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="packing.html" class="dropdown-item">Packing Tips</a>
+                        <a href="visa.html" class="dropdown-item">Visa Information</a>
+                        <a href="health&safety.html" class="dropdown-item">Health & Safety</a>
+                        <a href="besttimetovisit.html" class="dropdown-item">Best Time to Visit</a>
+                        <a href="localcustoms.html" class="dropdown-item">Local Customs</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            
+            <a href="booking.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+<!-- Summit Header -->
+<div class="container-fluid mountain-header py-5 mb-5 position-relative">
+    <div class="container py-5 position-relative z-index-1 text-center text-white">
+        <h1 class="display-3 mb-3 animated fadeInDown text-white">Mount Kilimanjaro</h1>
+<p class="h4 animated fadeIn delay-1 text-white">Africa's Rooftop • 5,895m • UNESCO World Heritage</p>
+        <div class="mt-4 animated fadeIn delay-2">
+            <a href="#routes" class="btn btn-outline-light btn-lg mx-2">Climbing Routes</a>
+            <a href="#packages" class="btn btn-primary btn-lg mx-2">Tour Packages</a>
+        </div>
+    </div>
+    <div class="header-overlay"></div>
+</div>
+
+<!-- Key Facts -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <div class="pe-lg-5">
+                    <h2 class="display-6 mb-4">Conquer Africa's Highest Peak</h2>
+                    <p class="lead">Kilimanjaro is the world's tallest free-standing mountain and one of the most accessible high summits, requiring no technical climbing skills.</p>
+                    
+                    <div class="row mt-5">
+                        <div class="col-md-6 mb-4">
+                            <div class="d-flex">
+                                <div class="icon-square bg-primary text-white rounded-circle flex-shrink-0 me-4">
+                                    <i class="fas fa-mountain fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h5>5,895 meters</h5>
+                                    <p class="mb-0">Uhuru Peak elevation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="d-flex">
+                                <div class="icon-square bg-primary text-white rounded-circle flex-shrink-0 me-4">
+                                    <i class="fas fa-route fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h5>7 Routes</h5>
+                                    <p class="mb-0">With varying difficulty</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="d-flex">
+                                <div class="icon-square bg-primary text-white rounded-circle flex-shrink-0 me-4">
+                                    <i class="fas fa-calendar-alt fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h5>5-9 Days</h5>
+                                    <p class="mb-0">Typical climb duration</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="d-flex">
+                                <div class="icon-square bg-primary text-white rounded-circle flex-shrink-0 me-4">
+                                    <i class="fas fa-user-shield fa-2x"></i>
+                                </div>
+                                <div>
+                                    <h5>90% Success Rate</h5>
+                                    <p class="mb-0">With proper acclimatization</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="mountain-elevation-chart">
+                    <img src="img/kilimanjaro1.jpg" alt="Kilimanjaro Elevation Profile" class="img-fluid rounded shadow">
+                    <div class="elevation-markers">
+                        <div class="marker" style="bottom: 15%">
+                            <div class="marker-dot"></div>
+                            <div class="marker-label">Machame Gate<br>1,800m</div>
+                        </div>
+                        <div class="marker" style="bottom: 50%">
+                            <div class="marker-dot"></div>
+                            <div class="marker-label">Shira Camp<br>3,840m</div>
+                        </div>
+                        <div class="marker" style="bottom: 85%">
+                            <div class="marker-dot"></div>
+                            <div class="marker-label">Uhuru Peak<br>5,895m</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Climbing Routes -->
+<div class="container-fluid bg-light py-5" id="routes">
+    <div class="container">
+        <div class="section-title text-center mb-5">
+            <h2 class="display-5">Climbing Routes</h2>
+            <div class="divider mx-auto my-3"></div>
+            <p class="w-75 mx-auto">Choose your path to the summit based on difficulty, scenery, and acclimatization profile</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Machame Route -->
+            <div class="col-lg-4 col-md-6">
+                <div class="route-card h-100">
+                    <div class="route-badge popular">MOST POPULAR</div>
+                    <img src="img/kilimanjaropac1.jpg" class="route-image" alt="Machame Route">
+                    <div class="route-content">
+                        <h3>Machame Route</h3>
+                        <div class="route-meta mb-3">
+                            <span class="me-3"><i class="fas fa-clock me-2"></i>6-7 Days</span>
+                            <span><i class="fas fa-chart-line me-2"></i>Moderate</span>
+                        </div>
+                        <p>Known as the "Whiskey Route" for its challenging but scenic path through five diverse ecological zones.</p>
+                        <ul class="route-features">
+                            <li><i class="fas fa-check text-primary me-2"></i>High success rate (90%)</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Stunning views</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Good acclimatization</li>
+                        </ul>
+                    </div>
+                    <div class="route-footer">
+                        <a href="#" class="btn btn-outline-primary w-100">Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Marangu Route -->
+            <div class="col-lg-4 col-md-6">
+                <div class="route-card h-100">
+                    <img src="img/kilimanjaropac2.jpg" class="route-image" alt="Marangu Route">
+                    <div class="route-content">
+                        <h3>Marangu Route</h3>
+                        <div class="route-meta mb-3">
+                            <span class="me-3"><i class="fas fa-clock me-2"></i>5-6 Days</span>
+                            <span><i class="fas fa-chart-line me-2"></i>Moderate</span>
+                        </div>
+                        <p>The "Coca-Cola Route" is the only route with hut accommodations. Faster but with lower success rates.</p>
+                        <ul class="route-features">
+                            <li><i class="fas fa-check text-primary me-2"></i>Hut accommodations</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Most direct route</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Less scenic variation</li>
+                        </ul>
+                    </div>
+                    <div class="route-footer">
+                        <a href="#" class="btn btn-outline-primary w-100">Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lemosho Route -->
+            <div class="col-lg-4 col-md-6">
+                <div class="route-card h-100">
+                    <div class="route-badge premium">BEST SCENERY</div>
+                    <img src="img/kilimanjaropac3.jpg" class="route-image" alt="Lemosho Route">
+                    <div class="route-content">
+                        <h3>Lemosho Route</h3>
+                        <div class="route-meta mb-3">
+                            <span class="me-3"><i class="fas fa-clock me-2"></i>7-8 Days</span>
+                            <span><i class="fas fa-chart-line me-2"></i>Challenging</span>
+                        </div>
+                        <p>Considered the most beautiful approach with high success rates due to excellent acclimatization.</p>
+                        <ul class="route-features">
+                            <li><i class="fas fa-check text-primary me-2"></i>Remote wilderness</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>High success rate</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Gradual ascent</li>
+                        </ul>
+                    </div>
+                    <div class="route-footer">
+                        <a href="#" class="btn btn-outline-primary w-100">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Climbing Packages -->
+<div class="container-xxl py-5" id="packages">
+    <div class="container">
+        <div class="section-title text-center mb-5">
+            <h2 class="display-5">Climbing Packages</h2>
+            <div class="divider mx-auto my-3"></div>
+            <p class="w-75 mx-auto">All-inclusive expeditions with expert guides, quality equipment, and safety focus</p>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Standard Package -->
+            <div class="col-lg-4">
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Standard Ascent</h3>
+                        <div class="package-price">
+                            <span class="amount">$2,199</span>
+                            <span class="duration">/person</span>
+                        </div>
+                    </div>
+                    <div class="package-body">
+                        <ul class="package-features">
+                            <li><i class="fas fa-check text-primary me-2"></i>7-day Machame Route</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Professional mountain guides</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>All park fees included</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Quality camping equipment</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Three meals daily</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Pre-climb briefing</li>
+                            <li class="na"><i class="fas fa-times me-2"></i>Hotel before/after</li>
+                        </ul>
+                    </div>
+                    <div class="package-footer">
+                        <a href="#" class="btn btn-primary w-100">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Premium Package -->
+            <div class="col-lg-4">
+                <div class="package-card featured">
+                    <!-- <div class="package-badge">RECOMMENDED</div> -->
+                    <div class="package-header">
+                        <h3>Premium Expedition</h3>
+                        <div class="package-price">
+                            <span class="amount">$3,499</span>
+                            <span class="duration">/person</span>
+                        </div>
+                    </div>
+                    <div class="package-body">
+                        <ul class="package-features">
+                            <li><i class="fas fa-check text-primary me-2"></i>8-day Lemosho Route</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>VIP small group (max 6)</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Extra acclimatization day</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Private toilet tent</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>2 nights hotel included</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Summit certificate</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Medical oxygen</li>
+                        </ul>
+                    </div>
+                    <div class="package-footer">
+                        <a href="#" class="btn btn-primary w-100">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Luxury Package -->
+            <div class="col-lg-4">
+                <div class="package-card">
+                    <div class="package-header">
+                        <h3>Luxury Climb</h3>
+                        <div class="package-price">
+                            <span class="amount">$5,999</span>
+                            <span class="duration">/person</span>
+                        </div>
+                    </div>
+                    <div class="package-body">
+                        <ul class="package-features">
+                            <li><i class="fas fa-check text-primary me-2"></i>9-day private climb</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Personal guide & porter</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Luxury tented camps</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Hot showers on mountain</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>4-star hotel before/after</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Helicopter evacuation</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Celebration dinner</li>
+                        </ul>
+                    </div>
+                    <div class="package-footer">
+                        <a href="#" class="btn btn-primary w-100">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Preparation Guide -->
+<div class="container-fluid bg-light py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6">
+                <div class="pe-lg-5">
+                    <h2 class="display-6 mb-4">Climb Preparation</h2>
+                    <div class="accordion" id="prepAccordion">
+                        <div class="accordion-item mb-3">
+                            <h3 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    <i class="fas fa-hiking me-3"></i> Physical Training
+                                </button>
+                            </h3>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                                <div class="accordion-body">
+                                    <p>Begin training 3-6 months before your climb:</p>
+                                    <ul>
+                                        <li>Cardio 4-5 times/week (hiking, stair climbing, running)</li>
+                                        <li>Strength training for legs and core</li>
+                                        <li>Practice hiking with a weighted backpack</li>
+                                        <li>Altitude training if possible</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item mb-3">
+                            <h3 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    <i class="fas fa-suitcase me-3"></i> Packing List
+                                </button>
+                            </h3>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo">
+                                <div class="accordion-body">
+                                    <p>Essential gear for your climb:</p>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>4-season sleeping bag</li>
+                                                <li>Insulated hiking boots</li>
+                                                <li>Moisture-wicking layers</li>
+                                                <li>Down jacket</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul>
+                                                <li>Headlamp with extra batteries</li>
+                                                <li>Trekking poles</li>
+                                                <li>Sunglasses (UV400)</li>
+                                                <li>Water purification tablets</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    <i class="fas fa-heartbeat me-3"></i> Altitude Advice
+                                </button>
+                            </h3>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree">
+                                <div class="accordion-body">
+                                    <ul>
+                                        <li>Choose a longer route for better acclimatization</li>
+                                        <li>Drink 4-5 liters of water daily</li>
+                                        <li>Climb high, sleep low</li>
+                                        <li>Recognize AMS symptoms</li>
+                                        <li>Consider Diamox after consulting your doctor</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="h-100">
+                    <div class="ratio ratio-16x9">
+                        <iframe 
+                            src="https://www.youtube.com/embed/QalQMJbpBos" 
+                            title="Kilimanjaro Climb" 
+                            allowfullscreen 
+                            class="rounded shadow">
+                        </iframe>
+                    </div>
+                    
+                    <div class="mt-4 text-center">
+                        <h3>Why Climb With Us?</h3>
+                        <div class="row mt-4">
+                            <div class="col-md-4 mb-4">
+                                <div class="icon-circle bg-primary mx-auto mb-3">
+                                    <i class="fas fa-shield-alt fa-2x text-white"></i>
+                                </div>
+                                <h5>Safety First</h5>
+                                <p class="small">100% safety record with certified guides</p>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="icon-circle bg-primary mx-auto mb-3">
+                                    <i class="fas fa-medal fa-2x text-white"></i>
+                                </div>
+                                <h5>90% Success</h5>
+                                <p class="small">Industry-leading summit rates</p>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="icon-circle bg-primary mx-auto mb-3">
+                                    <i class="fas fa-leaf fa-2x text-white"></i>
+                                </div>
+                                <h5>Eco-Friendly</h5>
+                                <p class="small">Leave No Trace principles</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+  
+    <!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Contact Us</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Arusha, Tanzania</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+255 681 838 482</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@safarishuffle.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Our Services</h4>
+                <a class="btn btn-link" href="tailormade.html">Tailor-Made Safaris</a>
+                <a class="btn btn-link" href="groupsafari.html">Group Safaris</a>
+                <a class="btn btn-link" href="luxurysafaris.html">Luxury Safaris</a>
+                <a class="btn btn-link" href="zanzaibarbeachholidya.html">Zanzibar Beach Holidays</a>
+                <a class="btn btn-link" href="culturaltours.html">Cultural Tours</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Quick Links</h4>
+                <a class="btn btn-link" href="about us.html">About Us</a>
+                <!-- <a class="btn btn-link" href="#">Destinations</a> -->
+                <a class="btn btn-link" href="tours.html">Safari Packages</a>
+                <a class="btn btn-link" href="termsandconditions.html">Terms & Conditions</a>
+                <a class="btn btn-link" href="contact.html">Contact Us</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Newsletter</h4>
+                <p>Subscribe to receive updates on our latest safari offers and travel tips.</p>
+                <div class="position-relative mx-auto" style="max-width: 400px;">
+                    <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Safari Shuffle</a>, All Rights Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!-- Designed by <a class="border-bottom" href="#">Your</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+<a href="https://wa.me/yourwhatsappnumber" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp whatsapp-icon"></i>
+</a>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

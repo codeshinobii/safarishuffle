@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title id="page-title">Safari Shuffle | Package Details</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/safarishuffleicon.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .package-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/serengeti.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        .itinerary-day {
+            border-left: 3px solid #0d6efd;
+            padding-left: 15px;
+            margin-bottom: 30px;
+        }
+        .included-item, .excluded-item {
+            margin-bottom: 10px;
+        }
+        .included-item i {
+            color: #28a745;
+        }
+        .excluded-item i {
+            color: #dc3545;
+        }
+        .booking-card {
+            position: sticky;
+            top: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .gallery-img {
+            transition: transform 0.3s;
+        }
+        .gallery-img:hover {
+            transform: scale(1.03);
+        }
+        /* Add placeholder style */
+        .placeholder-glow .placeholder { min-height: 1em; }
+        /* Ensure hero background can be changed */
+        #package-hero-section {
+            transition: background-image 0.5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-light p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>Arusha, Tanzania</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Open 24/7</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+255 681 838 482</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+    
+    <!-- Navbar Start -->
+	<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="img/safarilogo.png" alt="WooDY Logo" class="navbar-logo">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Destinations</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="serengeti.html" class="dropdown-item">Serengeti National Park</a>
+                        <a href="ngorongoro.html" class="dropdown-item">Ngorongoro Conservational Area</a>
+                        <a href="manyara.html" class="dropdown-item">Lake Manyara National Park</a>
+                        <a href="tarangire.html" class="dropdown-item">Tarangire National Park</a>
+                        <a href="zanzibar.html" class="dropdown-item">Zanzibar</a>
+                        <a href="kilimanjaro.html" class="dropdown-item">Mount Kilimanjaro</a>
+                    </div>
+                </div>
+                <a href="tours.html" class="nav-item nav-link">Tours</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our Services</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="tailormade.html" class="dropdown-item">Tailor Made Safaris</a>
+                        <a href="luxurysafaris.html" class="dropdown-item">Luxury Safaris</a>
+                        <a href="groupsafari.html" class="dropdown-item">Group Safaris</a>
+                        <a href="zanzaibarbeachholidya.html" class="dropdown-item">Zanzibar Beach Holidays</a>
+                        <a href="culturaltours.html" class="dropdown-item">Cultural Tours</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Travel Tips</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="packing.html" class="dropdown-item">Packing Tips</a>
+                        <a href="visa.html" class="dropdown-item">Visa Information</a>
+                        <a href="health&safety.html" class="dropdown-item">Health & Safety</a>
+                        <a href="besttimetovisit.html" class="dropdown-item">Best Time to Visit</a>
+                        <a href="localcustoms.html" class="dropdown-item">Local Customs</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            
+            <a href="booking.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Package Hero Start -->
+    <div class="container-fluid package-hero" id="package-hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8" id="package-hero-main">
+                    <!-- Placeholder while loading -->
+                     <div class="placeholder-glow">
+                        <h1 class="display-4 text-white mb-4 placeholder col-8" id="package-title">Package Title</h1>
+                    <div class="d-flex align-items-center mb-4">
+                            <div class="me-4 placeholder col-3" id="package-duration">Duration</div>
+                            <div class="me-4 placeholder col-4" id="package-location">Location</div>
+                            <div class="placeholder col-3" id="package-rating">Rating</div>
+                        </div>
+                        <div class="d-flex" id="package-tags">
+                            <span class="placeholder col-2 me-2 py-1 rounded"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-lg-end" id="package-hero-price">
+                     <div class="placeholder-glow">
+                        <h2 class="text-white display-5 mb-3 placeholder col-12" id="package-price">$Price</h2>
+                        <span class="text-white-50 placeholder col-3">per person / per night</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Package Hero End -->
+
+    <!-- Package Content Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Main Content -->
+                <div class="col-lg-8">
+                    <!-- Overview -->
+                    <div class="mb-5">
+                        <h2 class="mb-4">Tour Overview</h2>
+                        <div id="package-overview" class="placeholder-glow">
+                             <p class="placeholder col-12"></p>
+                             <p class="placeholder col-10"></p>
+                             <p class="placeholder col-11"></p>
+                        </div>
+                    </div>
+
+                    <!-- Highlights -->
+                    <div class="mb-5">
+                        <h2 class="mb-4">Tour Highlights</h2>
+                        <div class="row g-4" id="highlights-container">
+                            <!-- Highlights will be loaded here -->
+                             <div class="col-md-6 placeholder-glow"><p class="placeholder col-12"></p></div>
+                             <div class="col-md-6 placeholder-glow"><p class="placeholder col-12"></p></div>
+                        </div>
+                    </div>
+
+                    <!-- Itinerary -->
+                    <div class="mb-5">
+                        <h2 class="mb-4">Detailed Itinerary</h2>
+                        <div id="itinerary-container">
+                            <!-- Itinerary days will be loaded here -->
+                             <div class="placeholder-glow"><p class="placeholder col-12 mb-3"></p></div>
+                        </div>
+                    </div>
+
+                    <!-- Inclusions & Exclusions -->
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-6">
+                            <h4 class="mb-3">What's Included</h4>
+                            <ul class="list-unstyled" id="inclusions-list">
+                                <!-- Inclusions will be loaded here -->
+                                 <li class="placeholder-glow"><span class="placeholder col-7"></span></li>
+                                 <li class="placeholder-glow"><span class="placeholder col-8"></span></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h4 class="mb-3">What's Not Included</h4>
+                            <ul class="list-unstyled" id="exclusions-list">
+                                <!-- Exclusions will be loaded here -->
+                                 <li class="placeholder-glow"><span class="placeholder col-7"></span></li>
+                                 <li class="placeholder-glow"><span class="placeholder col-6"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Gallery -->
+                    <div class="mb-5">
+                        <h2 class="mb-4">Photo Gallery</h2>
+                        <div class="row g-3" id="gallery-container">
+                            <!-- Gallery images will be loaded here -->
+                             <div class="col-md-4 placeholder-glow"><div class="placeholder" style="height: 150px;"></div></div>
+                             <div class="col-md-4 placeholder-glow"><div class="placeholder" style="height: 150px;"></div></div>
+                             <div class="col-md-4 placeholder-glow"><div class="placeholder" style="height: 150px;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <div class="card booking-card p-4">
+                        <h4 class="mb-4">Book This Tour</h4>
+                        <form>
+                            <div class="mb-3">
+                                <label for="bookingName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="bookingName" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="bookingEmail" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="bookingEmail" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="bookingPhone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="bookingPhone">
+                            </div>
+                            <div class="mb-3">
+                                <label for="bookingDate" class="form-label">Preferred Travel Date</label>
+                                <input type="date" class="form-control" id="bookingDate">
+                            </div>
+                            <div class="mb-3">
+                                <label for="bookingGuests" class="form-label">Number of Guests</label>
+                                <input type="number" class="form-control" id="bookingGuests" min="1" value="2">
+                            </div>
+                            <div class="mb-3">
+                                <label for="bookingMessage" class="form-label">Message (Optional)</label>
+                                <textarea class="form-control" id="bookingMessage" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Send Enquiry</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Package Content End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Contact Us</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Arusha, Tanzania</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+255 681 838 482</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@safarishuffle.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Our Services</h4>
+                    <a class="btn btn-link" href="tailormade.html">Tailor-Made Safaris</a>
+                    <a class="btn btn-link" href="groupsafari.html">Group Safaris</a>
+                    <a class="btn btn-link" href="luxurysafaris.html">Luxury Safaris</a>
+                    <a class="btn btn-link" href="zanzaibarbeachholidya.html">Zanzibar Beach Holidays</a>
+                    <a class="btn btn-link" href="culturaltours.html">Cultural Tours</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="about us.html">About Us</a>
+                    <!-- <a class="btn btn-link" href="#">Destinations</a> -->
+                    <a class="btn btn-link" href="tours.html">Safari Packages</a>
+                    <a class="btn btn-link" href="termsandconditions.html">Terms & Conditions</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-light mb-4">Newsletter</h4>
+                    <p>Subscribe to receive updates on our latest safari offers and travel tips.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Safari Shuffle</a>, All Rights Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <!-- Designed by <a class="border-bottom" href="#">Your</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    <a href="https://wa.me/yourwhatsappnumber" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp whatsapp-icon"></i>
+    </a>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+     <!-- Tour Detail Loading Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const backendUrl = 'http://127.0.0.1:8000';
+            const params = new URLSearchParams(window.location.search);
+            const packageSlug = params.get('slug') || params.get('id'); // Get slug or ID
+
+            const titleEl = document.getElementById('page-title');
+            const heroSectionEl = document.getElementById('package-hero-section');
+            const packageTitleEl = document.getElementById('package-title');
+            const durationEl = document.getElementById('package-duration');
+            const locationEl = document.getElementById('package-location');
+            const ratingEl = document.getElementById('package-rating');
+            const tagsEl = document.getElementById('package-tags');
+            const priceEl = document.getElementById('package-price');
+            const overviewEl = document.getElementById('package-overview');
+            const highlightsContainer = document.getElementById('highlights-container');
+            const itineraryContainer = document.getElementById('itinerary-container');
+            const inclusionsList = document.getElementById('inclusions-list');
+            const exclusionsList = document.getElementById('exclusions-list');
+            const galleryContainer = document.getElementById('gallery-container');
+
+            // Helper to safely set text content
+            const setText = (el, text) => { if (el && text) el.textContent = text; };
+            // Helper to safely set inner HTML
+            const setHtml = (el, html) => { if (el) el.innerHTML = html; };
+
+            async function fetchPackageDetails() {
+                if (!packageSlug) {
+                    console.error('No package slug or ID found in URL');
+                    setHtml(document.body, '<div class="container py-5 text-center"><h1>Package Not Found</h1><p>Please provide a valid package identifier in the URL.</p></div>');
+                    return;
+                }
+
+                const apiUrl = `${backendUrl}/api/packages/${packageSlug}`;
+
+                try {
+                    const response = await fetch(apiUrl);
+                    if (!response.ok) {
+                         if (response.status === 404) {
+                             throw new Error('Package not found.');
+                         } else {
+                             throw new Error(`HTTP error! status: ${response.status}`);
+                         }
+                    }
+                    const pkg = await response.json();
+
+                    // --- Populate Hero Section ---
+                    setText(titleEl, `Safari Shuffle | ${pkg.title || 'Package Details'}`);
+                    if (pkg.hero_image) {
+                         heroSectionEl.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${backendUrl}/storage/${pkg.hero_image}')`;
+                    }
+                    document.getElementById('package-hero-main').classList.remove('placeholder-glow');
+                    document.getElementById('package-hero-price').classList.remove('placeholder-glow');
+                    setText(packageTitleEl, pkg.title);
+                    setText(durationEl, pkg.duration);
+                    setText(locationEl, pkg.location);
+                    setText(ratingEl, pkg.rating_display || ''); // Hide if empty
+                    if(ratingEl && pkg.rating_display) ratingEl.innerHTML = `<i class="fa fa-star text-primary me-2"></i> ${pkg.rating_display}`;
+                    else if(ratingEl) ratingEl.innerHTML = ''; // Clear placeholder if no rating
+                    
+                    let tagsHtml = '';
+                    if (pkg.show_popular_tag) {
+                         tagsHtml += `<span class="bg-primary text-white px-3 py-1 rounded me-2">Popular</span>`;
+                    }
+                    if (pkg.display_tags) {
+                        pkg.display_tags.split(',').forEach(tag => {
+                             tagsHtml += `<span class="bg-white text-dark px-3 py-1 rounded me-2">${tag.trim()}</span>`;
+                        });
+                    }
+                    setHtml(tagsEl, tagsHtml || '');
+                    
+                    // Update price display to show range
+                    const priceRange = pkg.min_price && pkg.max_price ? 
+                        `$${parseFloat(pkg.min_price).toFixed(0)} - $${parseFloat(pkg.max_price).toFixed(0)}` : 
+                        'Contact Us';
+                    setText(priceEl, priceRange);
+
+                    // --- Populate Main Content ---
+                    setHtml(overviewEl, pkg.overview ? pkg.overview.replace(/\n/g, '<br>') : 'No overview provided.');
+                     overviewEl.classList.remove('placeholder-glow');
+
+                    // Highlights
+                    let highlightsHtml = '';
+                    if (pkg.highlights && Array.isArray(pkg.highlights) && pkg.highlights.length > 0) {
+                        pkg.highlights.forEach(item => {
+                            highlightsHtml += `
+                                <div class="col-md-6">
+                                    <div class="d-flex align-items-start">
+                                        <div class="flex-shrink-0 btn-lg-square bg-primary text-white rounded-circle me-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px;">
+                                             <i class="fa fa-star"></i> <!-- You might want different icons -->
+                                        </div>
+                                        <div>
+                                            <h5 class="mb-1">${item.title || 'Highlight'}</h5>
+                                            <p class="mb-0 text-muted small">${item.description || ''}</p>
+                                        </div>
+                                    </div>
+                                </div>`;
+                        });
+                    } else {
+                        highlightsHtml = '<div class="col-12"><p>No specific highlights listed for this package.</p></div>';
+                    }
+                    setHtml(highlightsContainer, highlightsHtml);
+
+                    // Itinerary
+                    let itineraryHtml = '';
+                    if (pkg.itinerary && Array.isArray(pkg.itinerary) && pkg.itinerary.length > 0) {
+                        pkg.itinerary.forEach(day => {
+                            itineraryHtml += `
+                                <div class="itinerary-day">
+                                    <h4 class="h6 fw-bold text-primary">${day.title || 'Day'}</h4>
+                                    <p class="small mb-1">${day.description ? day.description.replace(/\n/g, '<br>') : 'No description.'}</p>
+                                    ${day.accommodation ? `<p class="small mb-0"><strong>Accommodation:</strong> ${day.accommodation}</p>` : ''}
+                                </div>`;
+                        });
+                    } else {
+                        itineraryHtml = '<p>No detailed itinerary provided for this package.</p>';
+                    }
+                    setHtml(itineraryContainer, itineraryHtml);
+
+                    // Inclusions
+                    let inclusionsHtml = '';
+                     if (pkg.inclusions && Array.isArray(pkg.inclusions) && pkg.inclusions.length > 0) {
+                        pkg.inclusions.forEach(item => {
+                            inclusionsHtml += `<li class="included-item"><i class="fa fa-check me-2"></i>${item}</li>`;
+                        });
+                    } else {
+                        inclusionsHtml = '<li>No inclusions specified.</li>';
+                    }
+                    setHtml(inclusionsList, inclusionsHtml);
+
+                    // Exclusions
+                    let exclusionsHtml = '';
+                     if (pkg.exclusions && Array.isArray(pkg.exclusions) && pkg.exclusions.length > 0) {
+                        pkg.exclusions.forEach(item => {
+                            exclusionsHtml += `<li class="excluded-item"><i class="fa fa-times me-2"></i>${item}</li>`;
+                        });
+                    } else {
+                        exclusionsHtml = '<li>No exclusions specified.</li>';
+                    }
+                    setHtml(exclusionsList, exclusionsHtml);
+
+                    // Gallery
+                    let galleryHtml = '';
+                     if (pkg.gallery_images && Array.isArray(pkg.gallery_images) && pkg.gallery_images.length > 0) {
+                        pkg.gallery_images.forEach(imagePath => {
+                             const fullImagePath = `${backendUrl}/storage/${imagePath}`;
+                             galleryHtml += `
+                                <div class="col-lg-4 col-md-6">
+                                    <a href="${fullImagePath}" data-lightbox="gallery">
+                                        <img class="img-fluid rounded gallery-img" src="${fullImagePath}" alt="Package Gallery Image" style="height: 200px; width: 100%; object-fit: cover;">
+                                    </a>
+                                </div>`;
+                        });
+                    } else {
+                        galleryHtml = '<div class="col-12"><p>No gallery images available for this package.</p></div>';
+                    }
+                    setHtml(galleryContainer, galleryHtml);
+
+                    // Initialize lightbox if images were added
+                     if (pkg.gallery_images && pkg.gallery_images.length > 0) {
+                         lightbox.option({
+                             'resizeDuration': 200,
+                             'wrapAround': true
+                         });
+                     }
+
+                } catch (error) {
+                    console.error("Error fetching package details:", error);
+                    setHtml(document.body, `<div class="container py-5 text-center"><h1>Error</h1><p>${error.message}</p><a href="tours.html">Back to Tours</a></div>`);
+                }
+            }
+
+            fetchPackageDetails();
+        });
+    </script>
+
+</body>
+</html>

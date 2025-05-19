@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Safari Shuffle | Luxury Safaris in Tanzania</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="luxury safari tanzania, premium safari, private guided safari, luxury lodges serengeti" name="keywords">
+    <meta content="Experience Tanzania in unparalleled luxury with our bespoke safaris. Private guides, exclusive lodges, and tailor-made wildlife encounters." name="description">
+
+    <!-- Favicon -->
+    <link href="img/safarishuffleicon.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Luxury Custom CSS -->
+    <style>
+        .luxury-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/luxury-safari-hero.jpg') center/cover no-repeat;
+            min-height: 80vh;
+        }
+        .luxury-card {
+            border: none;
+            border-radius: 5px;
+            overflow: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .luxury-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        .luxury-card-img {
+            height: 250px;
+            object-fit: cover;
+        }
+        .amenity-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(13, 110, 253, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .testimonial-luxury {
+            background-color: #f8f9fa;
+            border-left: 4px solid #ab7445;
+        }
+        .price-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        .section-title-luxury h6 {
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+        .lodge-carousel .owl-nav {
+            position: absolute;
+            top: -70px;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+
+    <!-- Topbar -->
+    <div class="container-fluid bg-light p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-map-marker-alt text-primary me-2"></small>
+                    <small>Arusha, Tanzania</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Mon - Fri: 9AM - 6PM | Sat: 9AM - 1PM</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+255 681 838 482</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-0" href=""><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar Start -->
+	<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <img src="img/safarilogo.png" alt="WooDY Logo" class="navbar-logo">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Destinations</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="serengeti.html" class="dropdown-item">Serengeti National Park</a>
+                        <a href="ngorongoro.html" class="dropdown-item">Ngorongoro Conservational Area</a>
+                        <a href="manyara.html" class="dropdown-item">Lake Manyara National Park</a>
+                        <a href="tarangire.html" class="dropdown-item">Tarangire National Park</a>
+                        <a href="zanzibar.html" class="dropdown-item">Zanzibar</a>
+                        <a href="kilimanjaro.html" class="dropdown-item">Mount Kilimanjaro</a>
+                    </div>
+                </div>
+                <a href="tours.html" class="nav-item nav-link">Tours</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Our Services</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="tailormade.html" class="dropdown-item">Tailor Made Safaris</a>
+                        <a href="luxurysafaris.html" class="dropdown-item">Luxury Safaris</a>
+                        <a href="groupsafari.html" class="dropdown-item">Group Safaris</a>
+                        <a href="zanzaibarbeachholidya.html" class="dropdown-item">Zanzibar Beach Holidays</a>
+                        <a href="culturaltours.html" class="dropdown-item">Cultural Tours</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Travel Tips</a>
+                    <div class="dropdown-menu fade-up m-0">
+                        <a href="packing.html" class="dropdown-item">Packing Tips</a>
+                        <a href="visa.html" class="dropdown-item">Visa Information</a>
+                        <a href="health&safety.html" class="dropdown-item">Health & Safety</a>
+                        <a href="besttimetovisit.html" class="dropdown-item">Best Time to Visit</a>
+                        <a href="localcustoms.html" class="dropdown-item">Local Customs</a>
+                    </div>
+                </div>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            
+            <a href="booking.html" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Get A Quote<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Hero Section -->
+    <div class="container-fluid luxury-hero d-flex align-items-center">
+        <div class="container text-center text-white py-5">
+            <h1 class="display-3 mb-4 text-white">Luxury Safaris in Tanzania</h1>
+            <p class="fs-4 mb-5 text-white">Where wilderness meets refinement in Africa's most spectacular landscapes</p>
+            
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#signature" class="btn btn-lg btn-primary px-4 py-3">Our Signature Journeys</a>
+                <a href="contact.html" class="btn btn-lg btn-outline-light px-4 py-3">Enquire Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Luxury Intro -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="section-title position-relative section-title-luxury">
+                        <h6 class="text-uppercase text-primary mb-3">Unparalleled Excellence</h6>
+                        <h1 class="display-5 mb-4">The <span class="text-primary">Safari Shuffle</span> Luxury Difference</h1>
+                    </div>
+                    <p class="mb-4">Our luxury safaris redefine wilderness exploration, combining exclusive access to Tanzania's premier wildlife areas with uncompromising comfort and personalized service. Each journey is crafted to deliver exceptional wildlife encounters while indulging in the finest accommodations and amenities Africa has to offer.</p>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-check text-white"></i>
+                                </div>
+                                <h6 class="mb-0">Private Expert Guides</h6>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-check text-white"></i>
+                                </div>
+                                <h6 class="mb-0">Exclusive Lodge Partners</h6>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-check text-white"></i>
+                                </div>
+                                <h6 class="mb-0">Helicopter Transfers Available</h6>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="flex-shrink-0 btn-square bg-primary rounded-circle me-3">
+                                    <i class="fa fa-check text-white"></i>
+                                </div>
+                                <h6 class="mb-0">24/7 Concierge Service</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary py-3 px-5 mt-4">Design Your Safari</a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <img class="img-fluid rounded w-100" src="img/luxury-lodge-1.jpg" alt="Luxury Tent Interior" style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="col-6">
+                            <img class="img-fluid rounded w-100" src="img/luxury-pool.jpg" alt="Lodge Pool" style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="col-6">
+                            <img class="img-fluid rounded w-100" src="img/luxury-dining.jpg" alt="Private Dining" style="height: 250px; object-fit: cover;">
+                        </div>
+                        <div class="col-6">
+                            <img class="img-fluid rounded w-100" src="img/luxury-sundowner.jpg" alt="Sundowner" style="height: 250px; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Luxury Amenities -->
+    <div class="container-fluid bg-light py-5">
+        <div class="container py-5">
+            <div class="section-title text-center section-title-luxury">
+                <h6 class="text-uppercase text-primary mb-3">Luxury Defined</h6>
+                <h1 class="display-5 mb-5">Premium <span class="text-primary">Safari</span> Amenities</h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center p-4">
+                        <div class="amenity-icon mx-auto">
+                            <i class="fas fa-bed fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="mb-3">Luxury Accommodations</h5>
+                        <p class="mb-0">Stay in handpicked lodges and tented camps featuring private plunge pools, king beds with premium linens, and stunning wilderness views from your private deck.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center p-4">
+                        <div class="amenity-icon mx-auto">
+                            <i class="fas fa-utensils fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="mb-3">Gourmet Dining</h5>
+                        <p class="mb-0">Enjoy chef-prepared meals with premium ingredients, private bush dinners under the stars, and curated wine selections from South Africa and beyond.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center p-4">
+                        <div class="amenity-icon mx-auto">
+                            <i class="fas fa-car fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="mb-3">Private Vehicles</h5>
+                        <p class="mb-0">Travel in customized 4x4 Land Cruisers with pop-up roofs, charging stations, fridge, and guaranteed window seats for optimal game viewing comfort.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center p-4">
+                        <div class="amenity-icon mx-auto">
+                            <i class="fas fa-spa fa-2x text-primary"></i>
+                        </div>
+                        <h5 class="mb-3">Wellness Focus</h5>
+                        <p class="mb-0">Rejuvenate with in-room massages, sunrise yoga sessions, and spa treatments using organic African botanicals after your game drives.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signature Luxury Journeys -->
+    <div class="container-fluid bg-light py-5" id="signature">
+        <div class="container py-5">
+            <div class="section-title text-center position-relative mx-auto mb-5" style="max-width: 600px;">
+                <h1 class="display-5 mb-3">Signature Luxury Journeys</h1>
+                <p>Curated itineraries showcasing the best of Tanzania's wilderness in ultimate comfort.</p>
+            </div>
+            <div class="col-12 text-center" id="loading-indicator" style="display: none;">
+                 <div class="spinner-border text-primary" role="status">
+                     <span class="visually-hidden">Loading...</span>
+                        </div>
+                 <p>Loading luxury packages...</p>
+                            </div>
+            <div id="luxury-packages-container" class="row g-4">
+                <!-- Luxury packages will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Luxury Lodges Section -->
+<div class="container-fluid bg-light py-5">
+    <div class="container py-5">
+        <div class="section-title text-center">
+            <h6 class="text-uppercase text-primary mb-3">Exclusive Partners</h6>
+            <h1 class="display-5 mb-5">Our <span class="text-primary">Luxury</span> Lodge Collection</h1>
+        </div>
+        
+        <div class="row g-4">
+            <!-- Lodge 1 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/singita-lodge.jpg" class="card-img-top" alt="Singita Faru Faru Lodge" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Singita Faru Faru Lodge</h5>
+                        <p class="text-muted mb-2">Grumeti Reserve, Serengeti</p>
+                        <div class="mb-3">
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                        </div>
+                        <p class="card-text">Riverside lodge with infinity pool overlooking wildlife-rich plains. Features 9 stone suites with private decks, outdoor showers, and butler service.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <div class="d-flex justify-content-between">
+                            <small><i class="fas fa-wifi text-primary me-1"></i> Free WiFi</small>
+                            <small><i class="fas fa-swimming-pool text-primary me-1"></i> Pool</small>
+                            <small><i class="fas fa-spa text-primary me-1"></i> Spa</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lodge 2 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/beyond-lodge.jpg" class="card-img-top" alt="&Beyond Ngorongoro Crater Lodge" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">&Beyond Ngorongoro Crater Lodge</h5>
+                        <p class="text-muted mb-2">Ngorongoro Crater Rim</p>
+                        <div class="mb-3">
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                        </div>
+                        <p class="card-text">Opulent lodge with panoramic crater views. 30 suites with fireplace, private butler, and Victorian-style bathrooms. Known as "Africa's Versailles".</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <div class="d-flex justify-content-between">
+                            <small><i class="fas fa-utensils text-primary me-1"></i> Gourmet</small>
+                            <small><i class="fas fa-fireplace text-primary me-1"></i> Fireplace</small>
+                            <small><i class="fas fa-user-tie text-primary me-1"></i> Butler</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lodge 3 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/four-seasons.jpg" class="card-img-top" alt="Four Seasons Safari Lodge" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Four Seasons Safari Lodge</h5>
+                        <p class="text-muted mb-2">Seronera, Serengeti</p>
+                        <div class="mb-3">
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                        </div>
+                        <p class="card-text">Luxury lodge with infinity pool overlooking a watering hole frequented by elephants. 77 rooms including 12 suites with plunge pools.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <div class="d-flex justify-content-between">
+                            <small><i class="fas fa-infinity text-primary me-1"></i> Pool</small>
+                            <small><i class="fas fa-concierge-bell text-primary me-1"></i> 24hr Service</small>
+                            <small><i class="fas fa-elephant text-primary me-1"></i> Wildlife</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Lodge 4 -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="img/serengeti-house.webp" class="card-img-top" alt="Serengeti House" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">Serengeti House by &Beyond</h5>
+                        <p class="text-muted mb-2">Serengeti National Park</p>
+                        <div class="mb-3">
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                        </div>
+                        <p class="card-text">Exclusive-use villa with 4 ensuite bedrooms, private staff, heated pool, and dedicated safari vehicle. Perfect for families.</p>
+                    </div>
+                    <div class="card-footer bg-white border-0">
+                        <div class="d-flex justify-content-between">
+                            <small><i class="fas fa-home text-primary me-1"></i> Villa</small>
+                            <small><i class="fas fa-users text-primary me-1"></i> Staff</small>
+                            <small><i class="fas fa-car text-primary me-1"></i> Vehicle</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+    <!-- Testimonials
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="section-title text-center section-title-luxury">
+                <h6 class="text-uppercase text-primary mb-3">Guest Experiences</h6>
+                <h1 class="display-5 mb-5">Luxury <span class="text-primary">Testimonials</span></h1>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="testimonial-luxury p-4 h-100">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="img/testimonial-luxury-1.jpg" class="rounded-circle me-3" width="60" alt="Guest">
+                            <div>
+                                <h6 class="mb-0">The Reynolds Family</h6>
+                                <small>New York, USA | June 2023</small>
+                                <div class="text-primary">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Every detail was perfection - from our private guide who found us leopard cubs on our first game drive, to the surprise champagne breakfast in the Serengeti. The staff at Singita Faru Faru anticipated our every need before we even asked. Worth every penny for this once-in-a-lifetime experience."</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-luxury p-4 h-100">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="img/testimonial-luxury-2.jpg" class="rounded-circle me-3" width="60" alt="Guest">
+                            <div>
+                                <h6 class="mb-0">James & Sarah Wilkinson</h6>
+                                <small>London, UK | Honeymoon September 2023</small>
+                                <div class="text-primary">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Our honeymoon safari exceeded all expectations. The team arranged a private dinner under acacia trees with Maasai warriors singing, and our tent at &Beyond Serengeti Under Canvas had rose petals everywhere when we arrived. The guide's wildlife knowledge was incredible - we saw all Big Five before lunch on day two!"</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="testimonial-luxury p-4 h-100">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="img/testimonial-luxury-3.jpg" class="rounded-circle me-3" width="60" alt="Guest">
+                            <div>
+                                <h6 class="mb-0">The Chen Family</h6>
+                                <small>Singapore | Multi-Gen Trip August 2023</small>
+                                <div class="text-primary">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Traveling with grandparents and children (ages 8-15), Serengeti House was perfect. Private vehicles meant we could customize schedules, and the chef accommodated all dietary needs. The kids loved the pool and wildlife at the doorstep, while we appreciated the wine cellar and spa. The staff treated us like family."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- CTA -->
+    <div class="container-fluid bg-primary text-white py-5">
+        <div class="container text-center py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="display-5 mb-4">Begin Your Luxury Safari Journey</h2>
+                    <p class="fs-5 mb-5">Contact our luxury safari specialists to design your personalized Tanzanian adventure</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="contact.html" class="btn btn-lg btn-light px-4 py-3">
+                            <i class="fas fa-envelope me-2"></i> Enquire Now
+                        </a>
+                        <a href="tel:+255681838482" class="btn btn-lg btn-outline-light px-4 py-3">
+                            <i class="fas fa-phone-alt me-2"></i> Call +255 681 838 482
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+     
+    <!-- Footer Start -->
+<div class="container-fluid bg-dark text-light footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Contact Us</h4>
+                <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Arusha, Tanzania</p>
+                <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+255 681 838 482</p>
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@safarishuffle.com</p>
+                <div class="d-flex pt-2">
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-social" href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Our Services</h4>
+                <a class="btn btn-link" href="tailormade.html">Tailor-Made Safaris</a>
+                <a class="btn btn-link" href="groupsafari.html">Group Safaris</a>
+                <a class="btn btn-link" href="luxurysafaris.html">Luxury Safaris</a>
+                <a class="btn btn-link" href="zanzaibarbeachholidya.html">Zanzibar Beach Holidays</a>
+                <a class="btn btn-link" href="culturaltours.html">Cultural Tours</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Quick Links</h4>
+                <a class="btn btn-link" href="about us.html">About Us</a>
+                <!-- <a class="btn btn-link" href="#">Destinations</a> -->
+                <a class="btn btn-link" href="tours.html">Safari Packages</a>
+                <a class="btn btn-link" href="termsandconditions.html">Terms & Conditions</a>
+                <a class="btn btn-link" href="contact.html">Contact Us</a>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <h4 class="text-light mb-4">Newsletter</h4>
+                <p>Subscribe to receive updates on our latest safari offers and travel tips.</p>
+                <div class="position-relative mx-auto" style="max-width: 400px;">
+                    <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                    <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="copyright">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    &copy; <a class="border-bottom" href="#">Safari Shuffle</a>, All Rights Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <!-- Designed by <a class="border-bottom" href="#">Your</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer End -->
+<a href="https://wa.me/yourwhatsappnumber" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp whatsapp-icon"></i>
+</a>
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Custom Script for Luxury Packages -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const luxuryContainer = document.getElementById('luxury-packages-container');
+            const loadingIndicator = document.getElementById('loading-indicator');
+            const backendUrl = 'http://127.0.0.1:8000';
+
+            function createLuxuryPackageHTML(pkg) {
+                const imageUrl = pkg.hero_image ? `${backendUrl}/storage/${pkg.hero_image}` : 'img/placeholder.jpg';
+                const price = pkg.price ? `$${parseFloat(pkg.price).toFixed(0)} pp` : 'Price on Request';
+                const title = pkg.title || 'Luxury Package';
+                // Combine duration and short description for the text
+                let descriptionText = '';
+                if (pkg.duration) descriptionText += `${pkg.duration} | `;
+                if (pkg.short_description) descriptionText += pkg.short_description;
+                if (!descriptionText) descriptionText = 'Experience unparalleled luxury.';
+                
+                const detailUrl = `tourdetails.html?slug=${pkg.slug || pkg.id}`;
+
+                return `
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="card luxury-card h-100">
+                            <div class="position-relative">
+                                <img class="card-img-top luxury-card-img" src="${imageUrl}" alt="${title}">
+                                <span class="price-badge">${price}</span>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h4 class="card-title mb-3">${title}</h4>
+                                <p class="card-text flex-grow-1">${descriptionText.substring(0, 100)}${descriptionText.length > 100 ? '...' : ''}</p>
+                                <a href="${detailUrl}" class="btn btn-outline-primary mt-3 align-self-start">View Details <i class="fa fa-arrow-right ms-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+
+            async function fetchLuxuryPackages() {
+                loadingIndicator.style.display = 'block';
+                luxuryContainer.innerHTML = '';
+
+                try {
+                    const response = await fetch(`${backendUrl}/api/packages?category=luxury`);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    const result = await response.json();
+
+                    if (result.data && result.data.length > 0) {
+                        const packagesToShow = result.data.slice(0, 3); // Limit to 3 packages
+                        packagesToShow.forEach(pkg => {
+                             luxuryContainer.innerHTML += createLuxuryPackageHTML(pkg);
+                        });
+                    } else {
+                        luxuryContainer.innerHTML = '<div class="col-12"><p class="text-center">No luxury packages found matching the criteria.</p></div>';
+                    }
+                } catch (error) {
+                    console.error("Error fetching luxury packages:", error);
+                    luxuryContainer.innerHTML = `<div class="col-12"><p class="text-center text-danger">Failed to load luxury packages.</p></div>`;
+                } finally {
+                    loadingIndicator.style.display = 'none';
+                }
+            }
+
+            fetchLuxuryPackages();
+        });
+    </script>
+    
+</body>
+
+</html>
